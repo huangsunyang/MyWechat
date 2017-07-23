@@ -29,12 +29,12 @@
     self = [super init];
     
     if (self) {
-        for (int i = 0; i < 10; i++) {
+        _allItems = [[NSMutableArray alloc] init];
+        for (int i = 0; i < 20; i++) {
             MWMainPageItem * item = [[MWMainPageItem alloc] init];
             [_allItems addObject:item];
         }
     }
-    
     return self;
 }
 

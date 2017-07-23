@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "MWMainPageInfoManager.h"
+#import "MWMainPageTableViewController.h"
 
 @interface AppDelegate ()
 
@@ -17,7 +19,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window = [[UIWindow alloc] initWithFrame:UIScreen.mainScreen.bounds];
-    UINavigationController * naviController = [[UINavigationController alloc] init];
+    MWMainPageTableViewController * mainPageTableViewController = [[MWMainPageTableViewController alloc] init];
+    UINavigationController * naviController = [[UINavigationController alloc] initWithRootViewController:mainPageTableViewController];
     self.window.rootViewController = naviController;
     self.window.backgroundColor = UIColor.whiteColor;
     [self.window makeKeyAndVisible];

@@ -17,14 +17,17 @@
 
 @implementation MWMainPageTableViewController
 
+- (instancetype) init {
+    self = [super initWithStyle:UITableViewStylePlain];
+    
+    return self;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    [self.tableView registerClass:[UITableViewCell class]
+           forCellReuseIdentifier:@"UITableViewCell"];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -39,18 +42,27 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [];
+    return [MWMainPageInfoManager sharedInfo].allItems.count;
 }
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    UITableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:@"UITableViewCell"
+                              forIndexPath:indexPath];
+    
+    NSArray * items = [MWMainPageInfoManager sharedInfo].allItems;
+    
+    MWMainPageItem * item = items[indexPath.row];
+    
+    NSLog(@"%@", item);
+    
+    cell.textLabel.text = [item description];
     
     // Configure the cell...
     
     return cell;
 }
-*/
+
 
 /*
 // Override to support conditional editing of the table view.

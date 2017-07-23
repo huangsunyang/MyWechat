@@ -16,6 +16,8 @@
 
 @property(nonatomic, strong) NSArray * allItems;
 
++ (instancetype) sharedInfo;
+
 @end
 
 #endif /* MWMainPageInfoManager_h */
