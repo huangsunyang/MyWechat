@@ -5,7 +5,7 @@
 //  Created by huangsunyang on 7/23/2017.
 //  Copyright © 2017年 huangsunyang. All rights reserved.
 //
-
+#import "MWMainPageTableViewCell.h"
 #import "MWMainPageTableViewController.h"
 #import "MWMainPageInfoManager.h"
 
@@ -26,8 +26,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self.tableView registerClass:[UITableViewCell class]
-           forCellReuseIdentifier:@"UITableViewCell"];
+    UINib * nib = [UINib nibWithNibName:@"MWMainPageTableViewCell" bundle:nil];
+    
+    [self.tableView registerNib:nib
+         forCellReuseIdentifier:@"MWMainPageTableViewCell"];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -47,7 +49,7 @@
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:@"UITableViewCell"
+    MWMainPageTableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:@"MWMainPageTableViewCell"
                               forIndexPath:indexPath];
     
     NSArray * items = [MWMainPageInfoManager sharedInfo].allItems;
@@ -56,7 +58,8 @@
     
     NSLog(@"%@", item);
     
-    cell.textLabel.text = [item description];
+    cell.nameLabel.text = item.name;
+    cell.lastMessageLabel.text = item.lastMessage;
     
     // Configure the cell...
     

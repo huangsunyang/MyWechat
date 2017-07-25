@@ -16,6 +16,8 @@
 		690EAB671F24E94D00609313 /* MWMainPageTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 690EAB661F24E94D00609313 /* MWMainPageTableViewController.m */; };
 		690EAB761F24EA2F00609313 /* MWMainPageInfoManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 690EAB751F24EA2F00609313 /* MWMainPageInfoManager.m */; };
 		690EAB791F24EAF500609313 /* MWMainPageItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 690EAB781F24EAF500609313 /* MWMainPageItem.m */; };
+		690EAB7E1F27925200609313 /* MWMainPageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 690EAB7C1F27925200609313 /* MWMainPageTableViewCell.m */; };
+		690EAB7F1F27925200609313 /* MWMainPageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 690EAB7D1F27925200609313 /* MWMainPageTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +37,9 @@
 		690EAB771F24EA4000609313 /* MWMainPageInfoManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MWMainPageInfoManager.h; sourceTree = "<group>"; };
 		690EAB781F24EAF500609313 /* MWMainPageItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWMainPageItem.m; sourceTree = "<group>"; };
 		690EAB7A1F24EBA100609313 /* MWMainPageItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MWMainPageItem.h; sourceTree = "<group>"; };
+		690EAB7B1F27925200609313 /* MWMainPageTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWMainPageTableViewCell.h; sourceTree = "<group>"; };
+		690EAB7C1F27925200609313 /* MWMainPageTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWMainPageTableViewCell.m; sourceTree = "<group>"; };
+		690EAB7D1F27925200609313 /* MWMainPageTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MWMainPageTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +116,9 @@
 		690EAB561F24E85B00609313 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				690EAB7B1F27925200609313 /* MWMainPageTableViewCell.h */,
+				690EAB7C1F27925200609313 /* MWMainPageTableViewCell.m */,
+				690EAB7D1F27925200609313 /* MWMainPageTableViewCell.xib */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -185,6 +193,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				690EAB4D1F24E6B800609313 /* LaunchScreen.storyboard in Resources */,
+				690EAB7F1F27925200609313 /* MWMainPageTableViewCell.xib in Resources */,
 				690EAB4A1F24E6B800609313 /* Assets.xcassets in Resources */,
 				690EAB481F24E6B800609313 /* Main.storyboard in Resources */,
 			);
@@ -201,6 +210,7 @@
 				690EAB451F24E6B800609313 /* ViewController.m in Sources */,
 				690EAB791F24EAF500609313 /* MWMainPageItem.m in Sources */,
 				690EAB421F24E6B800609313 /* AppDelegate.m in Sources */,
+				690EAB7E1F27925200609313 /* MWMainPageTableViewCell.m in Sources */,
 				690EAB3F1F24E6B800609313 /* main.m in Sources */,
 				690EAB671F24E94D00609313 /* MWMainPageTableViewController.m in Sources */,
 			);
@@ -359,6 +369,7 @@
 				690EAB531F24E6B800609313 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
