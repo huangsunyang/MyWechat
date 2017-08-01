@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MWTabBarController"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tabBarController id="DBP-R2-04s" customClass="MWTabBarController">
+            <tabBar key="tabBar" contentMode="scaleToFill" id="SwO-0r-IPY">
+                <rect key="frame" x="0.0" y="618" width="375" height="49"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            </tabBar>
+            <viewControllers>
+                <viewController id="Gcx-C5-1HG">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="NOx-dZ-cQ4"/>
+                        <viewControllerLayoutGuide type="bottom" id="NzC-2c-VRZ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="lUf-2V-uvf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 1" id="LHE-6D-xPg"/>
+                </viewController>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="Mze-Bs-LwL">
+                    <tabBarItem key="tabBarItem" title="Item" id="L0C-Jc-Rx9"/>
+                    <toolbarItems/>
+                </viewController>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="pn4-xB-WG9">
+                    <tabBarItem key="tabBarItem" title="Item" id="Lfr-ql-yfw"/>
+                    <toolbarItems/>
+                </viewController>
+                <viewController id="kLB-c9-tvV">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="xv6-MX-J1X"/>
+                        <viewControllerLayoutGuide type="bottom" id="DMO-60-uRX"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="eQO-Iq-c1s">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 2" id="I1s-Sm-IUd"/>
+                </viewController>
+            </viewControllers>
+            <point key="canvasLocation" x="1" y="-461"/>
+        </tabBarController>
+    </objects>
+</document>

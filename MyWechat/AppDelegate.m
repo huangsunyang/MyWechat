@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "MWMainPageInfoManager.h"
 #import "MWMainPageTableViewController.h"
+#import "MWTabBarController.h"
 
 @interface AppDelegate ()
 
@@ -21,7 +22,11 @@
     self.window = [[UIWindow alloc] initWithFrame:UIScreen.mainScreen.bounds];
     MWMainPageTableViewController * mainPageTableViewController = [[MWMainPageTableViewController alloc] init];
     UINavigationController * naviController = [[UINavigationController alloc] initWithRootViewController:mainPageTableViewController];
-    self.window.rootViewController = naviController;
+    
+    MWTabBarController * tabBarController  = [[MWTabBarController alloc] init];
+    tabBarController.viewControllers = @[naviController];
+    
+    self.window.rootViewController = tabBarController;
     self.window.backgroundColor = UIColor.whiteColor;
     [self.window makeKeyAndVisible];
     return YES;
