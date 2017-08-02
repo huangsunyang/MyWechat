@@ -9,7 +9,6 @@
 #import "AppDelegate.h"
 #import "MWMainPageInfoManager.h"
 #import "MWMainPageTableViewController.h"
-#import "MWTabBarController.h"
 
 @interface AppDelegate ()
 
@@ -23,8 +22,16 @@
     MWMainPageTableViewController * mainPageTableViewController = [[MWMainPageTableViewController alloc] init];
     UINavigationController * naviController = [[UINavigationController alloc] initWithRootViewController:mainPageTableViewController];
     
-    MWTabBarController * tabBarController  = [[MWTabBarController alloc] init];
+    UITabBarController * tabBarController  = [[UITabBarController alloc]
+                                              initWithNibName:@"MWTabBarController.xib"
+                                                       bundle:nil];
+    
     tabBarController.viewControllers = @[naviController];
+    
+    naviController.tabBarItem.title = @"聊天";
+    naviController.tabBarItem.image = [[UIImage imageNamed:@"chat_tabbar_icon"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    naviController.tabBarItem.selectedImage = [[UIImage imageNamed:@"chat_tabbar_icon"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    
     
     self.window.rootViewController = tabBarController;
     self.window.backgroundColor = UIColor.whiteColor;
