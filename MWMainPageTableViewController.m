@@ -26,6 +26,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    //导航栏
+    self.navigationItem.title = @"微信";
+    
     UINib * nib = [UINib nibWithNibName:@"MWMainPageTableViewCell" bundle:nil];
     
     [self.tableView registerNib:nib

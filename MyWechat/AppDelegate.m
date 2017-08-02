@@ -20,6 +20,8 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window = [[UIWindow alloc] initWithFrame:UIScreen.mainScreen.bounds];
     MWMainPageTableViewController * mainPageTableViewController = [[MWMainPageTableViewController alloc] init];
+    
+    //navigation
     UINavigationController * naviController = [[UINavigationController alloc] initWithRootViewController:mainPageTableViewController];
     
     UITabBarController * tabBarController  = [[UITabBarController alloc]
@@ -28,6 +30,7 @@
     
     tabBarController.viewControllers = @[naviController];
     
+    //添加tabBarItem
     naviController.tabBarItem.title = @"聊天";
     naviController.tabBarItem.image = [[UIImage imageNamed:@"chat_tabbar_icon"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     naviController.tabBarItem.selectedImage = [[UIImage imageNamed:@"chat_tabbar_icon"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
