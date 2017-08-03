@@ -24,10 +24,10 @@
     //navigation
     UINavigationController * naviController = [[UINavigationController alloc] initWithRootViewController:mainPageTableViewController];
     
+    //tabbarController
     UITabBarController * tabBarController  = [[UITabBarController alloc]
                                               initWithNibName:@"MWTabBarController.xib"
                                                        bundle:nil];
-    
     tabBarController.viewControllers = @[naviController];
     
     //添加tabBarItem
@@ -39,6 +39,7 @@
     self.window.rootViewController = tabBarController;
     self.window.backgroundColor = UIColor.whiteColor;
     [self.window makeKeyAndVisible];
+    
     return YES;
 }
 

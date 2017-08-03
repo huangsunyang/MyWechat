@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="MWChatTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="113"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="113"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="VjX-8k-ctU">
+                        <rect key="frame" x="13" y="11.5" width="35" height="35"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="35" id="4S1-l6-eWL"/>
+                            <constraint firstAttribute="height" constant="35" id="N4u-PU-CwR"/>
+                        </constraints>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="MZ6-zx-m9l">
+                        <rect key="frame" x="272" y="11.5" width="35" height="35"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="35" id="ZzS-G3-yQy"/>
+                            <constraint firstAttribute="height" constant="35" id="sGu-ap-y9X"/>
+                        </constraints>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="We1-tC-eSp">
+                        <rect key="frame" x="48" y="11.5" width="204" height="80"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="这是一条默认消息这是一条默认消息这是一条默认消息这是一条默认消息这是一条默认消息这是一条默认消息" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mux-Qe-saL">
+                        <rect key="frame" x="66" y="14.5" width="186" height="77"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottomMargin" secondItem="mux-Qe-saL" secondAttribute="bottom" constant="13" id="4ZI-0F-xrQ"/>
+                    <constraint firstItem="mux-Qe-saL" firstAttribute="leading" secondItem="We1-tC-eSp" secondAttribute="leading" constant="18" id="5E0-kV-3ct"/>
+                    <constraint firstItem="We1-tC-eSp" firstAttribute="top" secondItem="VjX-8k-ctU" secondAttribute="top" id="Ay5-4L-Ngs"/>
+                    <constraint firstItem="MZ6-zx-m9l" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="mux-Qe-saL" secondAttribute="trailing" constant="8" id="Df3-4i-pIS"/>
+                    <constraint firstItem="VjX-8k-ctU" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="3.5" id="GPT-hJ-rSc"/>
+                    <constraint firstItem="mux-Qe-saL" firstAttribute="trailing" secondItem="We1-tC-eSp" secondAttribute="trailing" id="Jf6-0J-q95"/>
+                    <constraint firstAttribute="trailing" secondItem="MZ6-zx-m9l" secondAttribute="trailing" constant="13" id="K5I-GT-XXF"/>
+                    <constraint firstItem="mux-Qe-saL" firstAttribute="leading" secondItem="VjX-8k-ctU" secondAttribute="trailing" constant="18" id="Q5Z-QA-arZ"/>
+                    <constraint firstItem="mux-Qe-saL" firstAttribute="top" secondItem="VjX-8k-ctU" secondAttribute="top" constant="3" id="Rxr-uj-gwt"/>
+                    <constraint firstItem="mux-Qe-saL" firstAttribute="bottom" secondItem="We1-tC-eSp" secondAttribute="bottom" id="eee-wc-eN7"/>
+                    <constraint firstItem="VjX-8k-ctU" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="13" id="gbc-pw-XUT"/>
+                    <constraint firstItem="MZ6-zx-m9l" firstAttribute="centerY" secondItem="VjX-8k-ctU" secondAttribute="centerY" id="kFY-2M-cHD"/>
+                    <constraint firstItem="mux-Qe-saL" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="6.5" id="p63-Mg-3hf"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="chatText" destination="mux-Qe-saL" id="myk-YC-lwL"/>
+                <outlet property="leftPortrait" destination="VjX-8k-ctU" id="8C0-Ex-WcU"/>
+                <outlet property="messageBox" destination="We1-tC-eSp" id="z9J-Sn-Dmy"/>
+                <outlet property="rightPortrait" destination="MZ6-zx-m9l" id="MuO-8J-iIH"/>
+            </connections>
+            <point key="canvasLocation" x="39" y="106.5"/>
+        </tableViewCell>
+    </objects>
+</document>

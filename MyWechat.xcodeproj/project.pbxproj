@@ -18,6 +18,9 @@
 		690EAB791F24EAF500609313 /* MWMainPageItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 690EAB781F24EAF500609313 /* MWMainPageItem.m */; };
 		690EAB7E1F27925200609313 /* MWMainPageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 690EAB7C1F27925200609313 /* MWMainPageTableViewCell.m */; };
 		690EAB7F1F27925200609313 /* MWMainPageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 690EAB7D1F27925200609313 /* MWMainPageTableViewCell.xib */; };
+		8C6635921F33193E00739333 /* MWChatTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C6635901F33193E00739333 /* MWChatTableViewController.m */; };
+		8C66359A1F33199400739333 /* MWChatTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C6635981F33199400739333 /* MWChatTableViewCell.m */; };
+		8C66359B1F33199400739333 /* MWChatTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C6635991F33199400739333 /* MWChatTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +43,11 @@
 		690EAB7B1F27925200609313 /* MWMainPageTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWMainPageTableViewCell.h; sourceTree = "<group>"; };
 		690EAB7C1F27925200609313 /* MWMainPageTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWMainPageTableViewCell.m; sourceTree = "<group>"; };
 		690EAB7D1F27925200609313 /* MWMainPageTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MWMainPageTableViewCell.xib; sourceTree = "<group>"; };
+		8C66358F1F33193E00739333 /* MWChatTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWChatTableViewController.h; sourceTree = "<group>"; };
+		8C6635901F33193E00739333 /* MWChatTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWChatTableViewController.m; sourceTree = "<group>"; };
+		8C6635971F33199400739333 /* MWChatTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWChatTableViewCell.h; sourceTree = "<group>"; };
+		8C6635981F33199400739333 /* MWChatTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWChatTableViewCell.m; sourceTree = "<group>"; };
+		8C6635991F33199400739333 /* MWChatTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MWChatTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +80,7 @@
 		690EAB3C1F24E6B800609313 /* MyWechat */ = {
 			isa = PBXGroup;
 			children = (
+				8C66358E1F3318E200739333 /* ChatView */,
 				690EAB541F24E83000609313 /* MainPage */,
 				690EAB401F24E6B800609313 /* AppDelegate.h */,
 				690EAB411F24E6B800609313 /* AppDelegate.m */,
@@ -130,6 +139,42 @@
 				690EAB771F24EA4000609313 /* MWMainPageInfoManager.h */,
 				690EAB781F24EAF500609313 /* MWMainPageItem.m */,
 				690EAB7A1F24EBA100609313 /* MWMainPageItem.h */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		8C66358E1F3318E200739333 /* ChatView */ = {
+			isa = PBXGroup;
+			children = (
+				8C6635961F33197C00739333 /* Model */,
+				8C6635951F33197600739333 /* View */,
+				8C6635941F33196C00739333 /* Controller */,
+			);
+			name = ChatView;
+			sourceTree = "<group>";
+		};
+		8C6635941F33196C00739333 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				8C66358F1F33193E00739333 /* MWChatTableViewController.h */,
+				8C6635901F33193E00739333 /* MWChatTableViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		8C6635951F33197600739333 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8C6635971F33199400739333 /* MWChatTableViewCell.h */,
+				8C6635981F33199400739333 /* MWChatTableViewCell.m */,
+				8C6635991F33199400739333 /* MWChatTableViewCell.xib */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		8C6635961F33197C00739333 /* Model */ = {
+			isa = PBXGroup;
+			children = (
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -195,6 +240,7 @@
 				690EAB4D1F24E6B800609313 /* LaunchScreen.storyboard in Resources */,
 				690EAB7F1F27925200609313 /* MWMainPageTableViewCell.xib in Resources */,
 				690EAB4A1F24E6B800609313 /* Assets.xcassets in Resources */,
+				8C66359B1F33199400739333 /* MWChatTableViewCell.xib in Resources */,
 				690EAB481F24E6B800609313 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -207,12 +253,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				690EAB761F24EA2F00609313 /* MWMainPageInfoManager.m in Sources */,
+				8C6635921F33193E00739333 /* MWChatTableViewController.m in Sources */,
 				690EAB451F24E6B800609313 /* ViewController.m in Sources */,
 				690EAB791F24EAF500609313 /* MWMainPageItem.m in Sources */,
 				690EAB421F24E6B800609313 /* AppDelegate.m in Sources */,
 				690EAB7E1F27925200609313 /* MWMainPageTableViewCell.m in Sources */,
 				690EAB3F1F24E6B800609313 /* main.m in Sources */,
 				690EAB671F24E94D00609313 /* MWMainPageTableViewController.m in Sources */,
+				8C66359A1F33199400739333 /* MWChatTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

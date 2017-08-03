@@ -19,7 +19,7 @@
         self.lastMessage = @"最后一条消息";
         self.lastMessageTime = [NSDate dateWithTimeIntervalSinceNow:0];
         self.isNotify = NO;
-        self.portrait = [UIImage imageNamed:@"defaultPortrait"];
+        self.portrait = [UIImage imageNamed:@"default_portrait"];
     }
     
     return self;

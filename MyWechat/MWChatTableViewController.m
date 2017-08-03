@@ -1,39 +1,34 @@
 //
-//  MWMainPageTableViewController.m
+//  MWChatTableViewController.m
 //  MyWechat
 //
-//  Created by huangsunyang on 7/23/2017.
+//  Created by NM on 2017/8/3.
 //  Copyright © 2017年 huangsunyang. All rights reserved.
 //
-#import "MWMainPageTableViewCell.h"
-#import "MWMainPageTableViewController.h"
-#import "MWMainPageInfoManager.h"
+
 #import "MWChatTableViewController.h"
+#import "MWChatTableViewCell.h"
 
-@interface MWMainPageTableViewController ()
-
-@property(nonatomic) MWMainPageInfoManager * infoManager;
+@interface MWChatTableViewController ()
 
 @end
 
-@implementation MWMainPageTableViewController
-
-- (instancetype) init {
-    self = [super initWithStyle:UITableViewStylePlain];
-    
-    return self;
-}
+@implementation MWChatTableViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    //导航栏
-    self.navigationItem.title = @"微信";
+    UINib * nib = [UINib nibWithNibName:@"MWChatTableViewCell" bundle:nil];
     
-    UINib * nib = [UINib nibWithNibName:@"MWMainPageTableViewCell" bundle:nil];
+    [self.tableView registerNib:nib forCellReuseIdentifier:@"MWChatTableViewCell"];
     
-    [self.tableView registerNib:nib
-         forCellReuseIdentifier:@"MWMainPageTableViewCell"];
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    self.tableView.estimatedRowHeight = 200;
+    // Uncomment the following line to preserve selection between presentations.
+    // self.clearsSelectionOnViewWillAppear = NO;
+    
+    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
+    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -48,38 +43,35 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [MWMainPageInfoManager sharedInfo].allItems.count;
+    return 30;
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    MWMainPageTableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:@"MWMainPageTableViewCell"
-                              forIndexPath:indexPath];
+    MWChatTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MWChatTableViewCell" forIndexPath:indexPath];
     
-    NSArray * items = [MWMainPageInfoManager sharedInfo].allItems;
+    cell.leftPortrait.image = [UIImage imageNamed:@"default_portrait"];
     
-    MWMainPageItem * item = items[indexPath.row];
+    UIImage * image = [UIImage imageNamed:@"message_box_left"];
+
     
-    NSLog(@"%@", item);
+    image = [image resizableImageWithCapInsets:UIEdgeInsetsMake(40, 80, 40, 80) resizingMode:UIImageResizingModeStretch];
+    cell.messageBox.image = image;
+    NSString * str = @"";
     
-    cell.nameLabel.text = item.name;
-    cell.lastMessageLabel.text = item.lastMessage;
-    cell.portraitImageView.image = item.portrait;
+    int x = arc4random() % 30 + 1;
+    for (int i = 0; i < x; i++) {
+        str = [str stringByAppendingString:@"这是一条默认消息"];
+    }
     
+    cell.chatText.text = str;
     // Configure the cell...
     
     return cell;
 }
 
 - (CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 70;
-}
-
-- (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    self.hidesBottomBarWhenPushed = YES;
-    MWChatTableViewController * chatViewController = [[MWChatTableViewController alloc] init];
-    [self.navigationController pushViewController:chatViewController animated:YES];
-    self.hidesBottomBarWhenPushed = NO;
+    return UITableViewAutomaticDimension;
 }
 
 /*
@@ -113,6 +105,22 @@
 - (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
     // Return NO if you do not want the item to be re-orderable.
     return YES;
+}
+*/
+
+/*
+#pragma mark - Table view delegate
+
+// In a xib-based application, navigation from a table can be handled in -tableView:didSelectRowAtIndexPath:
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    // Navigation logic may go here, for example:
+    // Create the next view controller.
+    <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:<#@"Nib name"#> bundle:nil];
+    
+    // Pass the selected object to the new view controller.
+    
+    // Push the view controller.
+    [self.navigationController pushViewController:detailViewController animated:YES];
 }
 */
 
