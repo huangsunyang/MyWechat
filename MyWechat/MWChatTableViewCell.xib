@@ -16,7 +16,7 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="113"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="113"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="112.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="VjX-8k-ctU">
@@ -34,7 +34,7 @@
                         </constraints>
                     </imageView>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="We1-tC-eSp">
-                        <rect key="frame" x="48" y="11.5" width="204" height="80"/>
+                        <rect key="frame" x="61" y="11.5" width="191" height="80"/>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="这是一条默认消息这是一条默认消息这是一条默认消息这是一条默认消息这是一条默认消息这是一条默认消息" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mux-Qe-saL">
                         <rect key="frame" x="66" y="14.5" width="186" height="77"/>
@@ -45,7 +45,7 @@
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="bottomMargin" secondItem="mux-Qe-saL" secondAttribute="bottom" constant="13" id="4ZI-0F-xrQ"/>
-                    <constraint firstItem="mux-Qe-saL" firstAttribute="leading" secondItem="We1-tC-eSp" secondAttribute="leading" constant="18" id="5E0-kV-3ct"/>
+                    <constraint firstItem="mux-Qe-saL" firstAttribute="leading" secondItem="We1-tC-eSp" secondAttribute="leading" constant="5" id="5E0-kV-3ct"/>
                     <constraint firstItem="We1-tC-eSp" firstAttribute="top" secondItem="VjX-8k-ctU" secondAttribute="top" id="Ay5-4L-Ngs"/>
                     <constraint firstItem="MZ6-zx-m9l" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="mux-Qe-saL" secondAttribute="trailing" constant="8" id="Df3-4i-pIS"/>
                     <constraint firstItem="VjX-8k-ctU" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="3.5" id="GPT-hJ-rSc"/>

@@ -55,7 +55,7 @@
     UIImage * image = [UIImage imageNamed:@"message_box_left"];
 
     
-    image = [image resizableImageWithCapInsets:UIEdgeInsetsMake(40, 80, 40, 80) resizingMode:UIImageResizingModeStretch];
+    image = [image resizableImageWithCapInsets:UIEdgeInsetsMake(20, 40, 20, 40) resizingMode:UIImageResizingModeStretch];
     cell.messageBox.image = image;
     NSString * str = @"";
     
