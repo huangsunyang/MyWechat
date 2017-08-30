@@ -10,8 +10,12 @@
 #import "MWChatTableViewCell.h"
 #import "NSString+NSStringExtension.h"
 #import "MWChatInformTableViewCell.h"
+#import "MWTypeView.h"
 
 @interface MWChatTableViewController ()
+
+@property (nonatomic, strong) MWTypeView * typeView;
+@property (nonatomic, strong) UITableView * tableView;
 
 @end
 
@@ -19,6 +23,26 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    [self setupViews];
+    [self setupFrames];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(keyboardWasShown:)
+                                                 name:UIKeyboardDidShowNotification
+                                               object:nil];
+}
+
+- (void) viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+}
+
+- (void) setupViews {
+    self.tableView = [[UITableView alloc] init];
+    self.tableView.delegate = self;
+    self.tableView.dataSource = self;
+    
+    [self.view addSubview:self.tableView];
     
     UINib * nib = [UINib nibWithNibName:@"MWChatTableViewCell" bundle:nil];
     
@@ -34,6 +58,16 @@
     
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     self.tableView.estimatedRowHeight = 200;
+    
+    NSArray *subviewArray = [[NSBundle mainBundle] loadNibNamed:@"MWTypeView" owner:self options:nil];
+    self.typeView = subviewArray[0];
+    [self.view addSubview:self.typeView];
+}
+
+- (void) setupFrames {
+    self.tableView.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height - 50);
+    
+    self.typeView.frame = CGRectMake(0, self.view.frame.size.height - 50, self.view.frame.size.width, 50);
 }
 
 - (void)didReceiveMemoryWarning {
@@ -84,6 +118,21 @@
 
 - (CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     return UITableViewAutomaticDimension;
+}
+
+- (void)keyboardWasShown:(NSNotification *)notification
+{
+    
+    // Get the size of the keyboard.
+    CGSize keyboardSize = [[[notification userInfo] objectForKey:UIKeyboardFrameBeginUserInfoKey] CGRectValue].size;
+    
+    //Given size may not account for screen rotation
+    int height = MIN(keyboardSize.height,keyboardSize.width);
+    int width = MAX(keyboardSize.height,keyboardSize.width);
+    
+    self.view.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height - height);
+    
+    [self setupFrames];
 }
 
 @end

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MWTypeViewController"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="N4c-aG-Wig" customClass="MWTypeView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="40"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="blQ-FT-jmR">
+                    <rect key="frame" x="50" y="5" width="230" height="30"/>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NAA-yA-ivX">
+                    <rect key="frame" x="10" y="5" width="30" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="30" id="cDa-8u-V3i"/>
+                        <constraint firstAttribute="height" constant="30" id="eXY-hd-O9o"/>
+                    </constraints>
+                    <state key="normal" backgroundImage="voice_icon"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QDp-KM-IvA">
+                    <rect key="frame" x="290" y="5" width="30" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="Loh-it-OcB"/>
+                        <constraint firstAttribute="width" constant="30" id="X13-XA-zWy"/>
+                    </constraints>
+                    <state key="normal" backgroundImage="emoji_icon"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zNo-zx-DEV">
+                    <rect key="frame" x="335" y="5" width="30" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="30" id="K6e-Hv-XP4"/>
+                        <constraint firstAttribute="height" constant="30" id="a5E-fH-pKI"/>
+                    </constraints>
+                    <state key="normal" backgroundImage="add_icon"/>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="zNo-zx-DEV" secondAttribute="trailing" constant="10" id="0Oj-P3-QvY"/>
+                <constraint firstItem="blQ-FT-jmR" firstAttribute="leading" secondItem="NAA-yA-ivX" secondAttribute="trailing" constant="10" id="5JE-ez-Icv"/>
+                <constraint firstItem="QDp-KM-IvA" firstAttribute="leading" secondItem="blQ-FT-jmR" secondAttribute="trailing" constant="10" id="6mA-Ja-2hV"/>
+                <constraint firstItem="NAA-yA-ivX" firstAttribute="centerY" secondItem="N4c-aG-Wig" secondAttribute="centerY" id="86D-3I-Omh"/>
+                <constraint firstItem="NAA-yA-ivX" firstAttribute="leading" secondItem="N4c-aG-Wig" secondAttribute="leading" constant="10" id="EhW-w3-qvp"/>
+                <constraint firstItem="blQ-FT-jmR" firstAttribute="centerY" secondItem="N4c-aG-Wig" secondAttribute="centerY" id="Mbf-yj-qcF"/>
+                <constraint firstItem="zNo-zx-DEV" firstAttribute="centerY" secondItem="N4c-aG-Wig" secondAttribute="centerY" id="PdP-rg-0Zn"/>
+                <constraint firstItem="QDp-KM-IvA" firstAttribute="centerY" secondItem="N4c-aG-Wig" secondAttribute="centerY" id="aJO-IM-nI9"/>
+                <constraint firstItem="zNo-zx-DEV" firstAttribute="leading" secondItem="QDp-KM-IvA" secondAttribute="trailing" constant="15" id="tSD-XD-B7Z"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="emojiButton" destination="QDp-KM-IvA" id="3Uh-x7-pOe"/>
+                <outlet property="moreToolsButton" destination="zNo-zx-DEV" id="8b7-zC-a9h"/>
+                <outlet property="textField" destination="blQ-FT-jmR" id="TWy-UV-U5i"/>
+                <outlet property="voiceOrTypeButton" destination="NAA-yA-ivX" id="Gfp-uC-Q6x"/>
+            </connections>
+            <point key="canvasLocation" x="89.5" y="-229"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="add_icon" width="32" height="32"/>
+        <image name="emoji_icon" width="32" height="32"/>
+        <image name="voice_icon" width="32" height="32"/>
+    </resources>
+</document>
