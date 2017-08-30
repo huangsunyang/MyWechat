@@ -18,6 +18,14 @@
 		690EAB791F24EAF500609313 /* MWMainPageItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 690EAB781F24EAF500609313 /* MWMainPageItem.m */; };
 		690EAB7E1F27925200609313 /* MWMainPageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 690EAB7C1F27925200609313 /* MWMainPageTableViewCell.m */; };
 		690EAB7F1F27925200609313 /* MWMainPageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 690EAB7D1F27925200609313 /* MWMainPageTableViewCell.xib */; };
+		69E7511D1F5658BE000728DD /* MWChatTableViewCellReverse.m in Sources */ = {isa = PBXBuildFile; fileRef = 69E7511B1F5658BE000728DD /* MWChatTableViewCellReverse.m */; };
+		69E7511E1F5658BE000728DD /* MWChatTableViewCellReverse.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69E7511C1F5658BE000728DD /* MWChatTableViewCellReverse.xib */; };
+		69E751211F565DA8000728DD /* MWChatInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 69E751201F565DA8000728DD /* MWChatInfo.m */; };
+		69E751281F565E26000728DD /* MWChatInformTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 69E751261F565E26000728DD /* MWChatInformTableViewCell.m */; };
+		69E751291F565E26000728DD /* MWChatInformTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69E751271F565E26000728DD /* MWChatInformTableViewCell.xib */; };
+		69E7512D1F5666A6000728DD /* NSString+NSStringExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 69E7512C1F5666A6000728DD /* NSString+NSStringExtension.m */; };
+		69E751331F566DB7000728DD /* MWTypeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 69E751311F566DB7000728DD /* MWTypeViewController.m */; };
+		69E751341F566DB7000728DD /* MWTypeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69E751321F566DB7000728DD /* MWTypeViewController.xib */; };
 		8C6635921F33193E00739333 /* MWChatTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C6635901F33193E00739333 /* MWChatTableViewController.m */; };
 		8C66359A1F33199400739333 /* MWChatTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C6635981F33199400739333 /* MWChatTableViewCell.m */; };
 		8C66359B1F33199400739333 /* MWChatTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C6635991F33199400739333 /* MWChatTableViewCell.xib */; };
@@ -43,6 +51,19 @@
 		690EAB7B1F27925200609313 /* MWMainPageTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWMainPageTableViewCell.h; sourceTree = "<group>"; };
 		690EAB7C1F27925200609313 /* MWMainPageTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWMainPageTableViewCell.m; sourceTree = "<group>"; };
 		690EAB7D1F27925200609313 /* MWMainPageTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MWMainPageTableViewCell.xib; sourceTree = "<group>"; };
+		69E7511A1F5658BE000728DD /* MWChatTableViewCellReverse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWChatTableViewCellReverse.h; sourceTree = "<group>"; };
+		69E7511B1F5658BE000728DD /* MWChatTableViewCellReverse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWChatTableViewCellReverse.m; sourceTree = "<group>"; };
+		69E7511C1F5658BE000728DD /* MWChatTableViewCellReverse.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MWChatTableViewCellReverse.xib; sourceTree = "<group>"; };
+		69E7511F1F565DA8000728DD /* MWChatInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWChatInfo.h; sourceTree = "<group>"; };
+		69E751201F565DA8000728DD /* MWChatInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWChatInfo.m; sourceTree = "<group>"; };
+		69E751251F565E26000728DD /* MWChatInformTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWChatInformTableViewCell.h; sourceTree = "<group>"; };
+		69E751261F565E26000728DD /* MWChatInformTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWChatInformTableViewCell.m; sourceTree = "<group>"; };
+		69E751271F565E26000728DD /* MWChatInformTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MWChatInformTableViewCell.xib; sourceTree = "<group>"; };
+		69E7512B1F5666A6000728DD /* NSString+NSStringExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+NSStringExtension.h"; sourceTree = "<group>"; };
+		69E7512C1F5666A6000728DD /* NSString+NSStringExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+NSStringExtension.m"; sourceTree = "<group>"; };
+		69E751301F566DB7000728DD /* MWTypeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWTypeViewController.h; sourceTree = "<group>"; };
+		69E751311F566DB7000728DD /* MWTypeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWTypeViewController.m; sourceTree = "<group>"; };
+		69E751321F566DB7000728DD /* MWTypeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MWTypeViewController.xib; sourceTree = "<group>"; };
 		8C66358F1F33193E00739333 /* MWChatTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWChatTableViewController.h; sourceTree = "<group>"; };
 		8C6635901F33193E00739333 /* MWChatTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWChatTableViewController.m; sourceTree = "<group>"; };
 		8C6635971F33199400739333 /* MWChatTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWChatTableViewCell.h; sourceTree = "<group>"; };
@@ -80,6 +101,7 @@
 		690EAB3C1F24E6B800609313 /* MyWechat */ = {
 			isa = PBXGroup;
 			children = (
+				69E7512A1F566633000728DD /* Categories */,
 				8C66358E1F3318E200739333 /* ChatView */,
 				690EAB541F24E83000609313 /* MainPage */,
 				690EAB401F24E6B800609313 /* AppDelegate.h */,
@@ -143,6 +165,41 @@
 			name = Model;
 			sourceTree = "<group>";
 		};
+		69E7512A1F566633000728DD /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				69E7512B1F5666A6000728DD /* NSString+NSStringExtension.h */,
+				69E7512C1F5666A6000728DD /* NSString+NSStringExtension.m */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
+		69E7512E1F566D53000728DD /* messageView */ = {
+			isa = PBXGroup;
+			children = (
+				69E7511A1F5658BE000728DD /* MWChatTableViewCellReverse.h */,
+				69E7511B1F5658BE000728DD /* MWChatTableViewCellReverse.m */,
+				69E7511C1F5658BE000728DD /* MWChatTableViewCellReverse.xib */,
+				8C6635971F33199400739333 /* MWChatTableViewCell.h */,
+				8C6635981F33199400739333 /* MWChatTableViewCell.m */,
+				8C6635991F33199400739333 /* MWChatTableViewCell.xib */,
+				69E751251F565E26000728DD /* MWChatInformTableViewCell.h */,
+				69E751261F565E26000728DD /* MWChatInformTableViewCell.m */,
+				69E751271F565E26000728DD /* MWChatInformTableViewCell.xib */,
+			);
+			name = messageView;
+			sourceTree = "<group>";
+		};
+		69E7512F1F566D63000728DD /* typeInView */ = {
+			isa = PBXGroup;
+			children = (
+				69E751301F566DB7000728DD /* MWTypeViewController.h */,
+				69E751311F566DB7000728DD /* MWTypeViewController.m */,
+				69E751321F566DB7000728DD /* MWTypeViewController.xib */,
+			);
+			name = typeInView;
+			sourceTree = "<group>";
+		};
 		8C66358E1F3318E200739333 /* ChatView */ = {
 			isa = PBXGroup;
 			children = (
@@ -165,9 +222,8 @@
 		8C6635951F33197600739333 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				8C6635971F33199400739333 /* MWChatTableViewCell.h */,
-				8C6635981F33199400739333 /* MWChatTableViewCell.m */,
-				8C6635991F33199400739333 /* MWChatTableViewCell.xib */,
+				69E7512F1F566D63000728DD /* typeInView */,
+				69E7512E1F566D53000728DD /* messageView */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -175,6 +231,8 @@
 		8C6635961F33197C00739333 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				69E7511F1F565DA8000728DD /* MWChatInfo.h */,
+				69E751201F565DA8000728DD /* MWChatInfo.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -239,8 +297,11 @@
 			files = (
 				690EAB4D1F24E6B800609313 /* LaunchScreen.storyboard in Resources */,
 				690EAB7F1F27925200609313 /* MWMainPageTableViewCell.xib in Resources */,
+				69E751291F565E26000728DD /* MWChatInformTableViewCell.xib in Resources */,
+				69E7511E1F5658BE000728DD /* MWChatTableViewCellReverse.xib in Resources */,
 				690EAB4A1F24E6B800609313 /* Assets.xcassets in Resources */,
 				8C66359B1F33199400739333 /* MWChatTableViewCell.xib in Resources */,
+				69E751341F566DB7000728DD /* MWTypeViewController.xib in Resources */,
 				690EAB481F24E6B800609313 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -252,10 +313,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				69E751281F565E26000728DD /* MWChatInformTableViewCell.m in Sources */,
 				690EAB761F24EA2F00609313 /* MWMainPageInfoManager.m in Sources */,
 				8C6635921F33193E00739333 /* MWChatTableViewController.m in Sources */,
 				690EAB451F24E6B800609313 /* ViewController.m in Sources */,
 				690EAB791F24EAF500609313 /* MWMainPageItem.m in Sources */,
+				69E7512D1F5666A6000728DD /* NSString+NSStringExtension.m in Sources */,
+				69E751211F565DA8000728DD /* MWChatInfo.m in Sources */,
+				69E7511D1F5658BE000728DD /* MWChatTableViewCellReverse.m in Sources */,
+				69E751331F566DB7000728DD /* MWTypeViewController.m in Sources */,
 				690EAB421F24E6B800609313 /* AppDelegate.m in Sources */,
 				690EAB7E1F27925200609313 /* MWMainPageTableViewCell.m in Sources */,
 				690EAB3F1F24E6B800609313 /* main.m in Sources */,
