@@ -10,7 +10,7 @@
 
 @interface MWTypeView : UIView
 @property (weak, nonatomic) IBOutlet UIButton *voiceOrTypeButton;
-@property (weak, nonatomic) IBOutlet UITextField *textField;
+@property (weak, nonatomic) IBOutlet UITextView *textField;
 @property (weak, nonatomic) IBOutlet UIButton *emojiButton;
 @property (weak, nonatomic) IBOutlet UIButton *moreToolsButton;
 

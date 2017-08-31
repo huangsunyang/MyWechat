@@ -15,12 +15,6 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="40"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="blQ-FT-jmR">
-                    <rect key="frame" x="50" y="5" width="230" height="30"/>
-                    <nil key="textColor"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits" returnKeyType="send"/>
-                </textField>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NAA-yA-ivX">
                     <rect key="frame" x="10" y="5" width="30" height="30"/>
                     <constraints>
@@ -45,24 +39,31 @@
                     </constraints>
                     <state key="normal" backgroundImage="add_icon"/>
                 </button>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="EH9-fc-HaC">
+                    <rect key="frame" x="50" y="5" width="230" height="30"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences" enablesReturnKeyAutomatically="YES"/>
+                </textView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="zNo-zx-DEV" secondAttribute="trailing" constant="10" id="0Oj-P3-QvY"/>
-                <constraint firstItem="blQ-FT-jmR" firstAttribute="leading" secondItem="NAA-yA-ivX" secondAttribute="trailing" constant="10" id="5JE-ez-Icv"/>
-                <constraint firstItem="QDp-KM-IvA" firstAttribute="leading" secondItem="blQ-FT-jmR" secondAttribute="trailing" constant="10" id="6mA-Ja-2hV"/>
                 <constraint firstItem="NAA-yA-ivX" firstAttribute="centerY" secondItem="N4c-aG-Wig" secondAttribute="centerY" id="86D-3I-Omh"/>
+                <constraint firstItem="EH9-fc-HaC" firstAttribute="leading" secondItem="NAA-yA-ivX" secondAttribute="trailing" constant="10" id="9KZ-iD-d9g"/>
                 <constraint firstItem="NAA-yA-ivX" firstAttribute="leading" secondItem="N4c-aG-Wig" secondAttribute="leading" constant="10" id="EhW-w3-qvp"/>
-                <constraint firstItem="blQ-FT-jmR" firstAttribute="centerY" secondItem="N4c-aG-Wig" secondAttribute="centerY" id="Mbf-yj-qcF"/>
                 <constraint firstItem="zNo-zx-DEV" firstAttribute="centerY" secondItem="N4c-aG-Wig" secondAttribute="centerY" id="PdP-rg-0Zn"/>
+                <constraint firstItem="QDp-KM-IvA" firstAttribute="leading" secondItem="EH9-fc-HaC" secondAttribute="trailing" constant="10" id="U1m-Jk-7Ai"/>
                 <constraint firstItem="QDp-KM-IvA" firstAttribute="centerY" secondItem="N4c-aG-Wig" secondAttribute="centerY" id="aJO-IM-nI9"/>
+                <constraint firstItem="EH9-fc-HaC" firstAttribute="centerY" secondItem="N4c-aG-Wig" secondAttribute="centerY" id="ncx-us-BMW"/>
                 <constraint firstItem="zNo-zx-DEV" firstAttribute="leading" secondItem="QDp-KM-IvA" secondAttribute="trailing" constant="15" id="tSD-XD-B7Z"/>
+                <constraint firstItem="EH9-fc-HaC" firstAttribute="top" secondItem="N4c-aG-Wig" secondAttribute="top" constant="5" id="wb0-R0-N8C"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
                 <outlet property="emojiButton" destination="QDp-KM-IvA" id="3Uh-x7-pOe"/>
                 <outlet property="moreToolsButton" destination="zNo-zx-DEV" id="8b7-zC-a9h"/>
-                <outlet property="textField" destination="blQ-FT-jmR" id="TWy-UV-U5i"/>
+                <outlet property="textField" destination="EH9-fc-HaC" id="Nvs-u1-m81"/>
                 <outlet property="voiceOrTypeButton" destination="NAA-yA-ivX" id="Gfp-uC-Q6x"/>
             </connections>
             <point key="canvasLocation" x="89.5" y="-229"/>

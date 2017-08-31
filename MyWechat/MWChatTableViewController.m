@@ -18,6 +18,7 @@
 
 @property (nonatomic, strong) MWTypeView * typeView;
 @property (nonatomic, strong) UITableView * tableView;
+@property (nonatomic, assign) BOOL isKeyboardShown;
 
 @end
 
@@ -29,6 +30,8 @@
     [self setupViews];
     [self setupFrames];
     [self setupEvents];
+    
+    self.isKeyboardShown = false;
 }
 
 - (void) setupViews {
@@ -128,6 +131,9 @@
 }
 
 - (void)keyboardWasShown:(NSNotification *)notification {
+    if (self.isKeyboardShown) return;
+    self.isKeyboardShown = YES;
+    
     CGSize keyboardSize = [[[notification userInfo] objectForKey:UIKeyboardFrameBeginUserInfoKey] CGRectValue].size;
     
     //Given size may not account for screen rotation
@@ -145,6 +151,8 @@
 }
 
 - (void)keyboardWasHidden:(NSNotification *)notification {
+    if (!self.isKeyboardShown) return;
+    self.isKeyboardShown = NO;
     CGSize keyboardSize = [[[notification userInfo] objectForKey:UIKeyboardFrameBeginUserInfoKey] CGRectValue].size;
     
     //Given size may not account for screen rotation
@@ -162,8 +170,9 @@
 }
 
 # pragma mark - textField delegate
-- (BOOL)textFieldShouldReturn:(UITextField *)textField {
-    if (textField == self.typeView.textField) {
+
+- (void)textViewDidEndEditing:(UITextView *)textView {
+    if (textView == self.typeView.textField) {
         if (self.typeView.textField.text.length > 0) {
             NSString * text = self.typeView.textField.text;
             [self sendMessage:text];
@@ -171,7 +180,6 @@
         }
         [self scollToLastCell];
     }
-    return YES;
 }
 
 # pragma mark - touch
