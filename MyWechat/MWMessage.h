@@ -8,15 +8,15 @@
 
 #import <Foundation/Foundation.h>
 
-typedef NS_ENUM(NSUInteger, ChatMessageType) {
-    ChatMessageTypeSend,
-    ChatMessageTypeReceive,
-    ChatMessageTypeSendInform,
+typedef NS_ENUM(NSUInteger, MessageType) {
+    MessageTypeSend,
+    MessageTypeReceive,
+    MessageTypeSendInform,
 };
 
-@interface MWChatInfo : NSObject
+@interface MWMessage : NSObject
 
-@property (nonatomic, assign) ChatMessageType messageType;
+@property (nonatomic, assign) MessageType messageType;
 @property (nonatomic, strong) NSDate * currentTime;
 
 //send和recevie类型共有项
@@ -26,6 +26,6 @@ typedef NS_ENUM(NSUInteger, ChatMessageType) {
 @property (nonatomic, copy) NSString * informText;
 
 - (instancetype) init;
-- (instancetype) initWithType: (ChatMessageType) type string: (NSString *) string;
+- (instancetype) initWithType: (MessageType) type string: (NSString *) string;
 
 @end

@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MWChatTableViewController : UIViewController<UITableViewDelegate, UITableViewDataSource>
+@interface MWChatTableViewController : UIViewController<UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate>
 
 @end

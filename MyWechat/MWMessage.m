@@ -6,9 +6,9 @@
 //  Copyright © 2017年 huangsunyang. All rights reserved.
 //
 
-#import "MWChatInfo.h"
+#import "MWMessage.h"
 
-@implementation MWChatInfo
+@implementation MWMessage
 
 # pragma mark - init method
 
@@ -16,21 +16,21 @@
     self = [super init];
     
     if (self) {
-        
+        self = [self initWithType:MessageTypeReceive string:@"测试字符串"];
     }
     
     return self;
 }
 
-- (instancetype) initWithType: (ChatMessageType) type string: (NSString *) string {
+- (instancetype) initWithType: (MessageType) type string: (NSString *) string {
     self = [super init];
     
     if (self) {
         self.messageType = type;
         
-        if (type == ChatMessageTypeSendInform) {
+        if (type == MessageTypeSendInform) {
             self.informText = string;
-        } else if (type == ChatMessageTypeSend || type == ChatMessageTypeReceive) {
+        } else if (type == MessageTypeSend || type == MessageTypeReceive) {
             self.messageText = string;
         }
     }

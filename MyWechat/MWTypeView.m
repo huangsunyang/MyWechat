@@ -10,6 +10,4 @@
 
 @implementation MWTypeView
 
-
-
 @end

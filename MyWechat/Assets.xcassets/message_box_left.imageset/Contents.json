@@ -5,6 +5,20 @@
       "scale" : "1x"
     },
     {
+      "resizing" : {
+        "mode" : "9-part",
+        "center" : {
+          "mode" : "tile",
+          "width" : 60,
+          "height" : 21
+        },
+        "cap-insets" : {
+          "bottom" : 20,
+          "top" : 18,
+          "right" : 17,
+          "left" : 24
+        }
+      },
       "idiom" : "iphone",
       "filename" : "text message clip art-434.jpg",
       "scale" : "2x"
