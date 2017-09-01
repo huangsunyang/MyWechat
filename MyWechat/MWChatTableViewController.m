@@ -255,10 +255,10 @@
     NSLog(@"MessageLabel long pressed");
     CGPoint point = [gesture locationInView:self.tableView];
     
-    NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-    UITableViewCell * cell = [self.tableView cellForRowAtIndexPath:indexPath];
+    NSIndexPath *indexPath = [self.tableView indexPathForRowAtPoint:point];
+    MWChatTableViewCell * cell = [self.tableView cellForRowAtIndexPath:indexPath];
     
-    
+    CGRect textRect = cell.chatText.frame;
     
     [self becomeFirstResponder];
     
@@ -267,8 +267,11 @@
                                                          action:@selector(onDeleteMessage:)];
     menu.menuItems = @[deleteItem];
     
-    [menu setTargetRect:CGRectMake(point.x, point.y,
-                                   2, 2) inView:self.tableView];
+    CGRect menuRect = CGRectMake(textRect.origin.x,
+                                 cell.frame.origin.y + textRect.origin.y,
+                                 textRect.size.width, textRect.size.height);
+    
+    [menu setTargetRect: menuRect inView:self.tableView];
     [menu setMenuVisible:YES animated:YES];
 }
 
