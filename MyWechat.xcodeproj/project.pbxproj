@@ -18,7 +18,6 @@
 		690EAB791F24EAF500609313 /* MWMainPageItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 690EAB781F24EAF500609313 /* MWMainPageItem.m */; };
 		690EAB7E1F27925200609313 /* MWMainPageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 690EAB7C1F27925200609313 /* MWMainPageTableViewCell.m */; };
 		690EAB7F1F27925200609313 /* MWMainPageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 690EAB7D1F27925200609313 /* MWMainPageTableViewCell.xib */; };
-		69E7511D1F5658BE000728DD /* MWChatTableViewCellReverse.m in Sources */ = {isa = PBXBuildFile; fileRef = 69E7511B1F5658BE000728DD /* MWChatTableViewCellReverse.m */; };
 		69E7511E1F5658BE000728DD /* MWChatTableViewCellReverse.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69E7511C1F5658BE000728DD /* MWChatTableViewCellReverse.xib */; };
 		69E751211F565DA8000728DD /* MWMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 69E751201F565DA8000728DD /* MWMessage.m */; };
 		69E751281F565E26000728DD /* MWChatInformTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 69E751261F565E26000728DD /* MWChatInformTableViewCell.m */; };
@@ -54,8 +53,6 @@
 		690EAB7B1F27925200609313 /* MWMainPageTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWMainPageTableViewCell.h; sourceTree = "<group>"; };
 		690EAB7C1F27925200609313 /* MWMainPageTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWMainPageTableViewCell.m; sourceTree = "<group>"; };
 		690EAB7D1F27925200609313 /* MWMainPageTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MWMainPageTableViewCell.xib; sourceTree = "<group>"; };
-		69E7511A1F5658BE000728DD /* MWChatTableViewCellReverse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWChatTableViewCellReverse.h; sourceTree = "<group>"; };
-		69E7511B1F5658BE000728DD /* MWChatTableViewCellReverse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWChatTableViewCellReverse.m; sourceTree = "<group>"; };
 		69E7511C1F5658BE000728DD /* MWChatTableViewCellReverse.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MWChatTableViewCellReverse.xib; sourceTree = "<group>"; };
 		69E7511F1F565DA8000728DD /* MWMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWMessage.h; sourceTree = "<group>"; };
 		69E751201F565DA8000728DD /* MWMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWMessage.m; sourceTree = "<group>"; };
@@ -186,8 +183,6 @@
 		69E7512E1F566D53000728DD /* messageTableView */ = {
 			isa = PBXGroup;
 			children = (
-				69E7511A1F5658BE000728DD /* MWChatTableViewCellReverse.h */,
-				69E7511B1F5658BE000728DD /* MWChatTableViewCellReverse.m */,
 				69E7511C1F5658BE000728DD /* MWChatTableViewCellReverse.xib */,
 				8C6635971F33199400739333 /* MWChatTableViewCell.h */,
 				8C6635981F33199400739333 /* MWChatTableViewCell.m */,
@@ -344,7 +339,6 @@
 				690EAB791F24EAF500609313 /* MWMainPageItem.m in Sources */,
 				69E7512D1F5666A6000728DD /* NSString+NSStringExtension.m in Sources */,
 				69E751211F565DA8000728DD /* MWMessage.m in Sources */,
-				69E7511D1F5658BE000728DD /* MWChatTableViewCellReverse.m in Sources */,
 				690EAB421F24E6B800609313 /* AppDelegate.m in Sources */,
 				690EAB7E1F27925200609313 /* MWMainPageTableViewCell.m in Sources */,
 				690EAB3F1F24E6B800609313 /* main.m in Sources */,

@@ -254,8 +254,11 @@
 - (void) onMessageLongPressed: (UIGestureRecognizer *) gesture {
     NSLog(@"MessageLabel long pressed");
     CGPoint point = [gesture locationInView:self.tableView];
+    
     NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-    long index = indexPath.row;
+    UITableViewCell * cell = [self.tableView cellForRowAtIndexPath:indexPath];
+    
+    
     
     [self becomeFirstResponder];
     
@@ -267,9 +270,6 @@
     [menu setTargetRect:CGRectMake(point.x, point.y,
                                    2, 2) inView:self.tableView];
     [menu setMenuVisible:YES animated:YES];
-    
-    [self.view setNeedsLayout];
-    [self.view setNeedsDisplay];
 }
 
 - (void)onDeleteMessage: (id)sender {
