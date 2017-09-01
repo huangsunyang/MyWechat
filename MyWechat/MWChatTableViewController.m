@@ -13,6 +13,7 @@
 #import "MWTypeView.h"
 #import "MWMessageManager.h"
 #import "MWMessage.h"
+#import "MWChatSettingTableViewController.h"
 
 @interface MWChatTableViewController ()
 
@@ -30,6 +31,7 @@
     [self setupViews];
     [self setupFrames];
     [self setupEvents];
+    [self setupNavigationBarItems];
     
     self.isKeyboardShown = false;
 }
@@ -38,6 +40,9 @@
     self.tableView = [[UITableView alloc] init];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    self.tableView.estimatedRowHeight = 200;
+    self.tableView.allowsSelection = NO;
     
     [self.view addSubview:self.tableView];
     
@@ -53,12 +58,11 @@
     
     [self.tableView registerNib:informMessage forCellReuseIdentifier:@"MWChatInformTableViewCell"];
     
-    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-    self.tableView.estimatedRowHeight = 200;
+    
     
     NSArray *subviewArray = [[NSBundle mainBundle] loadNibNamed:@"MWTypeView" owner:self options:nil];
     self.typeView = subviewArray[0];
-    self.typeView.textField.delegate = self;
+    self.typeView.textField.delegate = self.typeView;
     [self.view addSubview:self.typeView];
 }
 
@@ -72,22 +76,43 @@
     
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(keyboardWasShown:)
-                                                 name:UIKeyboardDidShowNotification
+                                                 name:UIKeyboardWillShowNotification
                                                object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(keyboardWasHidden:)
-                                                 name:UIKeyboardDidHideNotification
+                                                 name:UIKeyboardWillHideNotification
+                                               object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(keyboardFrameChanged:)
+                                                 name:UIKeyboardWillChangeFrameNotification
                                                object:nil];
     
     UITapGestureRecognizer * tapGesture = [[UITapGestureRecognizer alloc]
                                            initWithTarget:self
                                            action:@selector(tableviewTouchInside)];
     [self.tableView addGestureRecognizer:tapGesture];
+    [self.typeView.moreToolsButton addTarget:self
+                                      action:@selector(onMoreToolsButtonClicked:)
+                            forControlEvents:UIControlEventTouchUpInside];
+}
+
+- (void) setupNavigationBarItems {
+    UIImage * image = [UIImage imageNamed:@"user_icon"];
+    image = [image imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    UIBarButtonItem * setButton = [[UIBarButtonItem alloc] initWithImage:image
+                                                                   style:UIBarButtonItemStyleDone
+                                                                  target:self
+                                                                  action:@selector(onRightNavigationBarItemClicked)];
+    self.navigationItem.rightBarButtonItem = setButton;
 }
 
 - (void) viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     [self scollToLastCell];
+}
+
+- (void) dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -105,6 +130,7 @@
     return [MWMessageManager sharedInstance].allMessages.count;
 }
 
+#pragma mark - Table view delegate
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
@@ -113,10 +139,12 @@
     if (message.messageType == MessageTypeReceive) {
         MWChatTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MWChatTableViewCell" forIndexPath:indexPath];
         cell.chatText.text = message.messageText;
+        cell.delegate = self;
         return cell;
     } else if (message.messageType == MessageTypeSend) {
         MWChatTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MWChatTableViewCellReverse" forIndexPath:indexPath];
         cell.chatText.text = message.messageText;
+        cell.delegate = self;
         return cell;
     } else if (message.messageType == MessageTypeSendInform) {
         MWChatInformTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MWChatInformTableViewCell" forIndexPath:indexPath];
@@ -130,17 +158,20 @@
     return UITableViewAutomaticDimension;
 }
 
+
+# pragma mark - keyboard events
+
 - (void)keyboardWasShown:(NSNotification *)notification {
-    if (self.isKeyboardShown) return;
-    self.isKeyboardShown = YES;
-    
-    CGSize keyboardSize = [[[notification userInfo] objectForKey:UIKeyboardFrameBeginUserInfoKey] CGRectValue].size;
+    CGSize keyboardSize = [[[notification userInfo] objectForKey:UIKeyboardFrameEndUserInfoKey] CGRectValue].size;
     
     //Given size may not account for screen rotation
     int height = MIN(keyboardSize.height,keyboardSize.width);
     __unused int width = MAX(keyboardSize.height,keyboardSize.width);
     
-    self.view.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height - height);
+    CGFloat wholeHeight = [[UIScreen mainScreen] bounds].size.height;
+    
+    self.view.frame = CGRectMake(0, 0, self.view.frame.size.width,
+                                 wholeHeight - height);
     
     [UIView animateWithDuration:0.1
                      animations:^ {
@@ -151,15 +182,10 @@
 }
 
 - (void)keyboardWasHidden:(NSNotification *)notification {
-    if (!self.isKeyboardShown) return;
-    self.isKeyboardShown = NO;
-    CGSize keyboardSize = [[[notification userInfo] objectForKey:UIKeyboardFrameBeginUserInfoKey] CGRectValue].size;
+    CGFloat wholeHeight = [[UIScreen mainScreen] bounds].size.height;
     
-    //Given size may not account for screen rotation
-    int height = MIN(keyboardSize.height,keyboardSize.width);
-    __unused int width = MAX(keyboardSize.height,keyboardSize.width);
-    
-    self.view.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height + height);
+    self.view.frame = CGRectMake(0, 0, self.view.frame.size.width,
+                                 wholeHeight);
     
     [UIView animateWithDuration:0.1
                      animations:^ {
@@ -169,26 +195,74 @@
     [self scollToLastCell];
 }
 
-# pragma mark - textField delegate
-
-- (void)textViewDidEndEditing:(UITextView *)textView {
-    if (textView == self.typeView.textField) {
-        if (self.typeView.textField.text.length > 0) {
-            NSString * text = self.typeView.textField.text;
-            [self sendMessage:text];
-            [self.typeView.textField setText:@""];
-        }
-        [self scollToLastCell];
-    }
+- (void)keyboardFrameChanged: (NSNotification *)notification {
+    CGSize keyboardSize = [[[notification userInfo] objectForKey:UIKeyboardFrameBeginUserInfoKey] CGRectValue].size;
+    
+    //Given size may not account for screen rotation
+    int height = MIN(keyboardSize.height,keyboardSize.width);
+    __unused int width = MAX(keyboardSize.height,keyboardSize.width);
+    
+    CGFloat wholeHeight = [[UIScreen mainScreen] bounds].size.height;
+    
+    self.view.frame = CGRectMake(0, 0, self.view.frame.size.width,
+                                 wholeHeight - height);
+    
+    [UIView animateWithDuration:0.1
+                     animations:^ {
+                         [self setupFrames];
+                     }];
+    
+    [self scollToLastCell];
 }
 
-# pragma mark - touch
+
+# pragma mark - touch events
+
 - (void) tableviewTouchInside {
     [self.view endEditing:YES];
 }
 
+- (void) onRightNavigationBarItemClicked {
+    UIStoryboard * storyBoard = [UIStoryboard storyboardWithName:@"MWChatSettingTableViewController" bundle:nil];
+    MWChatSettingTableViewController * chatSetting = [storyBoard instantiateViewControllerWithIdentifier:@"MWChatSettingTableViewController"];
+    
+    self.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:chatSetting animated:YES];
+    self.hidesBottomBarWhenPushed = NO;
+}
+
+- (void) onMoreToolsButtonClicked:(id)sender {
+    UIImage * image = [((UIButton *) sender) backgroundImageForState:UIControlStateNormal];
+    
+    if ([image isEqual: [UIImage imageNamed:@"add_icon"]]) {
+        
+    } else if ([image isEqual: [UIImage imageNamed:@"send_icon"]]) {
+        NSString * text = self.typeView.textField.text;
+        if (text.length > 0) {
+            self.typeView.textField.text = @"";
+            [self.typeView textViewDidChange:self.typeView.textField];
+            [self sendMessage:text];
+            [self scollToLastCell];
+        }
+    }
+}
+
+- (void) onMessageLongPressed: (UIGestureRecognizer *) gesture {
+    CGPoint point = [gesture locationInView:self.tableView];
+    NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+    long index = indexPath.row;
+    UIMenuController * menu = [UIMenuController sharedMenuController];
+    UIMenuItem * deleteItem = [[UIMenuItem alloc] initWithTitle:@"删除"
+                                                         action:@selector(onDeleteMessage)];
+    menu.menuItems = @[deleteItem];
+    
+    [menu setTargetRect:CGRectMake(point.x, point.y,
+                                   2, 2) inView:self.tableView];
+    [menu setMenuVisible:YES animated:YES];
+}
 
 # pragma mark - tool functions
+
 - (void) scollToLastCell {
     long numOfSection = [self.tableView numberOfSections];
     if (numOfSection <= 0) return;
@@ -207,6 +281,7 @@
     MWMessage * message = [[MWMessage alloc] initWithType:MessageTypeSend string:text];
     [[MWMessageManager sharedInstance] addMessage: message];
     [self.tableView reloadData];
+    [self.tableView layoutIfNeeded];
 }
 
 @end

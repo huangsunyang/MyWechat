@@ -27,6 +27,8 @@
 		69E751341F566DB7000728DD /* MWTypeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69E751321F566DB7000728DD /* MWTypeView.xib */; };
 		69E751431F5716CA000728DD /* MWTypeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 69E751421F5716CA000728DD /* MWTypeView.m */; };
 		69E751481F585F56000728DD /* MWMessageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 69E751471F585F56000728DD /* MWMessageManager.m */; };
+		8C01A5291F593BE700FE6882 /* MWChatSettingTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C01A5271F593BE700FE6882 /* MWChatSettingTableViewController.m */; };
+		8C01A52C1F5944EC00FE6882 /* MWChatSettingTableViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C01A52B1F5944EC00FE6882 /* MWChatSettingTableViewController.storyboard */; };
 		8C6635921F33193E00739333 /* MWChatTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C6635901F33193E00739333 /* MWChatTableViewController.m */; };
 		8C66359A1F33199400739333 /* MWChatTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C6635981F33199400739333 /* MWChatTableViewCell.m */; };
 		8C66359B1F33199400739333 /* MWChatTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C6635991F33199400739333 /* MWChatTableViewCell.xib */; };
@@ -67,6 +69,10 @@
 		69E751421F5716CA000728DD /* MWTypeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWTypeView.m; sourceTree = "<group>"; };
 		69E751461F585F56000728DD /* MWMessageManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWMessageManager.h; sourceTree = "<group>"; };
 		69E751471F585F56000728DD /* MWMessageManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWMessageManager.m; sourceTree = "<group>"; };
+		8C01A5261F593BE700FE6882 /* MWChatSettingTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWChatSettingTableViewController.h; sourceTree = "<group>"; };
+		8C01A5271F593BE700FE6882 /* MWChatSettingTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWChatSettingTableViewController.m; sourceTree = "<group>"; };
+		8C01A52B1F5944EC00FE6882 /* MWChatSettingTableViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MWChatSettingTableViewController.storyboard; sourceTree = "<group>"; };
+		8C01A52D1F595EB100FE6882 /* MWMessageProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWMessageProtocol.h; sourceTree = "<group>"; };
 		8C66358F1F33193E00739333 /* MWChatTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWChatTableViewController.h; sourceTree = "<group>"; };
 		8C6635901F33193E00739333 /* MWChatTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWChatTableViewController.m; sourceTree = "<group>"; };
 		8C6635971F33199400739333 /* MWChatTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWChatTableViewCell.h; sourceTree = "<group>"; };
@@ -108,10 +114,10 @@
 				8C66358E1F3318E200739333 /* ChatView */,
 				690EAB541F24E83000609313 /* MainPage */,
 				690EAB401F24E6B800609313 /* AppDelegate.h */,
+				690EAB461F24E6B800609313 /* Main.storyboard */,
 				690EAB411F24E6B800609313 /* AppDelegate.m */,
 				690EAB431F24E6B800609313 /* ViewController.h */,
 				690EAB441F24E6B800609313 /* ViewController.m */,
-				690EAB461F24E6B800609313 /* Main.storyboard */,
 				690EAB491F24E6B800609313 /* Assets.xcassets */,
 				690EAB4B1F24E6B800609313 /* LaunchScreen.storyboard */,
 				690EAB4E1F24E6B800609313 /* Info.plist */,
@@ -189,6 +195,7 @@
 				69E751251F565E26000728DD /* MWChatInformTableViewCell.h */,
 				69E751261F565E26000728DD /* MWChatInformTableViewCell.m */,
 				69E751271F565E26000728DD /* MWChatInformTableViewCell.xib */,
+				8C01A52D1F595EB100FE6882 /* MWMessageProtocol.h */,
 			);
 			name = messageTableView;
 			sourceTree = "<group>";
@@ -201,6 +208,16 @@
 				69E751421F5716CA000728DD /* MWTypeView.m */,
 			);
 			name = typeInView;
+			sourceTree = "<group>";
+		};
+		8C01A5251F593B8200FE6882 /* ChatSettingView */ = {
+			isa = PBXGroup;
+			children = (
+				8C01A5261F593BE700FE6882 /* MWChatSettingTableViewController.h */,
+				8C01A5271F593BE700FE6882 /* MWChatSettingTableViewController.m */,
+				8C01A52B1F5944EC00FE6882 /* MWChatSettingTableViewController.storyboard */,
+			);
+			name = ChatSettingView;
 			sourceTree = "<group>";
 		};
 		8C66358E1F3318E200739333 /* ChatView */ = {
@@ -225,6 +242,7 @@
 		8C6635951F33197600739333 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				8C01A5251F593B8200FE6882 /* ChatSettingView */,
 				69E7512F1F566D63000728DD /* typeInView */,
 				69E7512E1F566D53000728DD /* messageTableView */,
 			);
@@ -305,6 +323,7 @@
 				69E751291F565E26000728DD /* MWChatInformTableViewCell.xib in Resources */,
 				69E7511E1F5658BE000728DD /* MWChatTableViewCellReverse.xib in Resources */,
 				690EAB4A1F24E6B800609313 /* Assets.xcassets in Resources */,
+				8C01A52C1F5944EC00FE6882 /* MWChatSettingTableViewController.storyboard in Resources */,
 				8C66359B1F33199400739333 /* MWChatTableViewCell.xib in Resources */,
 				69E751341F566DB7000728DD /* MWTypeView.xib in Resources */,
 				690EAB481F24E6B800609313 /* Main.storyboard in Resources */,
@@ -332,6 +351,7 @@
 				69E751481F585F56000728DD /* MWMessageManager.m in Sources */,
 				69E751431F5716CA000728DD /* MWTypeView.m in Sources */,
 				690EAB671F24E94D00609313 /* MWMainPageTableViewController.m in Sources */,
+				8C01A5291F593BE700FE6882 /* MWChatSettingTableViewController.m in Sources */,
 				8C66359A1F33199400739333 /* MWChatTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

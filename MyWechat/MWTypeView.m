@@ -10,4 +10,16 @@
 
 @implementation MWTypeView
 
+- (void)textViewDidChange:(UITextView *)textView {
+    if (textView.text.length == 0) {
+        [self.moreToolsButton setBackgroundImage:[UIImage imageNamed:@"add_icon"]
+                                        forState:UIControlStateNormal];
+    } else {
+        [self.moreToolsButton setBackgroundImage:[UIImage imageNamed:@"send_icon"]
+                                        forState:UIControlStateNormal];
+    }
+}
+
+
+
 @end

@@ -9,8 +9,8 @@
         "mode" : "9-part",
         "center" : {
           "mode" : "tile",
-          "width" : 60,
-          "height" : 27
+          "width" : 3,
+          "height" : 9
         },
         "cap-insets" : {
           "bottom" : 17,

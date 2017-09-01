@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MWTypeView : UIView
+@interface MWTypeView : UIView<UITextViewDelegate>
 @property (weak, nonatomic) IBOutlet UIButton *voiceOrTypeButton;
 @property (weak, nonatomic) IBOutlet UITextView *textField;
 @property (weak, nonatomic) IBOutlet UIButton *emojiButton;

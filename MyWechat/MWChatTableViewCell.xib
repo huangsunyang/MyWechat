@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -20,34 +20,33 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="default_portrait" translatesAutoresizingMaskIntoConstraints="NO" id="VjX-8k-ctU">
-                        <rect key="frame" x="13" y="11.5" width="35" height="35"/>
+                        <rect key="frame" x="13" y="8" width="35" height="35"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="35" id="4S1-l6-eWL"/>
                             <constraint firstAttribute="height" constant="35" id="N4u-PU-CwR"/>
                         </constraints>
                     </imageView>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="message_box_left" translatesAutoresizingMaskIntoConstraints="NO" id="We1-tC-eSp">
-                        <rect key="frame" x="57" y="11.5" width="200" height="85"/>
+                        <rect key="frame" x="54" y="8" width="234.5" height="93.5"/>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="这是一条默认消息这是一条默认消息这是一条默认消息这是一条默认消息这是一条默认消息这是一条默认消息" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mux-Qe-saL">
-                        <rect key="frame" x="66" y="14.5" width="186" height="77"/>
+                        <rect key="frame" x="66" y="11" width="214.5" height="85.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="bottomMargin" secondItem="mux-Qe-saL" secondAttribute="bottom" constant="13" id="4ZI-0F-xrQ"/>
-                    <constraint firstItem="mux-Qe-saL" firstAttribute="leading" secondItem="We1-tC-eSp" secondAttribute="leading" constant="9" id="5E0-kV-3ct"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="mux-Qe-saL" secondAttribute="bottom" constant="8" id="4ZI-0F-xrQ"/>
+                    <constraint firstItem="mux-Qe-saL" firstAttribute="leading" secondItem="We1-tC-eSp" secondAttribute="leading" constant="12" id="5E0-kV-3ct"/>
                     <constraint firstItem="We1-tC-eSp" firstAttribute="top" secondItem="VjX-8k-ctU" secondAttribute="top" id="Ay5-4L-Ngs"/>
-                    <constraint firstItem="VjX-8k-ctU" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="3.5" id="GPT-hJ-rSc"/>
-                    <constraint firstItem="mux-Qe-saL" firstAttribute="trailing" secondItem="We1-tC-eSp" secondAttribute="trailing" constant="-5" id="Jf6-0J-q95"/>
+                    <constraint firstItem="VjX-8k-ctU" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="GPT-hJ-rSc"/>
+                    <constraint firstItem="mux-Qe-saL" firstAttribute="trailing" secondItem="We1-tC-eSp" secondAttribute="trailing" constant="-8" id="Jf6-0J-q95"/>
                     <constraint firstItem="mux-Qe-saL" firstAttribute="leading" secondItem="VjX-8k-ctU" secondAttribute="trailing" constant="18" id="Q5Z-QA-arZ"/>
                     <constraint firstItem="mux-Qe-saL" firstAttribute="top" secondItem="VjX-8k-ctU" secondAttribute="top" constant="3" id="Rxr-uj-gwt"/>
                     <constraint firstItem="mux-Qe-saL" firstAttribute="bottom" secondItem="We1-tC-eSp" secondAttribute="bottom" constant="-5" id="eee-wc-eN7"/>
                     <constraint firstItem="VjX-8k-ctU" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="13" id="gbc-pw-XUT"/>
-                    <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="mux-Qe-saL" secondAttribute="trailing" constant="60" id="gtG-L5-bhq"/>
-                    <constraint firstItem="mux-Qe-saL" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="6.5" id="p63-Mg-3hf"/>
+                    <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="mux-Qe-saL" secondAttribute="trailing" constant="30" id="gtG-L5-bhq"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
@@ -60,6 +59,6 @@
     </objects>
     <resources>
         <image name="default_portrait" width="100" height="100"/>
-        <image name="message_box_left" width="50" height="29"/>
+        <image name="message_box_left" width="21" height="25"/>
     </resources>
 </document>

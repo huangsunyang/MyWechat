@@ -7,11 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MWMessageProtocol.h"
 
 @interface MWChatTableViewCellReverse : UITableViewCell
 
 @property (strong, nonatomic) IBOutlet UIImageView *leftPortrait;
 @property (strong, nonatomic) IBOutlet UIImageView *messageBox;
 @property (weak, nonatomic) IBOutlet UILabel *chatText;
+@property (weak, nonatomic) id<MWMessageProtocol> delegate;
 
 @end
