@@ -50,8 +50,19 @@
     return _allMessages;
 }
 
+//插入信息
 - (void) addMessage:(MWMessage *)message {
     [_allMessages addObject:message];
+}
+
+//在固定位置插入短信
+- (void) addMessage:(MWMessage *)message AtIndex: (long) index {
+    [_allMessages insertObject:message atIndex:index];
+}
+
+//删除某条短信
+- (void) deleteMessageAtIndex: (long) index {
+    [_allMessages removeObjectAtIndex:index];
 }
 
 @end

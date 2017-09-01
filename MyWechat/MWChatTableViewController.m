@@ -21,6 +21,8 @@
 @property (nonatomic, strong) UITableView * tableView;
 @property (nonatomic, assign) BOOL isKeyboardShown;
 
+@property (nonatomic, strong) NSIndexPath * currentLongPressedIndex;
+
 @end
 
 @implementation MWChatTableViewController
@@ -42,8 +44,6 @@
     self.tableView.dataSource = self;
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     self.tableView.estimatedRowHeight = 200;
-//    UILongPressGestureRecognizer *gest = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(onMessageLongPressed:)];
-//    [self.tableView addGestureRecognizer:gest];
     self.tableView.allowsSelection = NO;
     
     
@@ -88,6 +88,11 @@
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(keyboardFrameChanged:)
                                                  name:UIKeyboardWillChangeFrameNotification
+                                               object:nil];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(menuWasHidden:)
+                                                 name:UIMenuControllerDidHideMenuNotification
                                                object:nil];
     
     UITapGestureRecognizer * tapGesture = [[UITapGestureRecognizer alloc]
@@ -218,6 +223,10 @@
     [self scollToLastCell];
 }
 
+- (void) menuWasHidden: (NSNotification *)notification {
+    [UIMenuController sharedMenuController].menuItems = nil;
+    [[UIMenuController sharedMenuController] update];
+}
 
 # pragma mark - touch events
 
@@ -232,7 +241,6 @@
     
     self.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:chatSetting animated:YES];
-    self.hidesBottomBarWhenPushed = NO;
 }
 
 - (void) onMoreToolsButtonClicked:(id)sender {
@@ -252,30 +260,62 @@
 }
 
 - (void) onMessageLongPressed: (UIGestureRecognizer *) gesture {
-    NSLog(@"MessageLabel long pressed");
-    CGPoint point = [gesture locationInView:self.tableView];
-    
-    NSIndexPath *indexPath = [self.tableView indexPathForRowAtPoint:point];
-    MWChatTableViewCell * cell = [self.tableView cellForRowAtIndexPath:indexPath];
-    
-    CGRect textRect = cell.chatText.frame;
-    
-    [self becomeFirstResponder];
-    
-    UIMenuController * menu = [UIMenuController sharedMenuController];
-    UIMenuItem * deleteItem = [[UIMenuItem alloc] initWithTitle:@"删除"
-                                                         action:@selector(onDeleteMessage:)];
-    menu.menuItems = @[deleteItem];
-    
-    CGRect menuRect = CGRectMake(textRect.origin.x,
-                                 cell.frame.origin.y + textRect.origin.y,
-                                 textRect.size.width, textRect.size.height);
-    
-    [menu setTargetRect: menuRect inView:self.tableView];
-    [menu setMenuVisible:YES animated:YES];
+    if (gesture.state == UIGestureRecognizerStateBegan) {
+        NSLog(@"MessageLabel long pressed");
+        CGPoint point = [gesture locationInView:self.tableView];
+        
+        [self becomeFirstResponder];
+        
+        //获取当前点击的indexPath
+        NSIndexPath *indexPath = [self.tableView indexPathForRowAtPoint:point];
+        MWChatTableViewCell * cell = [self.tableView cellForRowAtIndexPath:indexPath];
+        
+        //回调的方法需要此参数
+        self.currentLongPressedIndex = indexPath;
+        
+        //文字部分的frame
+        CGRect textRect = cell.chatText.frame;
+        
+        UIMenuController * menu = [UIMenuController sharedMenuController];
+        UIMenuItem * deleteItem = [[UIMenuItem alloc] initWithTitle:@"删除"
+                                                             action:@selector(onDeleteMessage:)];
+        UIMenuItem * copyItem = [[UIMenuItem alloc] initWithTitle:@"复制"
+                                                           action:@selector(onCopyMessage:)];
+        UIMenuItem * forwardItem = [[UIMenuItem alloc] initWithTitle:@"转发"
+                                                           action:@selector(onForwardMessage:)];
+        UIMenuItem * moreItem = [[UIMenuItem alloc] initWithTitle:@"更多"
+                                                           action:@selector(onMoreItem:)];
+        menu.menuItems = @[copyItem, deleteItem, forwardItem, moreItem];
+        
+        //显示位置为menuRect上下边的中点
+        CGRect menuRect = CGRectMake(textRect.origin.x,
+                                     cell.frame.origin.y + textRect.origin.y,
+                                     textRect.size.width, textRect.size.height);
+        
+        [menu setTargetRect: menuRect inView:self.tableView];
+        [menu setMenuVisible:YES animated:YES];
+    }
 }
 
+//删除一条信息
 - (void)onDeleteMessage: (id)sender {
+    MWMessageManager * messageManager = [MWMessageManager sharedInstance];
+    [messageManager deleteMessageAtIndex:self.currentLongPressedIndex.row];
+    [self.tableView reloadData];
+}
+
+//复制选中字符串到剪贴板
+- (void)onCopyMessage: (id)sender {
+    UIPasteboard *pasteboard = [UIPasteboard generalPasteboard];
+    MWChatTableViewCell * cell = [self.tableView cellForRowAtIndexPath:self.currentLongPressedIndex];
+    pasteboard.string = cell.chatText.text;
+}
+
+- (void)onMoreItem: (id)sender {
+    
+}
+
+- (void)onForwardMessage: (id)sender {
     
 }
 

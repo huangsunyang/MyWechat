@@ -15,4 +15,6 @@
 
 + (instancetype) sharedInstance;
 - (void) addMessage: (MWMessage *) message;
+- (void) addMessage:(MWMessage *)message AtIndex: (long) index;
+- (void) deleteMessageAtIndex: (long) index;
 @end
