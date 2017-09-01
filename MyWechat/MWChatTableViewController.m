@@ -42,7 +42,10 @@
     self.tableView.dataSource = self;
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     self.tableView.estimatedRowHeight = 200;
+//    UILongPressGestureRecognizer *gest = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(onMessageLongPressed:)];
+//    [self.tableView addGestureRecognizer:gest];
     self.tableView.allowsSelection = NO;
+    
     
     [self.view addSubview:self.tableView];
     
@@ -219,6 +222,7 @@
 # pragma mark - touch events
 
 - (void) tableviewTouchInside {
+    NSLog(@"tableview touch inside");
     [self.view endEditing:YES];
 }
 
@@ -248,17 +252,32 @@
 }
 
 - (void) onMessageLongPressed: (UIGestureRecognizer *) gesture {
+    NSLog(@"MessageLabel long pressed");
     CGPoint point = [gesture locationInView:self.tableView];
     NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
     long index = indexPath.row;
+    
+    [self becomeFirstResponder];
+    
     UIMenuController * menu = [UIMenuController sharedMenuController];
     UIMenuItem * deleteItem = [[UIMenuItem alloc] initWithTitle:@"删除"
-                                                         action:@selector(onDeleteMessage)];
+                                                         action:@selector(onDeleteMessage:)];
     menu.menuItems = @[deleteItem];
     
     [menu setTargetRect:CGRectMake(point.x, point.y,
                                    2, 2) inView:self.tableView];
     [menu setMenuVisible:YES animated:YES];
+    
+    [self.view setNeedsLayout];
+    [self.view setNeedsDisplay];
+}
+
+- (void)onDeleteMessage: (id)sender {
+    
+}
+
+- (BOOL)canBecomeFirstResponder {
+    return YES;
 }
 
 # pragma mark - tool functions

@@ -20,14 +20,17 @@
     
     UILongPressGestureRecognizer * longGesture = [[UILongPressGestureRecognizer alloc] initWithTarget:self.delegate
                                                                              action:@selector(onMessageLongPressed:)];
-
-    [self.chatText addGestureRecognizer:longGesture];
+    [self.messageBox addGestureRecognizer:longGesture];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
 
     // Configure the view for the selected state
+}
+
+- (void) onDeleteMessage: (id) sender {
+    
 }
 
 @end
