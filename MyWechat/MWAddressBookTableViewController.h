@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MWAddressBookTableViewController : UIViewController<UITableViewDelegate, UITableViewDataSource>
+@interface MWAddressBookTableViewController : UIViewController<UITableViewDelegate, UITableViewDataSource, UIGestureRecognizerDelegate>
 
 @end

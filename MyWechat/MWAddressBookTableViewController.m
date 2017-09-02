@@ -18,6 +18,7 @@
 
 @property (strong, nonatomic) UITableView * addressBookTableView;
 @property (strong, nonatomic) UITableView * alphabeticTableView;
+@property (strong, nonatomic) UIPanGestureRecognizer * alphabeticGesture;
 
 @end
 
@@ -28,6 +29,7 @@
     
     [self setupViews];
     [self setupFrame];
+    [self setupEvents];
 }
 
 - (void) setupViews {
@@ -71,6 +73,13 @@
                                                 navigationBarHeight + statusBarHeight,
                                                 alphabeticWidth,
                                                 alphabeticHeight);
+}
+
+- (void) setupEvents {
+    self.alphabeticGesture = [[UIPanGestureRecognizer alloc] init];
+    [self.alphabeticGesture addTarget:self action:@selector(alphabeticTableViewWasTapped:)];
+    self.alphabeticGesture.delegate = self;
+    [self.alphabeticTableView addGestureRecognizer:self.alphabeticGesture];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -197,5 +206,26 @@
         
     }
 }
+
+#pragma mark - gesture delegate
+
+// 当有多个手势的时候需要实现，目前不需要
+//- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer {
+//    if (gestureRecognizer == self.alphabeticGesture) {
+//        return YES;
+//    }
+//    return NO;
+//}
+
+#pragma mark - events
+
+- (void) alphabeticTableViewWasTapped: (UIPanGestureRecognizer *) gr {
+    if (gr.state == UIGestureRecognizerStateBegan || gr.state == UIGestureRecognizerStateChanged) {
+        NSIndexPath * index = [self.alphabeticTableView indexPathForRowAtPoint: [gr locationInView:self.alphabeticTableView]];
+        [self tableView:self.alphabeticTableView didSelectRowAtIndexPath:index];
+    }
+}
+
+
 
 @end
