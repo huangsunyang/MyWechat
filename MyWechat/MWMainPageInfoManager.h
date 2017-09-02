@@ -10,7 +10,7 @@
 #define MWMainPageInfoManager_h
 #import <Foundation/Foundation.h>
 
-#import "MWMainPageItem.h"
+#import "MWPersonInfo.h"
 
 @interface MWMainPageInfoManager : NSObject
 

@@ -58,7 +58,7 @@
     
     NSArray * items = [MWMainPageInfoManager sharedInfo].allItems;
     
-    MWMainPageItem * item = items[indexPath.row];
+    MWPersonInfo * item = items[indexPath.row];
     
     NSLog(@"%@", item);
     
@@ -72,7 +72,7 @@
 }
 
 - (CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 70;
+    return 60;
 }
 
 - (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {

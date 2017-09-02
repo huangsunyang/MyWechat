@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "MWMainPageInfoManager.h"
 #import "MWMainPageTableViewController.h"
+#import "MWAddressBookTableViewController.h"
 
 @interface AppDelegate ()
 
@@ -19,22 +20,32 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window = [[UIWindow alloc] initWithFrame:UIScreen.mainScreen.bounds];
+    
+    //主界面
     MWMainPageTableViewController * mainPageTableViewController = [[MWMainPageTableViewController alloc] init];
     
-    //navigation
-    UINavigationController * naviController = [[UINavigationController alloc] initWithRootViewController:mainPageTableViewController];
+    //navigation 微信聊天主界面
+    UINavigationController * chatNaviController = [[UINavigationController alloc] initWithRootViewController:mainPageTableViewController];
+    
+    //通讯录界面
+    MWAddressBookTableViewController * addressBookTableViewController = [[MWAddressBookTableViewController alloc] init];
+    
+    //navigation 通讯录界面
+    UINavigationController * addressNaviController = [[UINavigationController alloc] initWithRootViewController:addressBookTableViewController];
     
     //tabbarController
-    UITabBarController * tabBarController  = [[UITabBarController alloc]
-                                              initWithNibName:@"MWTabBarController.xib"
-                                                       bundle:nil];
-    tabBarController.viewControllers = @[naviController];
+    UITabBarController * tabBarController  = [[UITabBarController alloc] init];
+    tabBarController.viewControllers = @[chatNaviController, addressNaviController];
     
-    //添加tabBarItem
-    naviController.tabBarItem.title = @"聊天";
-    naviController.tabBarItem.image = [[UIImage imageNamed:@"chat_tabbar_icon"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    naviController.tabBarItem.selectedImage = [[UIImage imageNamed:@"chat_tabbar_icon"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    //添加tabBarItem 聊天
+    chatNaviController.tabBarItem.title = @"聊天";
+    chatNaviController.tabBarItem.image = [[UIImage imageNamed:@"chat_tabbar_icon"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    chatNaviController.tabBarItem.selectedImage = [[UIImage imageNamed:@"chat_tabbar_icon"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     
+    //添加tabBarItem 通讯录
+    addressNaviController.tabBarItem.title = @"通讯录";
+    addressNaviController.tabBarItem.image = [[UIImage imageNamed:@"addressBook_icon"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    addressNaviController.tabBarItem.selectedImage = [[UIImage imageNamed:@"addressBook_icon"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     
     self.window.rootViewController = tabBarController;
     self.window.backgroundColor = UIColor.whiteColor;

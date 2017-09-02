@@ -12,13 +12,15 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-@interface MWMainPageItem : NSObject
+@interface MWPersonInfo : NSObject
 
 @property(nonatomic, strong) NSString * name;
 @property(nonatomic, strong) NSString * lastMessage;
 @property(nonatomic, strong) NSDate * lastMessageTime;
 @property(nonatomic, strong) UIImage * portrait;
 @property(nonatomic) BOOL isNotify;
+
+- (instancetype) initWithName: (NSString *) name;
 
 @end
 

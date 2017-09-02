@@ -7,9 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "MWMainPageItem.h"
+#import "MWPersonInfo.h"
 
-@implementation MWMainPageItem
+@implementation MWPersonInfo
 
 - (instancetype) init {
     self = [super init];
@@ -20,6 +20,17 @@
         self.lastMessageTime = [NSDate dateWithTimeIntervalSinceNow:0];
         self.isNotify = NO;
         self.portrait = [UIImage imageNamed:@"default_portrait"];
+    }
+    
+    return self;
+}
+
+- (instancetype) initWithName: (NSString *) name {
+    self = [super init];
+    
+    if (self) {
+        self = [self init];
+        self.name = name;
     }
     
     return self;

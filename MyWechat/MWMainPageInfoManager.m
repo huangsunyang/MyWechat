@@ -8,7 +8,6 @@
 
 #import <Foundation/Foundation.h>
 #import "MWMainPageInfoManager.h"
-#import "MWMainPageItem.h"
 
 @interface MWMainPageInfoManager () {
     NSMutableArray * _allItems;
@@ -29,9 +28,15 @@
     self = [super init];
     
     if (self) {
+        static const NSString *kRandomAlphabet = @"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+        int kRandomLength = 10;
         _allItems = [[NSMutableArray alloc] init];
         for (int i = 0; i < 20; i++) {
-            MWMainPageItem * item = [[MWMainPageItem alloc] init];
+            NSMutableString *randomString = [NSMutableString stringWithCapacity:kRandomLength];
+            for (int i = 0; i < kRandomLength; i++) {
+                [randomString appendFormat: @"%C", [kRandomAlphabet characterAtIndex:arc4random_uniform((u_int32_t)[kRandomAlphabet length])]];
+            }
+            MWPersonInfo * item = [[MWPersonInfo alloc] initWithName: randomString];
             [_allItems addObject:item];
         }
     }
@@ -40,10 +45,11 @@
 
 + (instancetype) sharedInfo {
     static MWMainPageInfoManager * infoManager = nil;
+    if (infoManager) return infoManager;
     
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^ {
-        infoManager = [[self alloc] initPrivate];
+        infoManager = [[MWMainPageInfoManager alloc] initPrivate];
     });
     
     return infoManager;

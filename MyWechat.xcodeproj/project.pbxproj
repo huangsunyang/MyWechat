@@ -15,7 +15,7 @@
 		690EAB4D1F24E6B800609313 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 690EAB4B1F24E6B800609313 /* LaunchScreen.storyboard */; };
 		690EAB671F24E94D00609313 /* MWMainPageTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 690EAB661F24E94D00609313 /* MWMainPageTableViewController.m */; };
 		690EAB761F24EA2F00609313 /* MWMainPageInfoManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 690EAB751F24EA2F00609313 /* MWMainPageInfoManager.m */; };
-		690EAB791F24EAF500609313 /* MWMainPageItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 690EAB781F24EAF500609313 /* MWMainPageItem.m */; };
+		690EAB791F24EAF500609313 /* MWPersonInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 690EAB781F24EAF500609313 /* MWPersonInfo.m */; };
 		690EAB7E1F27925200609313 /* MWMainPageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 690EAB7C1F27925200609313 /* MWMainPageTableViewCell.m */; };
 		690EAB7F1F27925200609313 /* MWMainPageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 690EAB7D1F27925200609313 /* MWMainPageTableViewCell.xib */; };
 		69E7511E1F5658BE000728DD /* MWChatTableViewCellReverse.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69E7511C1F5658BE000728DD /* MWChatTableViewCellReverse.xib */; };
@@ -26,6 +26,16 @@
 		69E751341F566DB7000728DD /* MWTypeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69E751321F566DB7000728DD /* MWTypeView.xib */; };
 		69E751431F5716CA000728DD /* MWTypeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 69E751421F5716CA000728DD /* MWTypeView.m */; };
 		69E751481F585F56000728DD /* MWMessageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 69E751471F585F56000728DD /* MWMessageManager.m */; };
+		69E7514D1F5A5C4D000728DD /* MWAddressBookTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 69E7514B1F5A5C4D000728DD /* MWAddressBookTableViewController.m */; };
+		69E751521F5A628D000728DD /* MWAddressBookManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 69E751511F5A628D000728DD /* MWAddressBookManager.m */; };
+		69E751571F5A7A0B000728DD /* MWAddressBookTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 69E751551F5A7A0B000728DD /* MWAddressBookTableViewCell.m */; };
+		69E751581F5A7A0B000728DD /* MWAddressBookTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69E751561F5A7A0B000728DD /* MWAddressBookTableViewCell.xib */; };
+		69E7515E1F5A7A39000728DD /* MWAlphabetTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 69E7515C1F5A7A39000728DD /* MWAlphabetTableViewCell.m */; };
+		69E7515F1F5A7A39000728DD /* MWAlphabetTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69E7515D1F5A7A39000728DD /* MWAlphabetTableViewCell.xib */; };
+		69E751631F5AE44C000728DD /* MWAddressBookHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 69E751621F5AE44C000728DD /* MWAddressBookHeaderView.m */; };
+		69E751651F5AE46F000728DD /* MWAddressBookHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69E751641F5AE46F000728DD /* MWAddressBookHeaderView.xib */; };
+		69E751691F5AEDA5000728DD /* AddressBookFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 69E751681F5AEDA5000728DD /* AddressBookFooterView.m */; };
+		69E7516B1F5AEDB1000728DD /* AddressBookFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69E7516A1F5AEDB1000728DD /* AddressBookFooterView.xib */; };
 		8C01A5291F593BE700FE6882 /* MWChatSettingTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C01A5271F593BE700FE6882 /* MWChatSettingTableViewController.m */; };
 		8C01A52C1F5944EC00FE6882 /* MWChatSettingTableViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C01A52B1F5944EC00FE6882 /* MWChatSettingTableViewController.storyboard */; };
 		8C6635921F33193E00739333 /* MWChatTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C6635901F33193E00739333 /* MWChatTableViewController.m */; };
@@ -48,8 +58,8 @@
 		690EAB661F24E94D00609313 /* MWMainPageTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MWMainPageTableViewController.m; path = ../MWMainPageTableViewController.m; sourceTree = "<group>"; };
 		690EAB751F24EA2F00609313 /* MWMainPageInfoManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWMainPageInfoManager.m; sourceTree = "<group>"; };
 		690EAB771F24EA4000609313 /* MWMainPageInfoManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MWMainPageInfoManager.h; sourceTree = "<group>"; };
-		690EAB781F24EAF500609313 /* MWMainPageItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWMainPageItem.m; sourceTree = "<group>"; };
-		690EAB7A1F24EBA100609313 /* MWMainPageItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MWMainPageItem.h; sourceTree = "<group>"; };
+		690EAB781F24EAF500609313 /* MWPersonInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWPersonInfo.m; sourceTree = "<group>"; };
+		690EAB7A1F24EBA100609313 /* MWPersonInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MWPersonInfo.h; sourceTree = "<group>"; };
 		690EAB7B1F27925200609313 /* MWMainPageTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWMainPageTableViewCell.h; sourceTree = "<group>"; };
 		690EAB7C1F27925200609313 /* MWMainPageTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWMainPageTableViewCell.m; sourceTree = "<group>"; };
 		690EAB7D1F27925200609313 /* MWMainPageTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MWMainPageTableViewCell.xib; sourceTree = "<group>"; };
@@ -66,6 +76,22 @@
 		69E751421F5716CA000728DD /* MWTypeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWTypeView.m; sourceTree = "<group>"; };
 		69E751461F585F56000728DD /* MWMessageManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWMessageManager.h; sourceTree = "<group>"; };
 		69E751471F585F56000728DD /* MWMessageManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWMessageManager.m; sourceTree = "<group>"; };
+		69E7514A1F5A5C4D000728DD /* MWAddressBookTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWAddressBookTableViewController.h; sourceTree = "<group>"; };
+		69E7514B1F5A5C4D000728DD /* MWAddressBookTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWAddressBookTableViewController.m; sourceTree = "<group>"; };
+		69E751501F5A628D000728DD /* MWAddressBookManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWAddressBookManager.h; sourceTree = "<group>"; };
+		69E751511F5A628D000728DD /* MWAddressBookManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWAddressBookManager.m; sourceTree = "<group>"; };
+		69E751541F5A7A0B000728DD /* MWAddressBookTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWAddressBookTableViewCell.h; sourceTree = "<group>"; };
+		69E751551F5A7A0B000728DD /* MWAddressBookTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWAddressBookTableViewCell.m; sourceTree = "<group>"; };
+		69E751561F5A7A0B000728DD /* MWAddressBookTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MWAddressBookTableViewCell.xib; sourceTree = "<group>"; };
+		69E7515B1F5A7A39000728DD /* MWAlphabetTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWAlphabetTableViewCell.h; sourceTree = "<group>"; };
+		69E7515C1F5A7A39000728DD /* MWAlphabetTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWAlphabetTableViewCell.m; sourceTree = "<group>"; };
+		69E7515D1F5A7A39000728DD /* MWAlphabetTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MWAlphabetTableViewCell.xib; sourceTree = "<group>"; };
+		69E751611F5AE44C000728DD /* MWAddressBookHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWAddressBookHeaderView.h; sourceTree = "<group>"; };
+		69E751621F5AE44C000728DD /* MWAddressBookHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWAddressBookHeaderView.m; sourceTree = "<group>"; };
+		69E751641F5AE46F000728DD /* MWAddressBookHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MWAddressBookHeaderView.xib; sourceTree = "<group>"; };
+		69E751671F5AEDA5000728DD /* AddressBookFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddressBookFooterView.h; sourceTree = "<group>"; };
+		69E751681F5AEDA5000728DD /* AddressBookFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddressBookFooterView.m; sourceTree = "<group>"; };
+		69E7516A1F5AEDB1000728DD /* AddressBookFooterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddressBookFooterView.xib; sourceTree = "<group>"; };
 		8C01A5261F593BE700FE6882 /* MWChatSettingTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWChatSettingTableViewController.h; sourceTree = "<group>"; };
 		8C01A5271F593BE700FE6882 /* MWChatSettingTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWChatSettingTableViewController.m; sourceTree = "<group>"; };
 		8C01A52B1F5944EC00FE6882 /* MWChatSettingTableViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MWChatSettingTableViewController.storyboard; sourceTree = "<group>"; };
@@ -110,8 +136,9 @@
 				69E7512A1F566633000728DD /* Categories */,
 				8C66358E1F3318E200739333 /* ChatView */,
 				690EAB541F24E83000609313 /* MainPage */,
-				690EAB401F24E6B800609313 /* AppDelegate.h */,
+				69E751491F5A5BFE000728DD /* AddressBook */,
 				690EAB461F24E6B800609313 /* Main.storyboard */,
+				690EAB401F24E6B800609313 /* AppDelegate.h */,
 				690EAB411F24E6B800609313 /* AppDelegate.m */,
 				690EAB431F24E6B800609313 /* ViewController.h */,
 				690EAB441F24E6B800609313 /* ViewController.m */,
@@ -165,8 +192,8 @@
 			children = (
 				690EAB751F24EA2F00609313 /* MWMainPageInfoManager.m */,
 				690EAB771F24EA4000609313 /* MWMainPageInfoManager.h */,
-				690EAB781F24EAF500609313 /* MWMainPageItem.m */,
-				690EAB7A1F24EBA100609313 /* MWMainPageItem.h */,
+				690EAB781F24EAF500609313 /* MWPersonInfo.m */,
+				690EAB7A1F24EBA100609313 /* MWPersonInfo.h */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -203,6 +230,85 @@
 				69E751421F5716CA000728DD /* MWTypeView.m */,
 			);
 			name = typeInView;
+			sourceTree = "<group>";
+		};
+		69E751491F5A5BFE000728DD /* AddressBook */ = {
+			isa = PBXGroup;
+			children = (
+				69E751531F5A79E8000728DD /* view */,
+				69E7514F1F5A5FA8000728DD /* model */,
+				69E7516C1F5AF069000728DD /* controller */,
+			);
+			name = AddressBook;
+			sourceTree = "<group>";
+		};
+		69E7514F1F5A5FA8000728DD /* model */ = {
+			isa = PBXGroup;
+			children = (
+				69E751501F5A628D000728DD /* MWAddressBookManager.h */,
+				69E751511F5A628D000728DD /* MWAddressBookManager.m */,
+			);
+			name = model;
+			sourceTree = "<group>";
+		};
+		69E751531F5A79E8000728DD /* view */ = {
+			isa = PBXGroup;
+			children = (
+				69E751661F5AED7B000728DD /* addressBookFooterView */,
+				69E751601F5AE417000728DD /* addressBookHeaderView */,
+				69E7515A1F5A7A1F000728DD /* alphabeticTableViewCell */,
+				69E751591F5A7A0F000728DD /* addressBooktableViewCell */,
+			);
+			name = view;
+			sourceTree = "<group>";
+		};
+		69E751591F5A7A0F000728DD /* addressBooktableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				69E751541F5A7A0B000728DD /* MWAddressBookTableViewCell.h */,
+				69E751551F5A7A0B000728DD /* MWAddressBookTableViewCell.m */,
+				69E751561F5A7A0B000728DD /* MWAddressBookTableViewCell.xib */,
+			);
+			name = addressBooktableViewCell;
+			sourceTree = "<group>";
+		};
+		69E7515A1F5A7A1F000728DD /* alphabeticTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				69E7515B1F5A7A39000728DD /* MWAlphabetTableViewCell.h */,
+				69E7515C1F5A7A39000728DD /* MWAlphabetTableViewCell.m */,
+				69E7515D1F5A7A39000728DD /* MWAlphabetTableViewCell.xib */,
+			);
+			name = alphabeticTableViewCell;
+			sourceTree = "<group>";
+		};
+		69E751601F5AE417000728DD /* addressBookHeaderView */ = {
+			isa = PBXGroup;
+			children = (
+				69E751611F5AE44C000728DD /* MWAddressBookHeaderView.h */,
+				69E751621F5AE44C000728DD /* MWAddressBookHeaderView.m */,
+				69E751641F5AE46F000728DD /* MWAddressBookHeaderView.xib */,
+			);
+			name = addressBookHeaderView;
+			sourceTree = "<group>";
+		};
+		69E751661F5AED7B000728DD /* addressBookFooterView */ = {
+			isa = PBXGroup;
+			children = (
+				69E751671F5AEDA5000728DD /* AddressBookFooterView.h */,
+				69E751681F5AEDA5000728DD /* AddressBookFooterView.m */,
+				69E7516A1F5AEDB1000728DD /* AddressBookFooterView.xib */,
+			);
+			name = addressBookFooterView;
+			sourceTree = "<group>";
+		};
+		69E7516C1F5AF069000728DD /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				69E7514A1F5A5C4D000728DD /* MWAddressBookTableViewController.h */,
+				69E7514B1F5A5C4D000728DD /* MWAddressBookTableViewController.m */,
+			);
+			name = controller;
 			sourceTree = "<group>";
 		};
 		8C01A5251F593B8200FE6882 /* ChatSettingView */ = {
@@ -319,7 +425,11 @@
 				69E7511E1F5658BE000728DD /* MWChatTableViewCellReverse.xib in Resources */,
 				690EAB4A1F24E6B800609313 /* Assets.xcassets in Resources */,
 				8C01A52C1F5944EC00FE6882 /* MWChatSettingTableViewController.storyboard in Resources */,
+				69E751581F5A7A0B000728DD /* MWAddressBookTableViewCell.xib in Resources */,
+				69E7516B1F5AEDB1000728DD /* AddressBookFooterView.xib in Resources */,
+				69E7515F1F5A7A39000728DD /* MWAlphabetTableViewCell.xib in Resources */,
 				8C66359B1F33199400739333 /* MWChatTableViewCell.xib in Resources */,
+				69E751651F5AE46F000728DD /* MWAddressBookHeaderView.xib in Resources */,
 				69E751341F566DB7000728DD /* MWTypeView.xib in Resources */,
 				690EAB481F24E6B800609313 /* Main.storyboard in Resources */,
 			);
@@ -333,18 +443,24 @@
 			buildActionMask = 2147483647;
 			files = (
 				69E751281F565E26000728DD /* MWChatInformTableViewCell.m in Sources */,
+				69E751571F5A7A0B000728DD /* MWAddressBookTableViewCell.m in Sources */,
 				690EAB761F24EA2F00609313 /* MWMainPageInfoManager.m in Sources */,
 				8C6635921F33193E00739333 /* MWChatTableViewController.m in Sources */,
 				690EAB451F24E6B800609313 /* ViewController.m in Sources */,
-				690EAB791F24EAF500609313 /* MWMainPageItem.m in Sources */,
+				69E751631F5AE44C000728DD /* MWAddressBookHeaderView.m in Sources */,
+				690EAB791F24EAF500609313 /* MWPersonInfo.m in Sources */,
+				69E751521F5A628D000728DD /* MWAddressBookManager.m in Sources */,
 				69E7512D1F5666A6000728DD /* NSString+NSStringExtension.m in Sources */,
+				69E751691F5AEDA5000728DD /* AddressBookFooterView.m in Sources */,
 				69E751211F565DA8000728DD /* MWMessage.m in Sources */,
+				69E7515E1F5A7A39000728DD /* MWAlphabetTableViewCell.m in Sources */,
 				690EAB421F24E6B800609313 /* AppDelegate.m in Sources */,
 				690EAB7E1F27925200609313 /* MWMainPageTableViewCell.m in Sources */,
 				690EAB3F1F24E6B800609313 /* main.m in Sources */,
 				69E751481F585F56000728DD /* MWMessageManager.m in Sources */,
 				69E751431F5716CA000728DD /* MWTypeView.m in Sources */,
 				690EAB671F24E94D00609313 /* MWMainPageTableViewController.m in Sources */,
+				69E7514D1F5A5C4D000728DD /* MWAddressBookTableViewController.m in Sources */,
 				8C01A5291F593BE700FE6882 /* MWChatSettingTableViewController.m in Sources */,
 				8C66359A1F33199400739333 /* MWChatTableViewCell.m in Sources */,
 			);
