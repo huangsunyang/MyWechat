@@ -36,6 +36,8 @@
 		69E751651F5AE46F000728DD /* MWAddressBookHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69E751641F5AE46F000728DD /* MWAddressBookHeaderView.xib */; };
 		69E751691F5AEDA5000728DD /* AddressBookFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 69E751681F5AEDA5000728DD /* AddressBookFooterView.m */; };
 		69E7516B1F5AEDB1000728DD /* AddressBookFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69E7516A1F5AEDB1000728DD /* AddressBookFooterView.xib */; };
+		69E7516F1F5AF859000728DD /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69E7516E1F5AF859000728DD /* QuartzCore.framework */; };
+		69E751741F5AF8C2000728DD /* ALToastView.m in Sources */ = {isa = PBXBuildFile; fileRef = 69E751731F5AF8C2000728DD /* ALToastView.m */; };
 		8C01A5291F593BE700FE6882 /* MWChatSettingTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C01A5271F593BE700FE6882 /* MWChatSettingTableViewController.m */; };
 		8C01A52C1F5944EC00FE6882 /* MWChatSettingTableViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C01A52B1F5944EC00FE6882 /* MWChatSettingTableViewController.storyboard */; };
 		8C6635921F33193E00739333 /* MWChatTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C6635901F33193E00739333 /* MWChatTableViewController.m */; };
@@ -92,6 +94,9 @@
 		69E751671F5AEDA5000728DD /* AddressBookFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddressBookFooterView.h; sourceTree = "<group>"; };
 		69E751681F5AEDA5000728DD /* AddressBookFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddressBookFooterView.m; sourceTree = "<group>"; };
 		69E7516A1F5AEDB1000728DD /* AddressBookFooterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddressBookFooterView.xib; sourceTree = "<group>"; };
+		69E7516E1F5AF859000728DD /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		69E751721F5AF8C2000728DD /* ALToastView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALToastView.h; sourceTree = "<group>"; };
+		69E751731F5AF8C2000728DD /* ALToastView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALToastView.m; sourceTree = "<group>"; };
 		8C01A5261F593BE700FE6882 /* MWChatSettingTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWChatSettingTableViewController.h; sourceTree = "<group>"; };
 		8C01A5271F593BE700FE6882 /* MWChatSettingTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWChatSettingTableViewController.m; sourceTree = "<group>"; };
 		8C01A52B1F5944EC00FE6882 /* MWChatSettingTableViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MWChatSettingTableViewController.storyboard; sourceTree = "<group>"; };
@@ -108,6 +113,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				69E7516F1F5AF859000728DD /* QuartzCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,6 +125,7 @@
 			children = (
 				690EAB3C1F24E6B800609313 /* MyWechat */,
 				690EAB3B1F24E6B800609313 /* Products */,
+				69E7516D1F5AF859000728DD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -133,6 +140,7 @@
 		690EAB3C1F24E6B800609313 /* MyWechat */ = {
 			isa = PBXGroup;
 			children = (
+				69E751701F5AF8A8000728DD /* library */,
 				69E7512A1F566633000728DD /* Categories */,
 				8C66358E1F3318E200739333 /* ChatView */,
 				690EAB541F24E83000609313 /* MainPage */,
@@ -311,6 +319,31 @@
 			name = controller;
 			sourceTree = "<group>";
 		};
+		69E7516D1F5AF859000728DD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				69E7516E1F5AF859000728DD /* QuartzCore.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		69E751701F5AF8A8000728DD /* library */ = {
+			isa = PBXGroup;
+			children = (
+				69E751711F5AF8B6000728DD /* New Group */,
+			);
+			name = library;
+			sourceTree = "<group>";
+		};
+		69E751711F5AF8B6000728DD /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+				69E751721F5AF8C2000728DD /* ALToastView.h */,
+				69E751731F5AF8C2000728DD /* ALToastView.m */,
+			);
+			name = "New Group";
+			sourceTree = "<group>";
+		};
 		8C01A5251F593B8200FE6882 /* ChatSettingView */ = {
 			isa = PBXGroup;
 			children = (
@@ -459,6 +492,7 @@
 				690EAB3F1F24E6B800609313 /* main.m in Sources */,
 				69E751481F585F56000728DD /* MWMessageManager.m in Sources */,
 				69E751431F5716CA000728DD /* MWTypeView.m in Sources */,
+				69E751741F5AF8C2000728DD /* ALToastView.m in Sources */,
 				690EAB671F24E94D00609313 /* MWMainPageTableViewController.m in Sources */,
 				69E7514D1F5A5C4D000728DD /* MWAddressBookTableViewController.m in Sources */,
 				8C01A5291F593BE700FE6882 /* MWChatSettingTableViewController.m in Sources */,

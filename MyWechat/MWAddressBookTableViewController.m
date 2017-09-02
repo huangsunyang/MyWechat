@@ -13,12 +13,14 @@
 #import "MWAddressBookTableViewCell.h"
 #import "AddressBookFooterView.h"
 #import "MWPersonInfo.h"
+#import "ALToastView.h"
 
 @interface MWAddressBookTableViewController ()
 
 @property (strong, nonatomic) UITableView * addressBookTableView;
 @property (strong, nonatomic) UITableView * alphabeticTableView;
-@property (strong, nonatomic) UIPanGestureRecognizer * alphabeticGesture;
+@property (strong, nonatomic) UIPanGestureRecognizer * alphabeticPanGesture;
+@property (strong, nonatomic) UILongPressGestureRecognizer * alphabeticTapGesture;
 
 @end
 
@@ -47,6 +49,7 @@
     self.alphabeticTableView.dataSource = self;
     self.alphabeticTableView.delegate = self;
     self.alphabeticTableView.scrollEnabled = NO;
+    self.alphabeticTableView.allowsSelection = NO;
     //隐藏分割线
     self.alphabeticTableView.separatorColor = [UIColor clearColor];
     self.alphabeticTableView.backgroundColor = [UIColor clearColor];
@@ -76,10 +79,16 @@
 }
 
 - (void) setupEvents {
-    self.alphabeticGesture = [[UIPanGestureRecognizer alloc] init];
-    [self.alphabeticGesture addTarget:self action:@selector(alphabeticTableViewWasTapped:)];
-    self.alphabeticGesture.delegate = self;
-    [self.alphabeticTableView addGestureRecognizer:self.alphabeticGesture];
+    self.alphabeticPanGesture = [[UIPanGestureRecognizer alloc] init];
+    [self.alphabeticPanGesture addTarget:self action:@selector(alphabeticTableViewWasPanned:)];
+    self.alphabeticPanGesture.delegate = self;
+    [self.alphabeticTableView addGestureRecognizer:self.alphabeticPanGesture];
+    
+    self.alphabeticTapGesture = [[UILongPressGestureRecognizer alloc] init];
+    [self.alphabeticTapGesture addTarget:self action:@selector(alphabeticTableViewWasTapped:)];
+    self.alphabeticTapGesture.delegate = self;
+    self.alphabeticTapGesture.minimumPressDuration = 0.1;
+    [self.alphabeticTableView addGestureRecognizer:self.alphabeticTapGesture];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -210,19 +219,36 @@
 #pragma mark - gesture delegate
 
 // 当有多个手势的时候需要实现，目前不需要
-//- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer {
-//    if (gestureRecognizer == self.alphabeticGesture) {
-//        return YES;
-//    }
-//    return NO;
-//}
+- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer {
+    if (gestureRecognizer == self.alphabeticTapGesture) {
+        return YES;
+    }
+    return YES;
+}
 
 #pragma mark - events
 
-- (void) alphabeticTableViewWasTapped: (UIPanGestureRecognizer *) gr {
+- (void) alphabeticTableViewWasPanned: (UIPanGestureRecognizer *) gr {
     if (gr.state == UIGestureRecognizerStateBegan || gr.state == UIGestureRecognizerStateChanged) {
         NSIndexPath * index = [self.alphabeticTableView indexPathForRowAtPoint: [gr locationInView:self.alphabeticTableView]];
+        MWAlphabetTableViewCell * cell = [self.alphabeticTableView cellForRowAtIndexPath:index];
+        [ALToastView toastInView:self.view withText:cell.alphabetLabel.text];
+        [self.view layoutIfNeeded];
         [self tableView:self.alphabeticTableView didSelectRowAtIndexPath:index];
+    } else {
+        [ALToastView removeToastView];
+    }
+}
+
+- (void) alphabeticTableViewWasTapped: (UILongPressGestureRecognizer *) gr {
+    if (gr.state != UIGestureRecognizerStateEnded) {
+    NSIndexPath * index = [self.alphabeticTableView indexPathForRowAtPoint: [gr locationInView:self.alphabeticTableView]];
+    MWAlphabetTableViewCell * cell = [self.alphabeticTableView cellForRowAtIndexPath:index];
+    [ALToastView toastInView:self.view withText:cell.alphabetLabel.text];
+    [self.view layoutIfNeeded];
+    [self tableView:self.alphabeticTableView didSelectRowAtIndexPath:index];
+    } else if (gr.state == UIGestureRecognizerStateEnded) {
+        [ALToastView removeToastView];
     }
 }
 
