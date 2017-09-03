@@ -114,8 +114,9 @@
     self.navigationItem.rightBarButtonItem = setButton;
 }
 
-- (void) viewDidAppear:(BOOL)animated {
-    [super viewDidAppear:animated];
+- (void) viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self.tableView reloadData];
     [self scollToLastCell];
 }
 
@@ -236,8 +237,7 @@
 }
 
 - (void) onRightNavigationBarItemClicked {
-    UIStoryboard * storyBoard = [UIStoryboard storyboardWithName:@"MWChatSettingTableViewController" bundle:nil];
-    MWChatSettingTableViewController * chatSetting = [storyBoard instantiateViewControllerWithIdentifier:@"MWChatSettingTableViewController"];
+    MWChatSettingTableViewController * chatSetting = [MWChatSettingTableViewController storyboardInstance];
     
     self.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:chatSetting animated:YES];
@@ -300,7 +300,7 @@
 //删除一条信息
 - (void)onDeleteMessage: (id)sender {
     MWMessageManager * messageManager = [MWMessageManager sharedInstance];
-    [messageManager deleteMessageAtIndex:self.currentLongPressedIndex.row];
+    [messageManager removeMessageAtIndex:self.currentLongPressedIndex.row];
     [self.tableView reloadData];
 }
 

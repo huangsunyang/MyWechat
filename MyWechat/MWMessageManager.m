@@ -61,8 +61,13 @@
 }
 
 //删除某条短信
-- (void) deleteMessageAtIndex: (long) index {
+- (void) removeMessageAtIndex: (long) index {
     [_allMessages removeObjectAtIndex:index];
+}
+
+//删除全部短信
+- (void)removeALLMessages {
+    [_allMessages removeAllObjects];
 }
 
 @end

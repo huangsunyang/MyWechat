@@ -49,6 +49,7 @@
     self.alphabeticTableView.dataSource = self;
     self.alphabeticTableView.delegate = self;
     self.alphabeticTableView.scrollEnabled = NO;
+    //取消cell的点击事件
     self.alphabeticTableView.allowsSelection = NO;
     //隐藏分割线
     self.alphabeticTableView.separatorColor = [UIColor clearColor];
@@ -230,25 +231,38 @@
 
 - (void) alphabeticTableViewWasPanned: (UIPanGestureRecognizer *) gr {
     if (gr.state == UIGestureRecognizerStateBegan || gr.state == UIGestureRecognizerStateChanged) {
-        NSIndexPath * index = [self.alphabeticTableView indexPathForRowAtPoint: [gr locationInView:self.alphabeticTableView]];
+        self.alphabeticTableView.backgroundColor = [[UIColor lightGrayColor] colorWithAlphaComponent:0.5];
+        CGPoint point = [gr locationInView:self.alphabeticTableView];
+        NSLog(@"%f %f", point.x, point.y);
+        if (point.x < 0) {
+            [ALToastView removeToastView];
+            self.alphabeticTableView.backgroundColor = [UIColor clearColor];
+            //神来之笔
+            [self.alphabeticTableView resignFirstResponder];
+            return;
+        }
+        NSIndexPath * index = [self.alphabeticTableView indexPathForRowAtPoint: point];
         MWAlphabetTableViewCell * cell = [self.alphabeticTableView cellForRowAtIndexPath:index];
         [ALToastView toastInView:self.view withText:cell.alphabetLabel.text];
         [self.view layoutIfNeeded];
         [self tableView:self.alphabeticTableView didSelectRowAtIndexPath:index];
     } else {
         [ALToastView removeToastView];
+        self.alphabeticTableView.backgroundColor = [UIColor clearColor];
     }
 }
 
 - (void) alphabeticTableViewWasTapped: (UILongPressGestureRecognizer *) gr {
     if (gr.state != UIGestureRecognizerStateEnded) {
-    NSIndexPath * index = [self.alphabeticTableView indexPathForRowAtPoint: [gr locationInView:self.alphabeticTableView]];
-    MWAlphabetTableViewCell * cell = [self.alphabeticTableView cellForRowAtIndexPath:index];
-    [ALToastView toastInView:self.view withText:cell.alphabetLabel.text];
-    [self.view layoutIfNeeded];
-    [self tableView:self.alphabeticTableView didSelectRowAtIndexPath:index];
+        self.alphabeticTableView.backgroundColor = [[UIColor lightGrayColor] colorWithAlphaComponent:0.5];
+        NSIndexPath * index = [self.alphabeticTableView indexPathForRowAtPoint: [gr locationInView:self.alphabeticTableView]];
+        MWAlphabetTableViewCell * cell = [self.alphabeticTableView cellForRowAtIndexPath:index];
+        [ALToastView toastInView:self.view withText:cell.alphabetLabel.text];
+        [self.view layoutIfNeeded];
+        [self tableView:self.alphabeticTableView didSelectRowAtIndexPath:index];
     } else if (gr.state == UIGestureRecognizerStateEnded) {
         [ALToastView removeToastView];
+        self.alphabeticTableView.backgroundColor = [UIColor clearColor];
     }
 }
 

@@ -8,6 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
+typedef void (^SetBackgroundBlock)(void);
+typedef void (^ClearAllMessageBlock)(void);
+
 @interface MWChatSettingTableViewController : UITableViewController
 
+@property (copy, nonatomic) SetBackgroundBlock setBackgoundBlock;
+@property (copy, nonatomic) ClearAllMessageBlock clearAllMessageBlock;
+
++ (instancetype) storyboardInstance;
 @end
