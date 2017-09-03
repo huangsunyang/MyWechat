@@ -14,10 +14,12 @@
 #import "MWMessageManager.h"
 #import "MWMessage.h"
 #import "MWChatSettingTableViewController.h"
+#import "MWDetailInfoController.h"
 
 @interface MWChatTableViewController ()
 
 @property (nonatomic, strong) MWTypeView * typeView;
+@property (nonatomic, strong) UIImageView * backgroundView;
 @property (nonatomic, strong) UITableView * tableView;
 @property (nonatomic, assign) BOOL isKeyboardShown;
 
@@ -28,6 +30,7 @@
 @implementation MWChatTableViewController
 
 - (void)viewDidLoad {
+    NSLog(@"chat view did load");
     [super viewDidLoad];
     
     [self setupViews];
@@ -45,7 +48,9 @@
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     self.tableView.estimatedRowHeight = 200;
     self.tableView.allowsSelection = NO;
-    
+    //设置tableview透明，才能够动态改变背后的背景
+    self.tableView.backgroundColor = [UIColor clearColor];
+    self.tableView.opaque = NO;
     
     [self.view addSubview:self.tableView];
     
@@ -67,6 +72,8 @@
     self.typeView = subviewArray[0];
     self.typeView.textField.delegate = self.typeView;
     [self.view addSubview:self.typeView];
+    
+    self.view.backgroundColor = [UIColor whiteColor];
 }
 
 - (void) setupFrames {
@@ -115,8 +122,14 @@
 }
 
 - (void) viewWillAppear:(BOOL)animated {
+    NSLog(@"chat view will appear");
     [super viewWillAppear:animated];
     [self.tableView reloadData];
+    if ([MWMessageManager sharedInstance].backgroundImage != nil) {
+        self.view.backgroundColor = [UIColor colorWithPatternImage:[MWMessageManager sharedInstance].backgroundImage];
+    } else {
+        self.view.backgroundColor = [UIColor whiteColor];
+    }
     [self scollToLastCell];
 }
 
@@ -295,6 +308,12 @@
         [menu setTargetRect: menuRect inView:self.tableView];
         [menu setMenuVisible:YES animated:YES];
     }
+}
+
+- (void) onPortraitTapped: (UITapGestureRecognizer *) gr {
+    NSLog(@"portrain tapped");
+    MWDetailInfoController * detailInfoController = [[MWDetailInfoController alloc] init];
+    [self.navigationController pushViewController:detailInfoController animated:YES];
 }
 
 //删除一条信息

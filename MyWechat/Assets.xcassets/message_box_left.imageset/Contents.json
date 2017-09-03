@@ -9,18 +9,18 @@
         "mode" : "9-part",
         "center" : {
           "mode" : "tile",
-          "width" : 2,
-          "height" : 13
+          "width" : 1,
+          "height" : 1
         },
         "cap-insets" : {
-          "bottom" : 20,
-          "top" : 18,
-          "right" : 17,
-          "left" : 24
+          "bottom" : 35,
+          "top" : 34,
+          "right" : 35,
+          "left" : 34
         }
       },
       "idiom" : "iphone",
-      "filename" : "text message clip art-434.jpg",
+      "filename" : "icon-chatbubble.png",
       "scale" : "2x"
     },
     {

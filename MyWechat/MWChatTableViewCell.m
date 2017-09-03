@@ -21,6 +21,10 @@
     UILongPressGestureRecognizer * longGesture = [[UILongPressGestureRecognizer alloc] initWithTarget:self.delegate
                                                                              action:@selector(onMessageLongPressed:)];
     [self.messageBox addGestureRecognizer:longGesture];
+    
+    UITapGestureRecognizer * tapGr = [[UITapGestureRecognizer alloc] initWithTarget:self.delegate
+                                                                             action:@selector(onPortraitTapped:)];
+    [self.leftPortrait addGestureRecognizer:tapGr];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

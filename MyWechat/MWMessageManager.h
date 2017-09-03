@@ -7,11 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 #import "MWMessage.h"
 
 @interface MWMessageManager : NSObject
 
 @property (nonatomic, strong) NSArray * allMessages;
+@property (nonatomic, strong) UIImage * backgroundImage;
 
 + (instancetype) sharedInstance;
 - (void) addMessage: (MWMessage *) message;
