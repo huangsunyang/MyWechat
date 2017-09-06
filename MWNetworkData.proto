@@ -1,0 +1,6 @@
+message MWNetworkData {
+    required int32 type = 1;
+    required string str_data = 2;
+    required string from_usr = 3;
+    required string to_usr = 4;
+}

@@ -17,6 +17,7 @@
 #import "MWDetailInfoController.h"
 #import <sys/socket.h>
 #import <netdb.h>
+#import "MWNetworkData.pb.h"
 
 #import <err.h>
 #import <errno.h>
@@ -405,6 +406,16 @@
     [self.outputStream write:messageDate.bytes maxLength:messageDate.length];
     
     [self addMessage:message];
+    
+    //尝试发送protobuf
+    MWNetworkDataBuilder * proto = [[MWNetworkDataBuilder alloc] init];
+    [proto setType:1];
+    [proto setFromUsr:@"huangsunyang"];
+    [proto setToUsr:@"choufei"];
+    [proto setStrData:@"hello world"];
+    MWNetworkData * d = [proto build];
+    [self.outputStream write:[d data].bytes maxLength:[d data].length];
+    
 }
 
 - (void)stream:(NSStream *)aStream handleEvent:(NSStreamEvent)eventCode {

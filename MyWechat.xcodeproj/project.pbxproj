@@ -23,6 +23,7 @@
 		696CB0B61F5E6797004DB493 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 696CB0B51F5E6797004DB493 /* UIView+Extension.m */; };
 		696CB0BB1F5E6CD2004DB493 /* MWDetailInfoTableViewButtonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 696CB0B91F5E6CD2004DB493 /* MWDetailInfoTableViewButtonCell.m */; };
 		696CB0BC1F5E6CD2004DB493 /* MWDetailInfoTableViewButtonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 696CB0BA1F5E6CD2004DB493 /* MWDetailInfoTableViewButtonCell.xib */; };
+		69DE00DB1F5FE7B60077FEA9 /* MWNetworkData.pb.m in Sources */ = {isa = PBXBuildFile; fileRef = 69DE00DA1F5FE7B60077FEA9 /* MWNetworkData.pb.m */; };
 		69E7511E1F5658BE000728DD /* MWChatTableViewCellReverse.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69E7511C1F5658BE000728DD /* MWChatTableViewCellReverse.xib */; };
 		69E751211F565DA8000728DD /* MWMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 69E751201F565DA8000728DD /* MWMessage.m */; };
 		69E751281F565E26000728DD /* MWChatInformTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 69E751261F565E26000728DD /* MWChatInformTableViewCell.m */; };
@@ -86,6 +87,8 @@
 		696CB0B81F5E6CD2004DB493 /* MWDetailInfoTableViewButtonCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWDetailInfoTableViewButtonCell.h; sourceTree = "<group>"; };
 		696CB0B91F5E6CD2004DB493 /* MWDetailInfoTableViewButtonCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWDetailInfoTableViewButtonCell.m; sourceTree = "<group>"; };
 		696CB0BA1F5E6CD2004DB493 /* MWDetailInfoTableViewButtonCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MWDetailInfoTableViewButtonCell.xib; sourceTree = "<group>"; };
+		69DE00D91F5FE7B60077FEA9 /* MWNetworkData.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWNetworkData.pb.h; sourceTree = "<group>"; };
+		69DE00DA1F5FE7B60077FEA9 /* MWNetworkData.pb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWNetworkData.pb.m; sourceTree = "<group>"; };
 		69E7511C1F5658BE000728DD /* MWChatTableViewCellReverse.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MWChatTableViewCellReverse.xib; sourceTree = "<group>"; };
 		69E7511F1F565DA8000728DD /* MWMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWMessage.h; sourceTree = "<group>"; };
 		69E751201F565DA8000728DD /* MWMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWMessage.m; sourceTree = "<group>"; };
@@ -251,6 +254,15 @@
 			name = Model;
 			sourceTree = "<group>";
 		};
+		69DE00D51F5FE4510077FEA9 /* protoFile */ = {
+			isa = PBXGroup;
+			children = (
+				69DE00D91F5FE7B60077FEA9 /* MWNetworkData.pb.h */,
+				69DE00DA1F5FE7B60077FEA9 /* MWNetworkData.pb.m */,
+			);
+			name = protoFile;
+			sourceTree = "<group>";
+		};
 		69E7512A1F566633000728DD /* Categories */ = {
 			isa = PBXGroup;
 			children = (
@@ -379,6 +391,7 @@
 		69E751701F5AF8A8000728DD /* library */ = {
 			isa = PBXGroup;
 			children = (
+				69DE00D51F5FE4510077FEA9 /* protoFile */,
 				69E751711F5AF8B6000728DD /* ToastView */,
 			);
 			name = library;
@@ -625,6 +638,7 @@
 				69E751571F5A7A0B000728DD /* MWAddressBookTableViewCell.m in Sources */,
 				690EAB761F24EA2F00609313 /* MWMainPageInfoManager.m in Sources */,
 				8C6635921F33193E00739333 /* MWChatTableViewController.m in Sources */,
+				69DE00DB1F5FE7B60077FEA9 /* MWNetworkData.pb.m in Sources */,
 				690EAB451F24E6B800609313 /* ViewController.m in Sources */,
 				69E751631F5AE44C000728DD /* MWAddressBookHeaderView.m in Sources */,
 				696CB0BB1F5E6CD2004DB493 /* MWDetailInfoTableViewButtonCell.m in Sources */,
@@ -773,6 +787,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.huangsunyang.MyWechat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "$(PODS_ROOT)/**";
 			};
 			name = Debug;
 		};
@@ -785,6 +800,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.huangsunyang.MyWechat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "$(PODS_ROOT)/**";
 			};
 			name = Release;
 		};
