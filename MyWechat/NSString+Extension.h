@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NSString (NSStringExtension)
+@interface NSString (Extension)
 
 + (NSString *)stringFromDate: (NSDate *) date;
 

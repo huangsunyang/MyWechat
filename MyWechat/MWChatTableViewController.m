@@ -8,13 +8,18 @@
 
 #import "MWChatTableViewController.h"
 #import "MWChatTableViewCell.h"
-#import "NSString+NSStringExtension.h"
+#import "NSString+Extension.h"
 #import "MWChatInformTableViewCell.h"
 #import "MWTypeView.h"
 #import "MWMessageManager.h"
 #import "MWMessage.h"
 #import "MWChatSettingTableViewController.h"
 #import "MWDetailInfoController.h"
+#import <sys/socket.h>
+#import <netdb.h>
+
+#import <err.h>
+#import <errno.h>
 
 @interface MWChatTableViewController ()
 
@@ -24,6 +29,9 @@
 @property (nonatomic, assign) BOOL isKeyboardShown;
 
 @property (nonatomic, strong) NSIndexPath * currentLongPressedIndex;
+
+@property(nonatomic, strong) NSInputStream *inputStream;
+@property(nonatomic, strong) NSOutputStream *outputStream;
 
 @end
 
@@ -37,7 +45,7 @@
     [self setupFrames];
     [self setupEvents];
     [self setupNavigationBarItems];
-    
+    [self setupNetwork];
     self.isKeyboardShown = false;
 }
 
@@ -121,6 +129,27 @@
     self.navigationItem.rightBarButtonItem = setButton;
 }
 
+- (void) setupNetwork {
+    NSString * localHost = @"183.172.22.42";
+    int port = 4867;
+    CFReadStreamRef readStream;
+    CFWriteStreamRef writeStream;
+
+    CFStreamCreatePairWithSocketToHost(NULL, (__bridge CFStringRef)(localHost), port, &readStream, &writeStream);
+    
+    self.inputStream = (__bridge NSInputStream *)readStream;
+    self.outputStream = (__bridge NSOutputStream *)writeStream;
+    
+    self.inputStream.delegate = self;
+    self.outputStream.delegate = self;
+    
+    [self.inputStream scheduleInRunLoop:[NSRunLoop mainRunLoop] forMode:NSDefaultRunLoopMode];
+    [self.outputStream scheduleInRunLoop:[NSRunLoop mainRunLoop] forMode:NSDefaultRunLoopMode];
+    
+    [self.inputStream open];
+    [self.outputStream open];
+}
+
 - (void) viewWillAppear:(BOOL)animated {
     NSLog(@"chat view will appear");
     [super viewWillAppear:animated];
@@ -130,6 +159,10 @@
     } else {
         self.view.backgroundColor = [UIColor whiteColor];
     }
+}
+
+- (void) viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
     [self scollToLastCell];
 }
 
@@ -312,6 +345,7 @@
 
 - (void) onPortraitTapped: (UITapGestureRecognizer *) gr {
     NSLog(@"portrain tapped");
+    self.hidesBottomBarWhenPushed = YES;
     MWDetailInfoController * detailInfoController = [[MWDetailInfoController alloc] init];
     [self.navigationController pushViewController:detailInfoController animated:YES];
 }
@@ -343,6 +377,12 @@
 }
 
 # pragma mark - tool functions
+- (void) addMessage: (MWMessage *) message {
+    [[MWMessageManager sharedInstance] addMessage: message];
+    [self.tableView reloadData];
+    [self.tableView layoutIfNeeded];
+    [self scollToLastCell];
+}
 
 - (void) scollToLastCell {
     long numOfSection = [self.tableView numberOfSections];
@@ -360,9 +400,63 @@
 
 - (void) sendMessage: (NSString *) text {
     MWMessage * message = [[MWMessage alloc] initWithType:MessageTypeSend string:text];
-    [[MWMessageManager sharedInstance] addMessage: message];
-    [self.tableView reloadData];
-    [self.tableView layoutIfNeeded];
+    
+    NSData * messageDate = [text dataUsingEncoding:NSUTF8StringEncoding];
+    [self.outputStream write:messageDate.bytes maxLength:messageDate.length];
+    
+    [self addMessage:message];
+}
+
+- (void)stream:(NSStream *)aStream handleEvent:(NSStreamEvent)eventCode {
+    NSString * event = @"nothing happened";
+    switch (eventCode) {
+        case NSStreamEventNone:
+            event = @"NSStreamEventNone";
+            break;
+        case NSStreamEventOpenCompleted:
+            event = @"NSStreamEventOpenCompleted";
+            break;
+        case NSStreamEventHasBytesAvailable: //有字节可读
+            if (aStream == self.inputStream) {
+                event = @"NSStreamEventHasBytesAvailable";
+                if ([self.inputStream hasBytesAvailable])
+                    [self receiveMessage];
+            }
+            break;
+        case NSStreamEventHasSpaceAvailable:
+            event = @"NSStreamEventHasSpaceAvailable";
+            break;
+        case NSStreamEventErrorOccurred:
+            event = @"NSStreamEventErrorOccurred";
+            break;
+        case NSStreamEventEndEncountered:   //结束
+            event = @"NSStreamEventEndEncountered";
+            [self closeConnection];
+        default:
+            break;
+    }
+    NSLog(@"event ---------- %@", event);
+}
+
+- (void) receiveMessage {
+    uint8_t buf[1024];
+    NSMutableData * receiveDate = [[NSMutableData alloc] init];
+    while ([self.inputStream hasBytesAvailable]) {
+        NSInteger length = [self.inputStream read:buf maxLength:sizeof(buf)];
+        [receiveDate appendBytes:buf length:length];
+    }
+    NSString * receiveStr = [[NSString alloc] initWithData:receiveDate encoding:NSUTF8StringEncoding];
+    if (receiveStr.length <= 0) return;
+    MWMessage * message = [[MWMessage alloc] initWithType:MessageTypeReceive string:receiveStr];
+    [self addMessage:message];
+}
+
+- (void) closeConnection {
+    [self.inputStream close];
+    [self.outputStream close];
+    //从主循环移除
+    [self.inputStream removeFromRunLoop:[NSRunLoop mainRunLoop] forMode:NSDefaultRunLoopMode];
+    [self.outputStream removeFromRunLoop:[NSRunLoop mainRunLoop] forMode:NSDefaultRunLoopMode];
 }
 
 @end

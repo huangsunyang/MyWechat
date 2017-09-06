@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 #import "MWMessageProtocol.h"
 
-@interface MWChatTableViewController : UIViewController<UITableViewDelegate, UITableViewDataSource, UITextViewDelegate, MWMessageProtocol>
+@interface MWChatTableViewController : UIViewController<UITableViewDelegate, UITableViewDataSource, UITextViewDelegate, MWMessageProtocol, NSStreamDelegate>
 
 @end

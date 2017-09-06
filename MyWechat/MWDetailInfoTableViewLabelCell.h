@@ -10,5 +10,5 @@
 
 @interface MWDetailInfoTableViewLabelCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UILabel * itemNameLabel;
-@property (weak, nonatomic) IBOutlet UILabel * nameLabel;
+@property (weak, nonatomic) IBOutlet UILabel * itemValueLabel;
 @end

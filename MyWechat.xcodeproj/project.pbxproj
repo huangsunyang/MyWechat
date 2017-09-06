@@ -18,11 +18,16 @@
 		690EAB791F24EAF500609313 /* MWPersonInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 690EAB781F24EAF500609313 /* MWPersonInfo.m */; };
 		690EAB7E1F27925200609313 /* MWMainPageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 690EAB7C1F27925200609313 /* MWMainPageTableViewCell.m */; };
 		690EAB7F1F27925200609313 /* MWMainPageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 690EAB7D1F27925200609313 /* MWMainPageTableViewCell.xib */; };
+		696CB0B11F5DBE12004DB493 /* MWDetailInfoTableViewLabelCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 696CB0B01F5DBE12004DB493 /* MWDetailInfoTableViewLabelCell.xib */; };
+		696CB0B31F5DBE4E004DB493 /* MWDetailInfoTableViewPhotoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 696CB0B21F5DBE4E004DB493 /* MWDetailInfoTableViewPhotoCell.xib */; };
+		696CB0B61F5E6797004DB493 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 696CB0B51F5E6797004DB493 /* UIView+Extension.m */; };
+		696CB0BB1F5E6CD2004DB493 /* MWDetailInfoTableViewButtonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 696CB0B91F5E6CD2004DB493 /* MWDetailInfoTableViewButtonCell.m */; };
+		696CB0BC1F5E6CD2004DB493 /* MWDetailInfoTableViewButtonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 696CB0BA1F5E6CD2004DB493 /* MWDetailInfoTableViewButtonCell.xib */; };
 		69E7511E1F5658BE000728DD /* MWChatTableViewCellReverse.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69E7511C1F5658BE000728DD /* MWChatTableViewCellReverse.xib */; };
 		69E751211F565DA8000728DD /* MWMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 69E751201F565DA8000728DD /* MWMessage.m */; };
 		69E751281F565E26000728DD /* MWChatInformTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 69E751261F565E26000728DD /* MWChatInformTableViewCell.m */; };
 		69E751291F565E26000728DD /* MWChatInformTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69E751271F565E26000728DD /* MWChatInformTableViewCell.xib */; };
-		69E7512D1F5666A6000728DD /* NSString+NSStringExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 69E7512C1F5666A6000728DD /* NSString+NSStringExtension.m */; };
+		69E7512D1F5666A6000728DD /* NSString+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 69E7512C1F5666A6000728DD /* NSString+Extension.m */; };
 		69E751341F566DB7000728DD /* MWTypeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69E751321F566DB7000728DD /* MWTypeView.xib */; };
 		69E751431F5716CA000728DD /* MWTypeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 69E751421F5716CA000728DD /* MWTypeView.m */; };
 		69E751481F585F56000728DD /* MWMessageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 69E751471F585F56000728DD /* MWMessageManager.m */; };
@@ -49,9 +54,11 @@
 		8C6635921F33193E00739333 /* MWChatTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C6635901F33193E00739333 /* MWChatTableViewController.m */; };
 		8C66359A1F33199400739333 /* MWChatTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C6635981F33199400739333 /* MWChatTableViewCell.m */; };
 		8C66359B1F33199400739333 /* MWChatTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C6635991F33199400739333 /* MWChatTableViewCell.xib */; };
+		A1AAA0158765529350BD0E6E /* libPods-MyWechat.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 88D6BB00EBC29281758AE4E2 /* libPods-MyWechat.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		00D7400982B343143D807311 /* Pods-MyWechat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyWechat.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyWechat/Pods-MyWechat.release.xcconfig"; sourceTree = "<group>"; };
 		690EAB3A1F24E6B800609313 /* MyWechat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyWechat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		690EAB3E1F24E6B800609313 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		690EAB401F24E6B800609313 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -71,14 +78,22 @@
 		690EAB7B1F27925200609313 /* MWMainPageTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWMainPageTableViewCell.h; sourceTree = "<group>"; };
 		690EAB7C1F27925200609313 /* MWMainPageTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWMainPageTableViewCell.m; sourceTree = "<group>"; };
 		690EAB7D1F27925200609313 /* MWMainPageTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MWMainPageTableViewCell.xib; sourceTree = "<group>"; };
+		696CB0B01F5DBE12004DB493 /* MWDetailInfoTableViewLabelCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MWDetailInfoTableViewLabelCell.xib; sourceTree = "<group>"; };
+		696CB0B21F5DBE4E004DB493 /* MWDetailInfoTableViewPhotoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MWDetailInfoTableViewPhotoCell.xib; sourceTree = "<group>"; };
+		696CB0B41F5E6797004DB493 /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
+		696CB0B51F5E6797004DB493 /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
+		696CB0B71F5E687C004DB493 /* MWAllExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MWAllExtension.h; sourceTree = "<group>"; };
+		696CB0B81F5E6CD2004DB493 /* MWDetailInfoTableViewButtonCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWDetailInfoTableViewButtonCell.h; sourceTree = "<group>"; };
+		696CB0B91F5E6CD2004DB493 /* MWDetailInfoTableViewButtonCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWDetailInfoTableViewButtonCell.m; sourceTree = "<group>"; };
+		696CB0BA1F5E6CD2004DB493 /* MWDetailInfoTableViewButtonCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MWDetailInfoTableViewButtonCell.xib; sourceTree = "<group>"; };
 		69E7511C1F5658BE000728DD /* MWChatTableViewCellReverse.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MWChatTableViewCellReverse.xib; sourceTree = "<group>"; };
 		69E7511F1F565DA8000728DD /* MWMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWMessage.h; sourceTree = "<group>"; };
 		69E751201F565DA8000728DD /* MWMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWMessage.m; sourceTree = "<group>"; };
 		69E751251F565E26000728DD /* MWChatInformTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWChatInformTableViewCell.h; sourceTree = "<group>"; };
 		69E751261F565E26000728DD /* MWChatInformTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWChatInformTableViewCell.m; sourceTree = "<group>"; };
 		69E751271F565E26000728DD /* MWChatInformTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MWChatInformTableViewCell.xib; sourceTree = "<group>"; };
-		69E7512B1F5666A6000728DD /* NSString+NSStringExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+NSStringExtension.h"; sourceTree = "<group>"; };
-		69E7512C1F5666A6000728DD /* NSString+NSStringExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+NSStringExtension.m"; sourceTree = "<group>"; };
+		69E7512B1F5666A6000728DD /* NSString+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Extension.h"; sourceTree = "<group>"; };
+		69E7512C1F5666A6000728DD /* NSString+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Extension.m"; sourceTree = "<group>"; };
 		69E751321F566DB7000728DD /* MWTypeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MWTypeView.xib; sourceTree = "<group>"; };
 		69E751411F5716C9000728DD /* MWTypeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWTypeView.h; sourceTree = "<group>"; };
 		69E751421F5716CA000728DD /* MWTypeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWTypeView.m; sourceTree = "<group>"; };
@@ -113,6 +128,7 @@
 		69E751861F5C5890000728DD /* MWDetailInfoTableViewPhotoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWDetailInfoTableViewPhotoCell.h; sourceTree = "<group>"; };
 		69E751871F5C5890000728DD /* MWDetailInfoTableViewPhotoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWDetailInfoTableViewPhotoCell.m; sourceTree = "<group>"; };
 		69E7518A1F5C6C62000728DD /* MWDetailInfoTableViewInfoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MWDetailInfoTableViewInfoCell.xib; sourceTree = "<group>"; };
+		88D6BB00EBC29281758AE4E2 /* libPods-MyWechat.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MyWechat.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C01A5261F593BE700FE6882 /* MWChatSettingTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWChatSettingTableViewController.h; sourceTree = "<group>"; };
 		8C01A5271F593BE700FE6882 /* MWChatSettingTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWChatSettingTableViewController.m; sourceTree = "<group>"; };
 		8C01A52B1F5944EC00FE6882 /* MWChatSettingTableViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MWChatSettingTableViewController.storyboard; sourceTree = "<group>"; };
@@ -122,6 +138,7 @@
 		8C6635971F33199400739333 /* MWChatTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWChatTableViewCell.h; sourceTree = "<group>"; };
 		8C6635981F33199400739333 /* MWChatTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWChatTableViewCell.m; sourceTree = "<group>"; };
 		8C6635991F33199400739333 /* MWChatTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MWChatTableViewCell.xib; sourceTree = "<group>"; };
+		C59454B17B628910068202E2 /* Pods-MyWechat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyWechat.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyWechat/Pods-MyWechat.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,18 +147,29 @@
 			buildActionMask = 2147483647;
 			files = (
 				69E7516F1F5AF859000728DD /* QuartzCore.framework in Frameworks */,
+				A1AAA0158765529350BD0E6E /* libPods-MyWechat.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		33342051CC4D367CFD1F50AA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C59454B17B628910068202E2 /* Pods-MyWechat.debug.xcconfig */,
+				00D7400982B343143D807311 /* Pods-MyWechat.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		690EAB311F24E6B800609313 = {
 			isa = PBXGroup;
 			children = (
 				690EAB3C1F24E6B800609313 /* MyWechat */,
 				690EAB3B1F24E6B800609313 /* Products */,
 				69E7516D1F5AF859000728DD /* Frameworks */,
+				33342051CC4D367CFD1F50AA /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -226,8 +254,11 @@
 		69E7512A1F566633000728DD /* Categories */ = {
 			isa = PBXGroup;
 			children = (
-				69E7512B1F5666A6000728DD /* NSString+NSStringExtension.h */,
-				69E7512C1F5666A6000728DD /* NSString+NSStringExtension.m */,
+				69E7512B1F5666A6000728DD /* NSString+Extension.h */,
+				69E7512C1F5666A6000728DD /* NSString+Extension.m */,
+				696CB0B41F5E6797004DB493 /* UIView+Extension.h */,
+				696CB0B51F5E6797004DB493 /* UIView+Extension.m */,
+				696CB0B71F5E687C004DB493 /* MWAllExtension.h */,
 			);
 			name = Categories;
 			sourceTree = "<group>";
@@ -340,6 +371,7 @@
 			isa = PBXGroup;
 			children = (
 				69E7516E1F5AF859000728DD /* QuartzCore.framework */,
+				88D6BB00EBC29281758AE4E2 /* libPods-MyWechat.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -347,18 +379,18 @@
 		69E751701F5AF8A8000728DD /* library */ = {
 			isa = PBXGroup;
 			children = (
-				69E751711F5AF8B6000728DD /* New Group */,
+				69E751711F5AF8B6000728DD /* ToastView */,
 			);
 			name = library;
 			sourceTree = "<group>";
 		};
-		69E751711F5AF8B6000728DD /* New Group */ = {
+		69E751711F5AF8B6000728DD /* ToastView */ = {
 			isa = PBXGroup;
 			children = (
 				69E751721F5AF8C2000728DD /* ALToastView.h */,
 				69E751731F5AF8C2000728DD /* ALToastView.m */,
 			);
-			name = "New Group";
+			name = ToastView;
 			sourceTree = "<group>";
 		};
 		69E751751F5C16EB000728DD /* DetailInfo */ = {
@@ -379,9 +411,14 @@
 				69E7518A1F5C6C62000728DD /* MWDetailInfoTableViewInfoCell.xib */,
 				69E751811F5C5863000728DD /* MWDetailInfoTableViewInfoCell.m */,
 				69E751831F5C587A000728DD /* MWDetailInfoTableViewLabelCell.h */,
+				696CB0B01F5DBE12004DB493 /* MWDetailInfoTableViewLabelCell.xib */,
 				69E751841F5C587A000728DD /* MWDetailInfoTableViewLabelCell.m */,
 				69E751861F5C5890000728DD /* MWDetailInfoTableViewPhotoCell.h */,
+				696CB0B21F5DBE4E004DB493 /* MWDetailInfoTableViewPhotoCell.xib */,
 				69E751871F5C5890000728DD /* MWDetailInfoTableViewPhotoCell.m */,
+				696CB0B81F5E6CD2004DB493 /* MWDetailInfoTableViewButtonCell.h */,
+				696CB0B91F5E6CD2004DB493 /* MWDetailInfoTableViewButtonCell.m */,
+				696CB0BA1F5E6CD2004DB493 /* MWDetailInfoTableViewButtonCell.xib */,
 			);
 			name = detailInfoCells;
 			sourceTree = "<group>";
@@ -451,9 +488,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 690EAB511F24E6B800609313 /* Build configuration list for PBXNativeTarget "MyWechat" */;
 			buildPhases = (
+				54B81A2D054E3DBA76570642 /* [CP] Check Pods Manifest.lock */,
 				690EAB361F24E6B800609313 /* Sources */,
 				690EAB371F24E6B800609313 /* Frameworks */,
 				690EAB381F24E6B800609313 /* Resources */,
+				0008767C6A1D44220AE35995 /* [CP] Embed Pods Frameworks */,
+				A09D0773C9049F89AC9083DD /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -504,10 +544,12 @@
 			files = (
 				690EAB4D1F24E6B800609313 /* LaunchScreen.storyboard in Resources */,
 				690EAB7F1F27925200609313 /* MWMainPageTableViewCell.xib in Resources */,
+				696CB0BC1F5E6CD2004DB493 /* MWDetailInfoTableViewButtonCell.xib in Resources */,
 				69E751291F565E26000728DD /* MWChatInformTableViewCell.xib in Resources */,
 				69E7511E1F5658BE000728DD /* MWChatTableViewCellReverse.xib in Resources */,
 				690EAB4A1F24E6B800609313 /* Assets.xcassets in Resources */,
 				69E7518B1F5C6C62000728DD /* MWDetailInfoTableViewInfoCell.xib in Resources */,
+				696CB0B31F5DBE4E004DB493 /* MWDetailInfoTableViewPhotoCell.xib in Resources */,
 				8C01A52C1F5944EC00FE6882 /* MWChatSettingTableViewController.storyboard in Resources */,
 				69E751581F5A7A0B000728DD /* MWAddressBookTableViewCell.xib in Resources */,
 				69E7516B1F5AEDB1000728DD /* AddressBookFooterView.xib in Resources */,
@@ -515,12 +557,64 @@
 				8C66359B1F33199400739333 /* MWChatTableViewCell.xib in Resources */,
 				69E751651F5AE46F000728DD /* MWAddressBookHeaderView.xib in Resources */,
 				69E751341F566DB7000728DD /* MWTypeView.xib in Resources */,
+				696CB0B11F5DBE12004DB493 /* MWDetailInfoTableViewLabelCell.xib in Resources */,
 				69E7517C1F5C17C1000728DD /* MWDetailInfoController.xib in Resources */,
 				690EAB481F24E6B800609313 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0008767C6A1D44220AE35995 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MyWechat/Pods-MyWechat-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		54B81A2D054E3DBA76570642 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MyWechat-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A09D0773C9049F89AC9083DD /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MyWechat/Pods-MyWechat-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		690EAB361F24E6B800609313 /* Sources */ = {
@@ -533,10 +627,11 @@
 				8C6635921F33193E00739333 /* MWChatTableViewController.m in Sources */,
 				690EAB451F24E6B800609313 /* ViewController.m in Sources */,
 				69E751631F5AE44C000728DD /* MWAddressBookHeaderView.m in Sources */,
+				696CB0BB1F5E6CD2004DB493 /* MWDetailInfoTableViewButtonCell.m in Sources */,
 				69E751881F5C5890000728DD /* MWDetailInfoTableViewPhotoCell.m in Sources */,
 				690EAB791F24EAF500609313 /* MWPersonInfo.m in Sources */,
 				69E751521F5A628D000728DD /* MWAddressBookManager.m in Sources */,
-				69E7512D1F5666A6000728DD /* NSString+NSStringExtension.m in Sources */,
+				69E7512D1F5666A6000728DD /* NSString+Extension.m in Sources */,
 				69E751691F5AEDA5000728DD /* AddressBookFooterView.m in Sources */,
 				69E751211F565DA8000728DD /* MWMessage.m in Sources */,
 				69E7515E1F5A7A39000728DD /* MWAlphabetTableViewCell.m in Sources */,
@@ -545,6 +640,7 @@
 				69E751851F5C587A000728DD /* MWDetailInfoTableViewLabelCell.m in Sources */,
 				690EAB7E1F27925200609313 /* MWMainPageTableViewCell.m in Sources */,
 				690EAB3F1F24E6B800609313 /* main.m in Sources */,
+				696CB0B61F5E6797004DB493 /* UIView+Extension.m in Sources */,
 				69E751481F585F56000728DD /* MWMessageManager.m in Sources */,
 				69E751431F5716CA000728DD /* MWTypeView.m in Sources */,
 				69E7517B1F5C17C1000728DD /* MWDetailInfoController.m in Sources */,
@@ -670,6 +766,7 @@
 		};
 		690EAB521F24E6B800609313 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C59454B17B628910068202E2 /* Pods-MyWechat.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = MyWechat/Info.plist;
@@ -681,6 +778,7 @@
 		};
 		690EAB531F24E6B800609313 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 00D7400982B343143D807311 /* Pods-MyWechat.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = MyWechat/Info.plist;

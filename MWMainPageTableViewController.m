@@ -9,6 +9,8 @@
 #import "MWMainPageTableViewController.h"
 #import "MWMainPageInfoManager.h"
 #import "MWChatTableViewController.h"
+#import <sys/socket.h>
+#import <netdb.h>
 
 @interface MWMainPageTableViewController ()
 
@@ -27,6 +29,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    [self setupView];
+    [self setupNetwork];
+}
+
+- (void) setupView {
     //导航栏
     self.navigationItem.title = @"微信";
     
@@ -34,6 +41,21 @@
     
     [self.tableView registerNib:nib
          forCellReuseIdentifier:@"MWMainPageTableViewCell"];
+}
+
+- (void) setupNetwork {
+    NSString * localHost = @"127.0.0.1";
+    int port = 486;
+    int socketFileDescriptor = socket(AF_INET, SOCK_STREAM, 0);
+    
+    if (socketFileDescriptor == -1) {
+        NSLog(@"Failed to create socket.");
+        return;
+    }
+    
+    struct hostent * romoteHostEnd;
+    
+    
 }
 
 - (void)didReceiveMemoryWarning {

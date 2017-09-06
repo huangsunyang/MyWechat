@@ -6,9 +6,9 @@
 //  Copyright © 2017年 huangsunyang. All rights reserved.
 //
 
-#import "NSString+NSStringExtension.h"
+#import "NSString+Extension.h"
 
-@implementation NSString (NSStringExtension)
+@implementation NSString (Extension)
 
 + (NSString *)stringFromDate: (NSDate *) date {
     NSDateFormatter * dateFormatter =[[NSDateFormatter alloc] init];
