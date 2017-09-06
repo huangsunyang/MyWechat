@@ -15,7 +15,7 @@
 #define SERVER_IP "183.172.22.42"
 #define SERVER_PORT 4867
 #define EPOLL_SIZE 5000
-#define SERVER_MESSAGE "ClientID %d say >> %s"
+#define SERVER_MESSAGE "%s"
 #define EXIT "EXIT"
 #define CAUTION "There is only one int the char room!"
 #define BUF_SIZE 0xFFFF
@@ -60,7 +60,7 @@ int sendBroadcastmessage(int clientfd) {
             return len;
         }
 
-        sprintf(message, SERVER_MESSAGE, clientfd, buf);
+        sprintf(message, SERVER_MESSAGE, buf);
 
         for (auto it = clients_list.begin(); it != clients_list.end(); it++) {
             if (*it != clientfd) {
