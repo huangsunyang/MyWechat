@@ -14,6 +14,8 @@
 #import "AddressBookFooterView.h"
 #import "MWPersonInfo.h"
 #import "ALToastView.h"
+#import "MWDetailInfoController.h"
+#import "MWLog.h"
 
 @interface MWAddressBookTableViewController ()
 
@@ -28,7 +30,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
     [self setupViews];
     [self setupFrame];
     [self setupEvents];
@@ -111,7 +112,7 @@
     if (tableView == self.alphabeticTableView) {
         return 27;
     } else {
-        NSArray * partArray = [[MWAddressBookManager sharedInstance] addressWithIndex:section];
+        NSArray * partArray = [[MWAddressBookManager sharedInstance] addressWithSection:section];
         return partArray.count;
     }
 }
@@ -137,7 +138,7 @@
         cell.backgroundColor = [UIColor clearColor];
         return cell;
     } else {
-        NSArray * partArray = [[MWAddressBookManager sharedInstance] addressWithIndex:indexPath.section];
+        NSArray * partArray = [[MWAddressBookManager sharedInstance] addressWithSection:indexPath.section];
         
         MWAddressBookTableViewCell * cell = [self.addressBookTableView dequeueReusableCellWithIdentifier:@"MWAddressBookTableViewCell"];
         
@@ -212,8 +213,13 @@
             NSIndexPath * index = [NSIndexPath indexPathForRow:0 inSection:section];
             [self.addressBookTableView scrollToRowAtIndexPath:index atScrollPosition:UITableViewScrollPositionTop animated:NO];
         }
-    } else {
-        
+    } else if (tableView == self.addressBookTableView) {
+        self.hidesBottomBarWhenPushed = YES;
+        MWDetailInfoController * detailInfoController = [[MWDetailInfoController alloc] init];
+        MWPersonInfo * info = [[MWAddressBookManager sharedInstance] addressWithIndex:indexPath];
+        detailInfoController.personInfo = info;
+        [self.navigationController pushViewController:detailInfoController animated:YES];
+        self.hidesBottomBarWhenPushed = NO;
     }
 }
 
@@ -233,7 +239,7 @@
     if (gr.state == UIGestureRecognizerStateBegan || gr.state == UIGestureRecognizerStateChanged) {
         self.alphabeticTableView.backgroundColor = [[UIColor lightGrayColor] colorWithAlphaComponent:0.5];
         CGPoint point = [gr locationInView:self.alphabeticTableView];
-        NSLog(@"%f %f", point.x, point.y);
+        MWLog(@"%f %f", point.x, point.y);
         if (point.x < 0) {
             [ALToastView removeToastView];
             self.alphabeticTableView.backgroundColor = [UIColor clearColor];

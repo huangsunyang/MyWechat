@@ -8,6 +8,7 @@
 
 #import "MWAddressBookManager.h"
 #import "MWPersonInfo.h"
+#import "MWLog.h"
 
 @interface MWAddressBookManager() {
     NSMutableArray * _addressBook;
@@ -67,11 +68,12 @@
     NSString * path = [self itemArchievePath];
     NSFileManager * fileManager = [NSFileManager defaultManager];
     if ([fileManager fileExistsAtPath:path]) {
+        MWLog(@"loading addressbook file");
         self = [NSKeyedUnarchiver unarchiveObjectWithFile:path];
     }
     
     if (self.addressBook.count == 0) {
-        NSLog(@"load file failed");
+        MWLog(@"load addressbook file failed");
         static const NSString *kRandomAlphabet = @"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
         int kRandomLength = 10;
         _addressBook = [[NSMutableArray alloc] init];
@@ -120,7 +122,7 @@
              }];
         }
     } else {
-        NSLog(@"load file succeeded");
+        MWLog(@"load addressbook file succeeded");
     }
     return self;
 }
@@ -144,7 +146,7 @@
     return ret;
 }
 
-- (NSArray *) addressWithIndex: (NSUInteger) index {
+- (NSArray *) addressWithSection: (NSUInteger) index {
     NSUInteger count = -1;
     for (char ch = 'A'; ch <= 'Z' + 1; ch++) {
         NSNumber * key = [NSNumber numberWithChar:ch];
@@ -155,6 +157,11 @@
         }
     }
     return nil;
+}
+
+- (MWPersonInfo *) addressWithIndex: (NSIndexPath *) index {
+    NSArray * partArray = [self addressWithSection:index.section];
+    return partArray[index.row];
 }
 
 - (NSArray *) addressWithKey: (char) ch {

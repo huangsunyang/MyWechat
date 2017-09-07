@@ -22,6 +22,7 @@
 #import <err.h>
 #import <errno.h>
 #import "YYText.h"
+#import "MWLog.h"
 
 @interface MWChatTableViewController ()
 
@@ -37,7 +38,7 @@
 @implementation MWChatTableViewController
 
 - (void)viewDidLoad {
-    NSLog(@"chat view did load");
+    MWLog(@"chat view did load");
     [super viewDidLoad];
     
     [self setupViews];
@@ -128,7 +129,7 @@
 }
 
 - (void) viewWillAppear:(BOOL)animated {
-    NSLog(@"chat view will appear");
+    MWLog(@"chat view will appear");
     [super viewWillAppear:animated];
     [self.tableView reloadData];
     //todo
@@ -196,7 +197,7 @@
                                      color:[UIColor orangeColor]
                            backgroundColor:[UIColor whiteColor]
                                  tapAction:^(UIView *containerView, NSAttributedString *text, NSRange range, CGRect rect){
-                                     NSLog(@"这里是点击事件");
+                                     MWLog(@"这里是点击事件");
                                      //跳转用的WKWebView
                                      MWWebMessageViewController *webView = [MWWebMessageViewController webViewWithURLString:[wholeText substringWithRange:match.range]];
                                      self.hidesBottomBarWhenPushed = YES;
@@ -284,7 +285,7 @@
 # pragma mark - touch events
 
 - (void) tableviewTouchInside {
-    NSLog(@"tableview touch inside");
+    MWLog(@"tableview touch inside");
     [self.view endEditing:YES];
 }
 
@@ -313,7 +314,7 @@
 
 - (void) onMessageLongPressed: (UIGestureRecognizer *) gesture {
     if (gesture.state == UIGestureRecognizerStateBegan) {
-        NSLog(@"MessageLabel long pressed");
+        MWLog(@"MessageLabel long pressed");
         CGPoint point = [gesture locationInView:self.tableView];
         
         [self becomeFirstResponder];
@@ -350,9 +351,10 @@
 }
 
 - (void) onPortraitTapped: (UITapGestureRecognizer *) gr {
-    NSLog(@"portrain tapped");
+    MWLog(@"portrain tapped");
     self.hidesBottomBarWhenPushed = YES;
     MWDetailInfoController * detailInfoController = [[MWDetailInfoController alloc] init];
+    detailInfoController.personInfo = self.personInfo;
     [self.navigationController pushViewController:detailInfoController animated:YES];
 }
 
@@ -411,6 +413,9 @@
     
     [self addMessage:message];
     
+    //记录当下的最后一条消息和发送时间
+    self.personInfo.lastMessage = message.messageText;
+    
     //尝试发送protobuf
     if ([self.outputStream hasSpaceAvailable]) {
         MWNetworkDataBuilder * proto = [[MWNetworkDataBuilder alloc] init];
@@ -451,7 +456,7 @@
         default:
             break;
     }
-    NSLog(@"event ---------- %@", event);
+    MWLog(@"event ---------- %@", event);
 }
 
 - (void) receiveMessage {

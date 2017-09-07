@@ -10,4 +10,6 @@
 
 @interface MWDetailInfoTableViewButtonCell : UITableViewCell
 
+@property(copy, nonatomic) void (^buttonClickedBlock)();
+
 @end

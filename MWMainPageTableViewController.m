@@ -12,6 +12,7 @@
 #import <sys/socket.h>
 #import <netdb.h>
 #import "MWNetworkData.pb.h"
+#import "MWLog.h"
 #import <err.h>
 #import <errno.h>
 
@@ -34,10 +35,17 @@
 }
 
 - (void)viewDidLoad {
+    MWLog(@"main page view did load");
     [super viewDidLoad];
     
     [self setupView];
     [self setupNetwork];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    MWLog(@"main page view will appear");
+    [self.tableView reloadData];
 }
 
 - (void) setupView {
@@ -110,7 +118,7 @@
     
     MWPersonInfo * item = items[indexPath.row];
     
-    NSLog(@"%@", item);
+    MWLog(@"%@", item);
     
     cell.nameLabel.text = item.name;
     cell.lastMessageLabel.text = item.lastMessage;

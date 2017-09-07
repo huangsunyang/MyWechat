@@ -11,6 +11,7 @@
 #import "MWMainPageTableViewController.h"
 #import "MWAddressBookTableViewController.h"
 #import "MWAddressBookManager.h"
+#import "MWLog.h"
 
 @interface AppDelegate ()
 
@@ -61,9 +62,9 @@
     // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.
     BOOL success = [[MWAddressBookManager sharedInstance] saveChanges];
     if (success) {
-        NSLog(@"Saved all addressbook items");
+        MWLog(@"Saved all addressbook items");
     } else {
-        NSLog(@"Saved addressbook items failed");
+        MWLog(@"Saved addressbook items failed");
     }
 }
 
@@ -73,9 +74,9 @@
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
     BOOL success = [[MWAddressBookManager sharedInstance] saveChanges];
     if (success) {
-        NSLog(@"Saved all addressbook items");
+        MWLog(@"Saved all addressbook items");
     } else {
-        NSLog(@"Saved addressbook items failed");
+        MWLog(@"Saved addressbook items failed");
     }
 }
 

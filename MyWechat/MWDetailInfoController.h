@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MWDetailInfoController : UIViewController<UITableViewDelegate, UITableViewDataSource>
+@class MWPersonInfo;
 
+@interface MWDetailInfoController : UIViewController<UITableViewDelegate, UITableViewDataSource>
+@property (nonatomic, strong) MWPersonInfo * personInfo;
 @end

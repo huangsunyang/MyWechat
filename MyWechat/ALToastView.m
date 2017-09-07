@@ -29,7 +29,6 @@ static UIView *currentToast;
 		self.layer.cornerRadius = 5;
 		self.autoresizingMask = UIViewAutoresizingNone;
 		self.autoresizesSubviews = NO;
-		
 		// Init and add label
 		_textLabel = [[UILabel alloc] init];
 		_textLabel.text = text;

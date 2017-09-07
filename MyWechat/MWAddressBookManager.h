@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+@class MWPersonInfo;
+
 @interface MWAddressBookManager : NSObject<NSCoding>
 
 @property (nonatomic, strong) NSArray * addressBook;
@@ -15,7 +17,8 @@
 
 + (instancetype)sharedInstance;
 - (NSUInteger) numOfAlphabets;
-- (NSArray *) addressWithIndex: (NSUInteger) index;
+- (NSArray *) addressWithSection: (NSUInteger) index;
+- (MWPersonInfo *) addressWithIndex: (NSIndexPath *) index;
 - (NSArray *) addressWithKey: (char) ch;
 - (NSInteger) sectionWithCharacter: (char) ch;
 - (char) charWithSection: (NSUInteger) section;

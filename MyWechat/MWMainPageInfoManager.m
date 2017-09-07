@@ -20,7 +20,7 @@
 
 # pragma mark - init method
 - (instancetype) init {
-    @throw [[NSException alloc] initWithName:@"SingletonExceptrion"
+    @throw [[NSException alloc] initWithName:@"SingletonException"
                                       reason:@"Can not use init method of a singleton class"
                                     userInfo:nil];
 }
@@ -33,7 +33,7 @@
         NSArray * allAddress = addressBookManager.addressBook;
         _allItems = [[NSMutableArray alloc] init];
         for (int i = 0; i < allAddress.count; i++) {
-            MWPersonInfo * item = allAddress[i];
+            __weak MWPersonInfo * item = allAddress[i];
             [_allItems addObject:item];
         }
     }

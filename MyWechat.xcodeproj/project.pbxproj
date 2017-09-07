@@ -95,6 +95,7 @@
 		69DE00DE1F603E260077FEA9 /* MWWebMessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWWebMessageViewController.m; sourceTree = "<group>"; };
 		69DE00E01F61756D0077FEA9 /* MWAllUserMessageManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWAllUserMessageManager.h; sourceTree = "<group>"; };
 		69DE00E11F61756D0077FEA9 /* MWAllUserMessageManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWAllUserMessageManager.m; sourceTree = "<group>"; };
+		69DE00E41F619C3A0077FEA9 /* MWLog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MWLog.h; sourceTree = "<group>"; };
 		69E7511C1F5658BE000728DD /* MWChatTableViewCellReverse.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MWChatTableViewCellReverse.xib; sourceTree = "<group>"; };
 		69E7511F1F565DA8000728DD /* MWMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWMessage.h; sourceTree = "<group>"; };
 		69E751201F565DA8000728DD /* MWMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWMessage.m; sourceTree = "<group>"; };
@@ -278,6 +279,14 @@
 			name = webview;
 			sourceTree = "<group>";
 		};
+		69DE00E31F619C230077FEA9 /* log */ = {
+			isa = PBXGroup;
+			children = (
+				69DE00E41F619C3A0077FEA9 /* MWLog.h */,
+			);
+			name = log;
+			sourceTree = "<group>";
+		};
 		69E7512A1F566633000728DD /* Categories */ = {
 			isa = PBXGroup;
 			children = (
@@ -406,6 +415,7 @@
 		69E751701F5AF8A8000728DD /* library */ = {
 			isa = PBXGroup;
 			children = (
+				69DE00E31F619C230077FEA9 /* log */,
 				69DE00D51F5FE4510077FEA9 /* protoFile */,
 				69E751711F5AF8B6000728DD /* ToastView */,
 			);

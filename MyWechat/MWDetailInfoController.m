@@ -12,6 +12,8 @@
 #import "MWDetailInfoTableViewLabelCell.h"
 #import "MWDetailInfoTableViewPhotoCell.h"
 #import "MWDetailInfoTableViewButtonCell.h"
+#import "MWPersonInfo.h"
+#import "MWChatTableViewController.h"
 
 @interface MWDetailInfoController ()
 
@@ -20,6 +22,19 @@
 @end
 
 @implementation MWDetailInfoController
+
+- (instancetype) initWithPersonInfo:(MWPersonInfo *) info {
+    self = [super init];
+    if (self) {
+        self.personInfo = info;
+    }
+    return self;
+}
+
+- (void) setPersonInfo:(MWPersonInfo *)personInfo {
+    _personInfo = personInfo;
+    [self.tableView layoutIfNeeded];
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -81,8 +96,8 @@
         case 1: return 40;
         case 2:
             switch (indexPath.row) {
-                case 1: return 70;
-                case 3: return 50;
+                case 1: return 70;  //朋友圈图片
+                case 3: return 60;  //按钮
                 default: return 40;
             }
     }
@@ -100,7 +115,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.section == 0) {
         MWDetailInfoTableViewInfoCell * cell = [self.tableView dequeueReusableCellWithIdentifier:@"MWDetailInfoTableViewInfoCell"];
-        cell.nameLabel.text = @"asdfasdf";
+        cell.nameLabel.text = self.personInfo.name;
         return cell;
     } else if (indexPath.section == 1) {
         MWDetailInfoTableViewLabelCell * cell = [self.tableView dequeueReusableCellWithIdentifier:@"MWDetailInfoTableViewLabelCell"];
@@ -128,6 +143,12 @@
             return cell;
         } else if (indexPath.row == 3) {
             MWDetailInfoTableViewButtonCell * cell = [self.tableView dequeueReusableCellWithIdentifier:@"MWDetailInfoTableViewButtonCell"];
+            cell.buttonClickedBlock = ^() {
+                self.hidesBottomBarWhenPushed = YES;
+                MWChatTableViewController * chatView = [[MWChatTableViewController alloc] init];
+                chatView.personInfo = self.personInfo;
+                [self.navigationController pushViewController:chatView animated:YES];
+            };
             return cell;
         }
     }

@@ -7,6 +7,7 @@
 //
 
 #import "MWDetailInfoTableViewButtonCell.h"
+#import "MWLog.h"
 
 @implementation MWDetailInfoTableViewButtonCell
 
@@ -19,6 +20,12 @@
     [super setSelected:selected animated:animated];
 
     // Configure the view for the selected state
+}
+- (IBAction)sendMessageButtonClicked:(id)sender {
+    MWLog(@"SendMessage ButtonClicked");
+    if (self.buttonClickedBlock != nil) {
+        self.buttonClickedBlock();
+    }
 }
 
 @end
