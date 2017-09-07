@@ -38,4 +38,22 @@
     return self;
 }
 
+- (void)encodeWithCoder:(NSCoder *)coder {
+    [coder encodeObject:self.messageText forKey:@"messageText"];
+    [coder encodeObject:self.currentTime forKey:@"currentTime"];
+    [coder encodeObject:self.informText  forKey:@"informText"];
+    [coder encodeInteger:self.messageType forKey:@"messageType"];
+}
+
+- (instancetype)initWithCoder:(NSCoder *)aDecoder {
+    self = [super init];
+    if (self) {
+        self.messageText = [aDecoder decodeObjectForKey:@"messageText"];
+        self.currentTime = [aDecoder decodeObjectForKey:@"currentTime"];
+        self.informText = [aDecoder decodeObjectForKey:@"informText"];
+        self.messageType = [aDecoder decodeIntegerForKey:@"messageType"];
+    }
+    return self;
+}
+
 @end

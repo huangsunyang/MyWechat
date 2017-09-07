@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MWMainPageTableViewController : UITableViewController
+@interface MWMainPageTableViewController : UITableViewController<NSStreamDelegate>
 
 @end

@@ -18,6 +18,22 @@
 
 @implementation MWAddressBookManager
 
+- (void)encodeWithCoder:(NSCoder *)coder {
+    [coder encodeObject:_addressBook forKey:@"addressBook"];
+    [coder encodeObject:_addressBookInAlphabet forKey:@"addressBookInAlphabet"];
+    
+}
+
+- (instancetype)initWithCoder:(NSCoder *)coder
+{
+    self = [super init];
+    if (self) {
+        _addressBook = [coder decodeObjectForKey:@"addressBook"];
+        _addressBookInAlphabet = [coder decodeObjectForKey:@"addressBookInAlphabet"];
+    }
+    return self;
+}
+
 //单例模式，生成通讯录
 + (instancetype)sharedInstance {
     static MWAddressBookManager * infoManager = nil;
@@ -32,10 +48,30 @@
     return infoManager;
 }
 
+- (NSString *)itemArchievePath {
+    NSArray * documentDirectories = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString * documentDirectory = [documentDirectories firstObject];
+    NSString * fileName = [NSStringFromClass(self.class) stringByAppendingString:@".archive"];
+    return [documentDirectory stringByAppendingPathComponent:fileName];
+}
+
+- (BOOL) saveChanges {
+    NSString * path = [self itemArchievePath];
+    return [NSKeyedArchiver archiveRootObject:self toFile:path];
+}
+
 //私有的构造函数
 - (instancetype)initPrivate {
     self = [super init];
-    if (self) {
+    
+    NSString * path = [self itemArchievePath];
+    NSFileManager * fileManager = [NSFileManager defaultManager];
+    if ([fileManager fileExistsAtPath:path]) {
+        self = [NSKeyedUnarchiver unarchiveObjectWithFile:path];
+    }
+    
+    if (self.addressBook.count == 0) {
+        NSLog(@"load file failed");
         static const NSString *kRandomAlphabet = @"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
         int kRandomLength = 10;
         _addressBook = [[NSMutableArray alloc] init];
@@ -46,7 +82,7 @@
             [_addressBookInAlphabet setObject:[[NSMutableArray alloc] init] forKey:key];
         }
         
-        for (int i = 0; i < 100; i++) {
+        for (int i = 0; i < 20; i++) {
             NSMutableString *randomString = [NSMutableString stringWithCapacity:kRandomLength];
             for (int i = 0; i < kRandomLength; i++) {
                 [randomString appendFormat: @"%C", [kRandomAlphabet characterAtIndex:arc4random_uniform((u_int32_t)[kRandomAlphabet length])]];
@@ -83,6 +119,8 @@
                  return result;
              }];
         }
+    } else {
+        NSLog(@"load file succeeded");
     }
     return self;
 }

@@ -22,6 +22,7 @@
                                                                              action:@selector(onMessageLongPressed:)];
     [self.messageBox addGestureRecognizer:longGesture];
     
+    
     UITapGestureRecognizer * tapGr = [[UITapGestureRecognizer alloc] initWithTarget:self.delegate
                                                                              action:@selector(onPortraitTapped:)];
     [self.leftPortrait addGestureRecognizer:tapGr];

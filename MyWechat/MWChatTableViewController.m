@@ -15,12 +15,13 @@
 #import "MWMessage.h"
 #import "MWChatSettingTableViewController.h"
 #import "MWDetailInfoController.h"
+#import "MWWebMessageViewController.h"
 #import <sys/socket.h>
 #import <netdb.h>
 #import "MWNetworkData.pb.h"
-
 #import <err.h>
 #import <errno.h>
+#import "YYText.h"
 
 @interface MWChatTableViewController ()
 
@@ -30,9 +31,6 @@
 @property (nonatomic, assign) BOOL isKeyboardShown;
 
 @property (nonatomic, strong) NSIndexPath * currentLongPressedIndex;
-
-@property(nonatomic, strong) NSInputStream *inputStream;
-@property(nonatomic, strong) NSOutputStream *outputStream;
 
 @end
 
@@ -46,7 +44,6 @@
     [self setupFrames];
     [self setupEvents];
     [self setupNavigationBarItems];
-    [self setupNetwork];
     self.isKeyboardShown = false;
 }
 
@@ -130,41 +127,27 @@
     self.navigationItem.rightBarButtonItem = setButton;
 }
 
-- (void) setupNetwork {
-    NSString * localHost = @"183.172.22.42";
-    int port = 4867;
-    CFReadStreamRef readStream;
-    CFWriteStreamRef writeStream;
-
-    CFStreamCreatePairWithSocketToHost(NULL, (__bridge CFStringRef)(localHost), port, &readStream, &writeStream);
-    
-    self.inputStream = (__bridge NSInputStream *)readStream;
-    self.outputStream = (__bridge NSOutputStream *)writeStream;
-    
-    self.inputStream.delegate = self;
-    self.outputStream.delegate = self;
-    
-    [self.inputStream scheduleInRunLoop:[NSRunLoop mainRunLoop] forMode:NSDefaultRunLoopMode];
-    [self.outputStream scheduleInRunLoop:[NSRunLoop mainRunLoop] forMode:NSDefaultRunLoopMode];
-    
-    [self.inputStream open];
-    [self.outputStream open];
-}
-
 - (void) viewWillAppear:(BOOL)animated {
     NSLog(@"chat view will appear");
     [super viewWillAppear:animated];
     [self.tableView reloadData];
-    if ([MWMessageManager sharedInstance].backgroundImage != nil) {
-        self.view.backgroundColor = [UIColor colorWithPatternImage:[MWMessageManager sharedInstance].backgroundImage];
-    } else {
-        self.view.backgroundColor = [UIColor whiteColor];
-    }
+    //todo
+//    if ([MWMessageManager sharedInstance].backgroundImage != nil) {
+//        self.view.backgroundColor = [UIColor colorWithPatternImage:[MWMessageManager sharedInstance].backgroundImage];
+//    } else {
+//        self.view.backgroundColor = [UIColor whiteColor];
+//    }
 }
+
 
 - (void) viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     [self scollToLastCell];
+}
+
+- (void) viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    [[MWMessageManager sharedInstanceWithUserName:self.personInfo.name] saveToFile];
 }
 
 - (void) dealloc {
@@ -183,14 +166,15 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [MWMessageManager sharedInstance].allMessages.count;
+    NSString * name = self.personInfo.name;
+    return [MWMessageManager sharedInstanceWithUserName:name].allMessages.count;
 }
 
 #pragma mark - Table view delegate
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    
-    MWMessage * message = [MWMessageManager sharedInstance].allMessages[indexPath.row];
+    NSString * name = self.personInfo.name;
+    MWMessage * message = [MWMessageManager sharedInstanceWithUserName:name].allMessages[indexPath.row];
     
     if (message.messageType == MessageTypeReceive) {
         MWChatTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MWChatTableViewCell" forIndexPath:indexPath];
@@ -199,7 +183,28 @@
         return cell;
     } else if (message.messageType == MessageTypeSend) {
         MWChatTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MWChatTableViewCellReverse" forIndexPath:indexPath];
-        cell.chatText.text = message.messageText;
+        //cell.chatText.text = message.messageText;
+        NSString * wholeText = message.messageText;
+        NSError * error;
+        NSDataDetector *dataDetector=[NSDataDetector dataDetectorWithTypes:NSTextCheckingTypeLink error:&error];
+        NSArray *arrayOfAllMatches=[dataDetector matchesInString:wholeText options:NSMatchingReportProgress range:NSMakeRange(0, wholeText.length)];
+
+        NSMutableAttributedString * text = [[NSMutableAttributedString alloc] initWithString:wholeText];
+        for (NSTextCheckingResult *match in arrayOfAllMatches)
+        {
+            [text yy_setTextHighlightRange:match.range//设置点击的位置
+                                     color:[UIColor orangeColor]
+                           backgroundColor:[UIColor whiteColor]
+                                 tapAction:^(UIView *containerView, NSAttributedString *text, NSRange range, CGRect rect){
+                                     NSLog(@"这里是点击事件");
+                                     //跳转用的WKWebView
+                                     MWWebMessageViewController *webView = [MWWebMessageViewController webViewWithURLString:[wholeText substringWithRange:match.range]];
+                                     self.hidesBottomBarWhenPushed = YES;
+                                     [self.navigationController pushViewController:webView animated:YES];
+                                     
+            }];
+        }
+        cell.chatText.attributedText = text;
         cell.delegate = self;
         return cell;
     } else if (message.messageType == MessageTypeSendInform) {
@@ -353,7 +358,8 @@
 
 //删除一条信息
 - (void)onDeleteMessage: (id)sender {
-    MWMessageManager * messageManager = [MWMessageManager sharedInstance];
+    NSString * name = self.personInfo.name;
+    MWMessageManager * messageManager = [MWMessageManager sharedInstanceWithUserName:name];
     [messageManager removeMessageAtIndex:self.currentLongPressedIndex.row];
     [self.tableView reloadData];
 }
@@ -379,7 +385,8 @@
 
 # pragma mark - tool functions
 - (void) addMessage: (MWMessage *) message {
-    [[MWMessageManager sharedInstance] addMessage: message];
+    NSString * name = self.personInfo.name;
+    [[MWMessageManager sharedInstanceWithUserName:name] addMessage: message];
     [self.tableView reloadData];
     [self.tableView layoutIfNeeded];
     [self scollToLastCell];
@@ -402,20 +409,18 @@
 - (void) sendMessage: (NSString *) text {
     MWMessage * message = [[MWMessage alloc] initWithType:MessageTypeSend string:text];
     
-    NSData * messageDate = [text dataUsingEncoding:NSUTF8StringEncoding];
-    [self.outputStream write:messageDate.bytes maxLength:messageDate.length];
-    
     [self addMessage:message];
     
     //尝试发送protobuf
-    MWNetworkDataBuilder * proto = [[MWNetworkDataBuilder alloc] init];
-    [proto setType:1];
-    [proto setFromUsr:@"huangsunyang"];
-    [proto setToUsr:@"choufei"];
-    [proto setStrData:@"hello world"];
-    MWNetworkData * d = [proto build];
-    [self.outputStream write:[d data].bytes maxLength:[d data].length];
-    
+    if ([self.outputStream hasSpaceAvailable]) {
+        MWNetworkDataBuilder * proto = [[MWNetworkDataBuilder alloc] init];
+        [proto setType:1];
+        [proto setFromUsr:@"huangsunyang"];
+        [proto setToUsr:@"choufei"];
+        [proto setStrData:text];
+        MWNetworkData * networkData = [proto build];
+        [self.outputStream write:[networkData data].bytes maxLength:[networkData data].length];
+    }
 }
 
 - (void)stream:(NSStream *)aStream handleEvent:(NSStreamEvent)eventCode {

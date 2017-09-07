@@ -11,14 +11,21 @@
 #import "MWChatTableViewController.h"
 #import <sys/socket.h>
 #import <netdb.h>
+#import "MWNetworkData.pb.h"
+#import <err.h>
+#import <errno.h>
 
 @interface MWMainPageTableViewController ()
 
 @property(nonatomic) MWMainPageInfoManager * infoManager;
+@property(nonatomic, strong) NSInputStream *inputStream;
+@property(nonatomic, strong) NSOutputStream *outputStream;
 
 @end
 
 @implementation MWMainPageTableViewController
+
+# pragma mark - view life cycle
 
 - (instancetype) init {
     self = [super initWithStyle:UITableViewStylePlain];
@@ -44,18 +51,24 @@
 }
 
 - (void) setupNetwork {
-    NSString * localHost = @"127.0.0.1";
-    int port = 486;
-    int socketFileDescriptor = socket(AF_INET, SOCK_STREAM, 0);
+    NSString * localHost = @"183.172.22.42";
+    int port = 4867;
+    CFReadStreamRef readStream;
+    CFWriteStreamRef writeStream;
     
-    if (socketFileDescriptor == -1) {
-        NSLog(@"Failed to create socket.");
-        return;
-    }
+    CFStreamCreatePairWithSocketToHost(NULL, (__bridge CFStringRef)(localHost), port, &readStream, &writeStream);
     
-    struct hostent * romoteHostEnd;
+    self.inputStream = (__bridge NSInputStream *)readStream;
+    self.outputStream = (__bridge NSOutputStream *)writeStream;
     
+    self.inputStream.delegate = self;
+    self.outputStream.delegate = self;
     
+    [self.inputStream scheduleInRunLoop:[NSRunLoop mainRunLoop] forMode:NSDefaultRunLoopMode];
+    [self.outputStream scheduleInRunLoop:[NSRunLoop mainRunLoop] forMode:NSDefaultRunLoopMode];
+    
+    [self.inputStream open];
+    [self.outputStream open];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -63,11 +76,26 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void) dealloc {
+    
+}
+
+- (void) closeConnection {
+    [self.inputStream close];
+    [self.outputStream close];
+    //从主循环移除
+    [self.inputStream removeFromRunLoop:[NSRunLoop mainRunLoop] forMode:NSDefaultRunLoopMode];
+    [self.outputStream removeFromRunLoop:[NSRunLoop mainRunLoop] forMode:NSDefaultRunLoopMode];
+}
+
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 1;
 }
+
+
+#pragma mark - Table view delegate
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return [MWMainPageInfoManager sharedInfo].allItems.count;
@@ -100,6 +128,13 @@
 - (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     self.hidesBottomBarWhenPushed = YES;
     MWChatTableViewController * chatViewController = [[MWChatTableViewController alloc] init];
+    chatViewController.inputStream = self.inputStream;
+    chatViewController.outputStream = self.outputStream;
+    
+    NSArray * items = [MWMainPageInfoManager sharedInfo].allItems;
+    MWPersonInfo * item = items[indexPath.row];
+    chatViewController.personInfo = item;
+    
     [self.navigationController pushViewController:chatViewController animated:YES];
     self.hidesBottomBarWhenPushed = NO;
 }

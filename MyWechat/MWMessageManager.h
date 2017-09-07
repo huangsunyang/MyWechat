@@ -12,12 +12,14 @@
 
 @interface MWMessageManager : NSObject
 
-@property (nonatomic, strong) NSArray * allMessages;
+@property (nonatomic, strong) NSString * usrName;
+@property (nonatomic, weak) NSArray * allMessages;
 @property (nonatomic, strong) UIImage * backgroundImage;
 
-+ (instancetype) sharedInstance;
++ (instancetype) sharedInstanceWithUserName: (NSString *) name;
 - (void) addMessage: (MWMessage *) message;
 - (void) addMessage:(MWMessage *)message AtIndex: (long) index;
 - (void) removeMessageAtIndex: (long) index;
 - (void) removeALLMessages;
+- (BOOL) saveToFile;
 @end

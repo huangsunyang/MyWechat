@@ -12,7 +12,7 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-@interface MWPersonInfo : NSObject
+@interface MWPersonInfo : NSObject<NSCoding>
 
 @property(nonatomic, strong) NSString * name;
 @property(nonatomic, strong) NSString * lastMessage;

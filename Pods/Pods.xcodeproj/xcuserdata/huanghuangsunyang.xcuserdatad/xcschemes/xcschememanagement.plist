@@ -14,15 +14,25 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>YYText.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>574D449AE6799B3C8A526D7469B81F74</key>
+		<key>06ED845F6C06055243354EB7C148E68A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>CB7902A300BDF830B4D608A547BE4C0A</key>
+		<key>7A53A264608BD726CDF5B64FCEF46F05</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>AFDB61725DD8E0CF097BEECE4C9E3992</key>
 		<dict>
 			<key>primary</key>
 			<true/>

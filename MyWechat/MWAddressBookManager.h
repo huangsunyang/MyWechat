@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface MWAddressBookManager : NSObject
+@interface MWAddressBookManager : NSObject<NSCoding>
 
 @property (nonatomic, strong) NSArray * addressBook;
 @property (nonatomic, strong) NSDictionary * addressBookInAlphabet;
@@ -19,5 +19,5 @@
 - (NSArray *) addressWithKey: (char) ch;
 - (NSInteger) sectionWithCharacter: (char) ch;
 - (char) charWithSection: (NSUInteger) section;
-
+- (BOOL) saveChanges;
 @end

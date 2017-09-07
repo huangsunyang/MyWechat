@@ -7,43 +7,53 @@
 //
 
 #import "MWMessageManager.h"
+#import "MWAllUserMessageManager.h"
 
 @interface MWMessageManager() {
-    NSMutableArray * _allMessages;
+    __weak NSMutableArray * _allMessages;
 }
 
 @end
 
 @implementation MWMessageManager
 
-//单例模式
-+ (instancetype) sharedInstance {
-    static MWMessageManager * sharedInstance = nil;
-    static dispatch_once_t pred;
-    if (sharedInstance) return sharedInstance;
-    
-    dispatch_once(&pred, ^{
-        sharedInstance = [MWMessageManager alloc];
-        sharedInstance = [sharedInstance initPrivate];
-    });
-    
++ (instancetype) sharedInstanceWithUserName: (NSString *) name {
+    MWMessageManager * sharedInstance = [MWMessageManager alloc];
+    sharedInstance = [sharedInstance initWithUserName:name];
     return sharedInstance;
 }
 
 //私有的构造函数
-- (instancetype)initPrivate {
+- (instancetype)initWithUserName: (NSString *) name {
     self = [super init];
     
     if (self) {
-        _allMessages = [[NSMutableArray alloc] init];
-        for (int i = 0; i < 5; i++) {
-            MWMessage * message = [[MWMessage alloc] init];
-            [_allMessages addObject:message];
-        }
+        MWAllUserMessageManager * allMessageManager = [MWAllUserMessageManager sharedInstance];
+        _allMessages = [allMessageManager loadMessageWithUserName:name];
+        _usrName = name;
     }
     
     return self;
 }
+
+- (BOOL) saveToFile {
+    MWAllUserMessageManager * allMessageManager = [MWAllUserMessageManager sharedInstance];
+    NSString * path = [allMessageManager itemArchievePathWithUserName:self.usrName];
+    return [NSKeyedArchiver archiveRootObject:_allMessages toFile:path];
+}
+
+- (void)encodeWithCoder:(NSCoder *)coder {
+    [coder encodeObject:_allMessages forKey:@"allMessages"];
+}
+
+- (instancetype)initWithCoder:(NSCoder *)coder {
+    self = [super init];
+    if (self) {
+        _allMessages = [coder decodeObjectForKey:@"allMessages"];
+    }
+    return self;
+}
+
 
 //所有的短信信息
 - (NSArray *) allMessages {

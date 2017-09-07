@@ -24,6 +24,8 @@
 		696CB0BB1F5E6CD2004DB493 /* MWDetailInfoTableViewButtonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 696CB0B91F5E6CD2004DB493 /* MWDetailInfoTableViewButtonCell.m */; };
 		696CB0BC1F5E6CD2004DB493 /* MWDetailInfoTableViewButtonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 696CB0BA1F5E6CD2004DB493 /* MWDetailInfoTableViewButtonCell.xib */; };
 		69DE00DB1F5FE7B60077FEA9 /* MWNetworkData.pb.m in Sources */ = {isa = PBXBuildFile; fileRef = 69DE00DA1F5FE7B60077FEA9 /* MWNetworkData.pb.m */; };
+		69DE00DF1F603E260077FEA9 /* MWWebMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 69DE00DE1F603E260077FEA9 /* MWWebMessageViewController.m */; };
+		69DE00E21F61756D0077FEA9 /* MWAllUserMessageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 69DE00E11F61756D0077FEA9 /* MWAllUserMessageManager.m */; };
 		69E7511E1F5658BE000728DD /* MWChatTableViewCellReverse.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69E7511C1F5658BE000728DD /* MWChatTableViewCellReverse.xib */; };
 		69E751211F565DA8000728DD /* MWMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 69E751201F565DA8000728DD /* MWMessage.m */; };
 		69E751281F565E26000728DD /* MWChatInformTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 69E751261F565E26000728DD /* MWChatInformTableViewCell.m */; };
@@ -89,6 +91,10 @@
 		696CB0BA1F5E6CD2004DB493 /* MWDetailInfoTableViewButtonCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MWDetailInfoTableViewButtonCell.xib; sourceTree = "<group>"; };
 		69DE00D91F5FE7B60077FEA9 /* MWNetworkData.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWNetworkData.pb.h; sourceTree = "<group>"; };
 		69DE00DA1F5FE7B60077FEA9 /* MWNetworkData.pb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWNetworkData.pb.m; sourceTree = "<group>"; };
+		69DE00DD1F603E260077FEA9 /* MWWebMessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWWebMessageViewController.h; sourceTree = "<group>"; };
+		69DE00DE1F603E260077FEA9 /* MWWebMessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWWebMessageViewController.m; sourceTree = "<group>"; };
+		69DE00E01F61756D0077FEA9 /* MWAllUserMessageManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWAllUserMessageManager.h; sourceTree = "<group>"; };
+		69DE00E11F61756D0077FEA9 /* MWAllUserMessageManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWAllUserMessageManager.m; sourceTree = "<group>"; };
 		69E7511C1F5658BE000728DD /* MWChatTableViewCellReverse.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MWChatTableViewCellReverse.xib; sourceTree = "<group>"; };
 		69E7511F1F565DA8000728DD /* MWMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWMessage.h; sourceTree = "<group>"; };
 		69E751201F565DA8000728DD /* MWMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWMessage.m; sourceTree = "<group>"; };
@@ -261,6 +267,15 @@
 				69DE00DA1F5FE7B60077FEA9 /* MWNetworkData.pb.m */,
 			);
 			name = protoFile;
+			sourceTree = "<group>";
+		};
+		69DE00DC1F603DEA0077FEA9 /* webview */ = {
+			isa = PBXGroup;
+			children = (
+				69DE00DD1F603E260077FEA9 /* MWWebMessageViewController.h */,
+				69DE00DE1F603E260077FEA9 /* MWWebMessageViewController.m */,
+			);
+			name = webview;
 			sourceTree = "<group>";
 		};
 		69E7512A1F566633000728DD /* Categories */ = {
@@ -476,6 +491,7 @@
 		8C6635951F33197600739333 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				69DE00DC1F603DEA0077FEA9 /* webview */,
 				8C01A5251F593B8200FE6882 /* ChatSettingView */,
 				69E7512F1F566D63000728DD /* typeInView */,
 				69E7512E1F566D53000728DD /* messageTableView */,
@@ -490,6 +506,8 @@
 				69E751201F565DA8000728DD /* MWMessage.m */,
 				69E751461F585F56000728DD /* MWMessageManager.h */,
 				69E751471F585F56000728DD /* MWMessageManager.m */,
+				69DE00E01F61756D0077FEA9 /* MWAllUserMessageManager.h */,
+				69DE00E11F61756D0077FEA9 /* MWAllUserMessageManager.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -638,6 +656,7 @@
 				69E751571F5A7A0B000728DD /* MWAddressBookTableViewCell.m in Sources */,
 				690EAB761F24EA2F00609313 /* MWMainPageInfoManager.m in Sources */,
 				8C6635921F33193E00739333 /* MWChatTableViewController.m in Sources */,
+				69DE00E21F61756D0077FEA9 /* MWAllUserMessageManager.m in Sources */,
 				69DE00DB1F5FE7B60077FEA9 /* MWNetworkData.pb.m in Sources */,
 				690EAB451F24E6B800609313 /* ViewController.m in Sources */,
 				69E751631F5AE44C000728DD /* MWAddressBookHeaderView.m in Sources */,
@@ -663,6 +682,7 @@
 				69E7514D1F5A5C4D000728DD /* MWAddressBookTableViewController.m in Sources */,
 				8C01A5291F593BE700FE6882 /* MWChatSettingTableViewController.m in Sources */,
 				8C66359A1F33199400739333 /* MWChatTableViewCell.m in Sources */,
+				69DE00DF1F603E260077FEA9 /* MWWebMessageViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

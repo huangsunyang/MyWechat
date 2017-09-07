@@ -8,11 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import "MWMessageProtocol.h"
+#import "YYLabel.h"
 
 @interface MWChatTableViewCell : UITableViewCell
 @property (strong, nonatomic) IBOutlet UIImageView *leftPortrait;
 @property (strong, nonatomic) IBOutlet UIImageView *messageBox;
-@property (weak, nonatomic) IBOutlet UILabel *chatText;
+@property (strong, nonatomic) IBOutlet UILabel *chatText;
 @property (weak, nonatomic) id<MWMessageProtocol> delegate;
 
 @end

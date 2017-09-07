@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "MWMainPageInfoManager.h"
+#import "MWAddressBookManager.h"
 
 @interface MWMainPageInfoManager () {
     NSMutableArray * _allItems;
@@ -28,15 +29,11 @@
     self = [super init];
     
     if (self) {
-        static const NSString *kRandomAlphabet = @"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
-        int kRandomLength = 10;
+        MWAddressBookManager * addressBookManager = [MWAddressBookManager sharedInstance];
+        NSArray * allAddress = addressBookManager.addressBook;
         _allItems = [[NSMutableArray alloc] init];
-        for (int i = 0; i < 20; i++) {
-            NSMutableString *randomString = [NSMutableString stringWithCapacity:kRandomLength];
-            for (int i = 0; i < kRandomLength; i++) {
-                [randomString appendFormat: @"%C", [kRandomAlphabet characterAtIndex:arc4random_uniform((u_int32_t)[kRandomAlphabet length])]];
-            }
-            MWPersonInfo * item = [[MWPersonInfo alloc] initWithName: randomString];
+        for (int i = 0; i < allAddress.count; i++) {
+            MWPersonInfo * item = allAddress[i];
             [_allItems addObject:item];
         }
     }

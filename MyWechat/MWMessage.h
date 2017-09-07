@@ -14,7 +14,7 @@ typedef NS_ENUM(NSUInteger, MessageType) {
     MessageTypeSendInform,
 };
 
-@interface MWMessage : NSObject
+@interface MWMessage : NSObject<NSCoding>
 
 @property (nonatomic, assign) MessageType messageType;
 @property (nonatomic, strong) NSDate * currentTime;

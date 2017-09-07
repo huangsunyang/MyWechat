@@ -77,7 +77,7 @@
     [UIAlertAction actionWithTitle:@"好的"
                              style:UIAlertActionStyleDefault
                            handler:^(UIAlertAction * action) {
-                               [[MWMessageManager sharedInstance] removeALLMessages];
+                               [[MWMessageManager sharedInstanceWithUserName:@""] removeALLMessages];
                            }];
     
     [alertController addAction:cancelAction];
@@ -145,7 +145,8 @@
 
 - (void) imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info {
     UIImage * image = info[UIImagePickerControllerOriginalImage];
-    [MWMessageManager sharedInstance].backgroundImage = image;
+    //todo 
+//    [MWMessageManager sharedInstance].backgroundImage = image;
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 

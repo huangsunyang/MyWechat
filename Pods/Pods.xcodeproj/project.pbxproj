@@ -7,153 +7,290 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		03280479E77B1AC148E0907D8D10DA30 /* GeneratedMessage.h in Headers */ = {isa = PBXBuildFile; fileRef = DD47609375DAD3CC7888A84D50C6D130 /* GeneratedMessage.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		03E83DB03B9F3B32D36E3C9FFA82CF76 /* CodedOutputStream.h in Headers */ = {isa = PBXBuildFile; fileRef = D9250FDFFC5FB79939C322EC716340D4 /* CodedOutputStream.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		05291CCCB7C4F2E71968B937AAC09BB1 /* MutableExtensionRegistry.h in Headers */ = {isa = PBXBuildFile; fileRef = 9906B063AB94F2D4EDB8F0285E95A5D3 /* MutableExtensionRegistry.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		069708A344DE29E5C4175DD3424BB5A0 /* TextFormat.m in Sources */ = {isa = PBXBuildFile; fileRef = 079F5CD20DA497359C331F022FFA31B6 /* TextFormat.m */; };
-		07121FA20076A99BE3DEF747CA604356 /* MessageBuilder.h in Headers */ = {isa = PBXBuildFile; fileRef = E9D7864B037CDA12C510BF91A112BF7E /* MessageBuilder.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		08702325898051BE4282202B536A2FC5 /* TextFormat.h in Headers */ = {isa = PBXBuildFile; fileRef = 81FD5B5E990BDC2F77F52730D133991F /* TextFormat.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0AA270DFA209D4F22819F6FA25504628 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		0AFDDF695D14B2384AAD00EACC4A6331 /* Descriptor.pb.m in Sources */ = {isa = PBXBuildFile; fileRef = 05AFA0990297D7BFA3229742DAA527B8 /* Descriptor.pb.m */; };
-		10A64268DBE0A0C08200488FE12A3AFA /* ForwardDeclarations.h in Headers */ = {isa = PBXBuildFile; fileRef = 336E8592ED3F95865F14D46D57E5C623 /* ForwardDeclarations.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		110FF328548AB71E508F0FE848685B94 /* ExtendableMessage.h in Headers */ = {isa = PBXBuildFile; fileRef = 78E8EE8AFACC7537B7BEC8A750366F18 /* ExtendableMessage.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		13A47443AF94162704D66C49F66E42A9 /* WireFormat.m in Sources */ = {isa = PBXBuildFile; fileRef = F4A9467D32E3A5781FA2C9E2242F4657 /* WireFormat.m */; };
-		18F0C49FE3ADA0BE19AF139AA6D5EDA8 /* MutableField.h in Headers */ = {isa = PBXBuildFile; fileRef = A92B1081BD968FA97FEDA9073C506BFC /* MutableField.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1C1B9EED1C76620D4885A95F5CEA3748 /* AbstractMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 50547A8016C5760ED092A0C9C1523D99 /* AbstractMessage.m */; };
-		251ADC5385244A7270C851835667D2A0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		268A7FE65E403D3B2C61E598F3495C62 /* AbstractMessage.h in Headers */ = {isa = PBXBuildFile; fileRef = AF5411D05A0A9C66A59F79B10445814F /* AbstractMessage.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		29B35DB818652BDDDD680773F2A5DA7A /* WireFormat.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BE6A4CE3F92496C7A58AB95D927C719 /* WireFormat.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2CCB4704608462FBF3229C179C18BB29 /* ObjectivecDescriptor.pb.m in Sources */ = {isa = PBXBuildFile; fileRef = A1F94F6E2F3BD6BB74A9D09F9977C5EE /* ObjectivecDescriptor.pb.m */; };
-		2D4C8498FD6243584B779B8C83EBE9BD /* Utilities.h in Headers */ = {isa = PBXBuildFile; fileRef = B68910B5E447598D0AACFB8BAFED419C /* Utilities.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2E23B82B9E427A9422FBAAB34967D271 /* ExtensionField.h in Headers */ = {isa = PBXBuildFile; fileRef = 611977A4C0B3432E737D832DB4769E50 /* ExtensionField.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2EA8EEA86705E0BFFDD4A2355489EE00 /* UnknownFieldSetBuilder.h in Headers */ = {isa = PBXBuildFile; fileRef = C7FB56D298C6EDEDAD4394DF228CCA13 /* UnknownFieldSetBuilder.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2FC9C16F3A0EDD2B1158836A60580210 /* MutableExtensionRegistry.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CB0BE26720D7E86027F7F18C4D7E387 /* MutableExtensionRegistry.m */; };
-		43563C4536E8625E5B1828EC293B6A83 /* CodedInputStream.m in Sources */ = {isa = PBXBuildFile; fileRef = 617AE35C1C5BC53F4E5E1ADCCD7DC02B /* CodedInputStream.m */; };
-		4B1C8D989308AFB062F9960750A4DDFD /* Field.h in Headers */ = {isa = PBXBuildFile; fileRef = B2D408029B4D0F12AA07F4CBA1C5FF5A /* Field.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5AE3990B7983E8E3F6142B87BA9CFADB /* UnknownFieldSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CF2ABBAF1026E850FA76334137D7DB0 /* UnknownFieldSet.m */; };
-		5E1C87E0C99DC15F3406001C8EEEE05C /* GeneratedMessageBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 0838C6800F7573781ADF63873CF2DD3F /* GeneratedMessageBuilder.m */; };
-		60F56A38E5EEEC0047055C7C1FDDB49E /* UnknownFieldSetBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = B6A90DB13F6719E6A97539F102D77C0C /* UnknownFieldSetBuilder.m */; };
-		68A8F1ED5F6A0C2F002C0B2E69A773CF /* CodedOutputStream.m in Sources */ = {isa = PBXBuildFile; fileRef = D58BE9B82830F693ECC409D7A76F3EB0 /* CodedOutputStream.m */; };
-		6B448A1B0B253723E2DCCF3F3A99FB33 /* ExtendableMessageBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DB076187FA59182D7B3DCD3500CBA71 /* ExtendableMessageBuilder.m */; };
-		7EEC6F5231AC84D24C718BB464E62866 /* PBArray.m in Sources */ = {isa = PBXBuildFile; fileRef = FB7BCDA2C0384BDAA0121A59F1771815 /* PBArray.m */; };
-		8026312F3469326B2EFF899053857934 /* ExtendableMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 26D521DD351D39D407F82ADAEA2C4906 /* ExtendableMessage.m */; };
-		8711DD0F75DF981F4C042C00DE7F543C /* Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = BA6F8FBE51545E69B477529351EE016F /* Utilities.m */; };
-		8E0D55F411BCF1D9D9F5677731B31998 /* ConcreteExtensionField.h in Headers */ = {isa = PBXBuildFile; fileRef = B5D6C87F0BC47AD328ACB3D5AF99CAAF /* ConcreteExtensionField.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8E5B38CF8BE742A66FB3559B587B3379 /* GeneratedMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 56A6987E101B12E08D1100C29BACD3C5 /* GeneratedMessage.m */; };
-		90B0DDF2003B80750EBF880E7A640A9E /* PBArray.h in Headers */ = {isa = PBXBuildFile; fileRef = EE0AB75EA1A8ABD280F6915ED92B7E67 /* PBArray.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		95921B28A49EF20288A28E2F916FAB49 /* GeneratedMessageBuilder.h in Headers */ = {isa = PBXBuildFile; fileRef = 95A3E637B9459407F241A7E3170393FB /* GeneratedMessageBuilder.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9E1DD623A43C23ECDA76C45058B03CA1 /* UnknownFieldSet.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A09FB01EF41BCA33C739FE32C244308 /* UnknownFieldSet.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A72498A6B7A8E1F2B4E1B83CE6183AF5 /* ExtensionRegistry.h in Headers */ = {isa = PBXBuildFile; fileRef = F408D87D1D20A91AB3B9C259CDC82881 /* ExtensionRegistry.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B770A8012C03B635B20DB82928F13BC2 /* RingBuffer.h in Headers */ = {isa = PBXBuildFile; fileRef = 61C710C75ED018B4C74FA30EC13AB0C5 /* RingBuffer.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BA06543C76BC3793887ABFCC31092887 /* CodedInputStream.h in Headers */ = {isa = PBXBuildFile; fileRef = AD33A44D05771DE51C961F91EC404FC2 /* CodedInputStream.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BA30EC3B9DACDEA213408EAD7AF57490 /* Descriptor.pb.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C433F3BCE1D444F729FD25307CD16B1 /* Descriptor.pb.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BAF92DA47DB7760519352BFE66292FF2 /* MutableField.m in Sources */ = {isa = PBXBuildFile; fileRef = AB0C2E47EE169BB99FB9EEA325FA9E72 /* MutableField.m */; };
-		BB7EE829827D92AB2974F3FC6C0BB881 /* ExtensionRegistry.m in Sources */ = {isa = PBXBuildFile; fileRef = 51A3CA88E2CFDE90812D79BDA841AF29 /* ExtensionRegistry.m */; };
-		C49B16E0C77DAD96BB021E6E66264DD2 /* ExtendableMessageBuilder.h in Headers */ = {isa = PBXBuildFile; fileRef = FB045C2EF90EA80F7CA163D7B1C05430 /* ExtendableMessageBuilder.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C7C007DB90564574FBC393F7A3CEB774 /* RingBuffer.m in Sources */ = {isa = PBXBuildFile; fileRef = 5957F5D71C3D285062F9E9E9C6090B64 /* RingBuffer.m */; };
-		C8FF1C9BE689B95B59A8D0430B919095 /* ObjectivecDescriptor.pb.h in Headers */ = {isa = PBXBuildFile; fileRef = E1CA27192CA935DB8ACD231CA9DA06F0 /* ObjectivecDescriptor.pb.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D154D085BCA5BD646681AE33B8A4650C /* ConcreteExtensionField.m in Sources */ = {isa = PBXBuildFile; fileRef = E4402681EA1F27DB002D649DE043C8E2 /* ConcreteExtensionField.m */; };
-		D2EB8DE489CD926B0C633D1BE942B51C /* ProtocolBuffers-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 72C1ABB2B024BF8CE6CD65661BAA8EAF /* ProtocolBuffers-dummy.m */; };
-		D5EBBDB68E40D0C58C363DEA6CB3447C /* Message.h in Headers */ = {isa = PBXBuildFile; fileRef = 7DCB0849AFF2EB4298F694C9A2B52DE0 /* Message.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D6DF158F3F987D33665B90DEC98D316C /* Field.m in Sources */ = {isa = PBXBuildFile; fileRef = EF53BE6C566A1A7CF7808FDF653A5016 /* Field.m */; };
-		D9077F0818306B4E5EE7C3D26D8A7670 /* AbstractMessageBuilder.h in Headers */ = {isa = PBXBuildFile; fileRef = 0ABE1AEA52CC19DAB7367444D62C7EF6 /* AbstractMessageBuilder.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EDB983FB46C7B61571147D89408A2F03 /* ProtocolBuffers.h in Headers */ = {isa = PBXBuildFile; fileRef = E47D1504A8DBF4AC120A4540A38AAA27 /* ProtocolBuffers.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F142FACCF5C90DB140290E3DC59253F1 /* AbstractMessageBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = F3FCC8488B611BE6FC42BDE2DC26F7C4 /* AbstractMessageBuilder.m */; };
-		F7CF85E506B1C27EDDEB227AF15383C8 /* Pods-MyWechat-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5285AB3342765B09041B7C2DE014B3AD /* Pods-MyWechat-dummy.m */; };
-		FBF2ACF6F3646B000831996F3C3EA367 /* Bootstrap.h in Headers */ = {isa = PBXBuildFile; fileRef = FF1303D27BBA51368BC0D2A465C853EC /* Bootstrap.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		081E85369CE605926972A1034F666B76 /* YYTextInput.h in Headers */ = {isa = PBXBuildFile; fileRef = 050510B31ACAAA55118D613A9DEC73E7 /* YYTextInput.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		097435D824B52D48120C0B84D1B3B420 /* Field.h in Headers */ = {isa = PBXBuildFile; fileRef = 562BC871D4F3A58E1757D264DA4322DF /* Field.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		097F5120DA006028CFFC2B2F32464FE0 /* TextFormat.m in Sources */ = {isa = PBXBuildFile; fileRef = B848043D737F13D03A764E7A87105239 /* TextFormat.m */; };
+		0ABAB35BA192827B21FFD8DC2D16F767 /* YYTextAsyncLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 13170C62CE684D599AEF01980777BF31 /* YYTextAsyncLayer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0C6B9B994F4D556FA328B13AB9E2E82C /* GeneratedMessageBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 8739B31D3895F95495820981412AC5CC /* GeneratedMessageBuilder.m */; };
+		111231896849011B30A61807D2FE0105 /* YYTextRunDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 38BDBAA5A90C21A0C69791D106E3B093 /* YYTextRunDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		15F9D4E421CF956FBA7F2221E5921773 /* GeneratedMessage.h in Headers */ = {isa = PBXBuildFile; fileRef = 75605CDB7FBE7DA24BBEBBBAEE79345A /* GeneratedMessage.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		17174964A38ED53B0563C651962AC7EA /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 985DBD70FB245138EC45B091E7D1B704 /* CoreText.framework */; };
+		17CCD69ECD55292A9EDA8780A1AF54B3 /* YYTextInput.m in Sources */ = {isa = PBXBuildFile; fileRef = 71CC94032CB2296984FBFD608E83AF06 /* YYTextInput.m */; };
+		19C5290EA7FACDBCE347D3878FE3514C /* YYLabel.h in Headers */ = {isa = PBXBuildFile; fileRef = 16F0BDA8394AFACE02EF67483BBAAE7E /* YYLabel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1CC2DC5ABC9D8F6FBF361F5CE6F5A15B /* YYTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = AA2D171CAF2AEF5E886F801443966B9A /* YYTextView.m */; };
+		1E1E3E4DD50DD8DF3C3BC73B91F6F012 /* TextFormat.h in Headers */ = {isa = PBXBuildFile; fileRef = AC76A3596B01A5937BAD4F30054C5873 /* TextFormat.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1F93D6CE66519ADCF4B442F812C81530 /* MutableField.h in Headers */ = {isa = PBXBuildFile; fileRef = 64544F9661B224E73153A099FB9293AA /* MutableField.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2095D2C062AFB8A626E62E9556161F29 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0525E07A8CAE299CB20D411AA8A1138E /* Accelerate.framework */; };
+		22DF7AA6914AA6C9B8A9BAC95C6DC721 /* YYTextMagnifier.m in Sources */ = {isa = PBXBuildFile; fileRef = 90D8A557B998F6F58C6207B995B36C2D /* YYTextMagnifier.m */; };
+		271DA8EB48A2601CB9BB8FD3BEB89684 /* PBArray.m in Sources */ = {isa = PBXBuildFile; fileRef = A403567C3B42BA612A86D0B19696EBC8 /* PBArray.m */; };
+		283CFE38D6CC02FC1988847F15058546 /* Utilities.h in Headers */ = {isa = PBXBuildFile; fileRef = CBC5F602C61BBB6A73AC5CDD5AE29150 /* Utilities.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2D45F38D8CB17F9E499A3C8CD86CF15D /* YYTextView.h in Headers */ = {isa = PBXBuildFile; fileRef = 97ED8B2D127EBA66986082FA220E5B9B /* YYTextView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2DEC7B8ACE6232D3449635C2ECE2D63C /* Message.h in Headers */ = {isa = PBXBuildFile; fileRef = 12B96533AAF4F6DC0AE0FC3C1DE7C0D2 /* Message.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2EFE1E52512F370DBBD9FD5657959972 /* ExtendableMessageBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = E444A43EC86AE97BAEE84A6A92142A40 /* ExtendableMessageBuilder.m */; };
+		2FA83CDB12B03EA1FDE659C0D307F623 /* YYTextAsyncLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = F961191210D8170FEA026F4C93FF4BF8 /* YYTextAsyncLayer.m */; };
+		31B75A2F7A902C05F36956822AC7236F /* GeneratedMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BEAFC65D838A8D47D337F8052F45DDD /* GeneratedMessage.m */; };
+		3586845947AADD36C33360FF779C041E /* AbstractMessageBuilder.h in Headers */ = {isa = PBXBuildFile; fileRef = 18F70A5D955F12347A5888A2DABAE0C5 /* AbstractMessageBuilder.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3976C5D33C678F55E99CF761D375EEED /* YYTextLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = EED0020317B5B1D5C1E9BD6087B33D1B /* YYTextLayout.m */; };
+		3BADA8D8C3D5EF9258F2A78667440248 /* NSParagraphStyle+YYText.h in Headers */ = {isa = PBXBuildFile; fileRef = EC2D39EBCC375EF4CBB012F9B8278E9E /* NSParagraphStyle+YYText.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3CFAFF7FA8482E61ED1DD43376BA470F /* YYTextLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 7D6D89C77582F225FA3479BCFE1C0015 /* YYTextLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3D8F9475AD330BAA52B98138A6BA7B6E /* YYTextRunDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 603F7380F39680EDA1B5CE8FFF5F242A /* YYTextRunDelegate.m */; };
+		405B4BCADA9E2006B7464AC29FE2B2BA /* UIPasteboard+YYText.m in Sources */ = {isa = PBXBuildFile; fileRef = EEC67484A8D2FCA890E6790BDDE00D57 /* UIPasteboard+YYText.m */; };
+		4505ADE5F07C97BB099CC05A44B16703 /* Descriptor.pb.h in Headers */ = {isa = PBXBuildFile; fileRef = 15D93B47D0339F685727201B5BA3616F /* Descriptor.pb.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		45EF97E1222FFC813DB220120D2B0B2E /* Pods-MyWechat-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5285AB3342765B09041B7C2DE014B3AD /* Pods-MyWechat-dummy.m */; };
+		48F15CF0407E11C923DC3C1AF05B5404 /* YYTextRubyAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B1621E252CAF88DFE8759287528E9CC /* YYTextRubyAnnotation.m */; };
+		543488A50B3AFACAAA3D3BA2C716E575 /* YYTextTransaction.h in Headers */ = {isa = PBXBuildFile; fileRef = B6262206A6FF2C40D0C8B6193D24C879 /* YYTextTransaction.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		561318DB17FFE99C9440358D196AE7FB /* ExtensionField.h in Headers */ = {isa = PBXBuildFile; fileRef = B13A41EE834CF82BB5A9B048836BBEB6 /* ExtensionField.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		56EB737222EA7225DB638DC4DDDB83B3 /* AbstractMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = BB02A3D692729F89E67D69D1E2614DDD /* AbstractMessage.m */; };
+		57830A93D06468BE8FDF71CED9A7133F /* YYTextDebugOption.m in Sources */ = {isa = PBXBuildFile; fileRef = F1B2BAE10F15E9A0FC90FC73402D8BB7 /* YYTextDebugOption.m */; };
+		58246C28A4201B231B498E488503EC63 /* UnknownFieldSet.h in Headers */ = {isa = PBXBuildFile; fileRef = FC55EA9BDBDA6801CE97DA9EAE1A9190 /* UnknownFieldSet.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5C12364DC38EF1F67321154D699928BF /* YYTextArchiver.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BCC1BB757741B15CA208BF8B9AC4535 /* YYTextArchiver.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5C2C9F2189401FC668D64A0536A182A9 /* YYTextWeakProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = 0434DB326B3DC26D9AE014000726134D /* YYTextWeakProxy.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5D93BE1E7EFF8CB3AA41788F0E1FC10C /* YYTextDebugOption.h in Headers */ = {isa = PBXBuildFile; fileRef = 0F71C7E53CDB07705EA3ABFF8408CCC1 /* YYTextDebugOption.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6027F136131243BA78AADA0CD2C0BC7D /* ExtensionRegistry.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FBCA5EBABF2D9835707A793CA013C46 /* ExtensionRegistry.m */; };
+		623F4E8A61AC43F8F883FA772C2757EC /* MessageBuilder.h in Headers */ = {isa = PBXBuildFile; fileRef = D51478708A8E3BC3310E0FAC78E57D44 /* MessageBuilder.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		65EEA31ABDB5E17E246644D39EEEF756 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C59B249C21FE178D4A257DE4CAF29E11 /* Foundation.framework */; };
+		677D63687B7308BD3851407DDBE34AA5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 552350B0C2360B478A721EB17E853ED5 /* UIKit.framework */; };
+		681BEE797D98100F6B59D7CF20499F4E /* YYTextWeakProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = C47486CED69B635C892ED1957884590C /* YYTextWeakProxy.m */; };
+		6841AEB70CA9732EFAC58F70C4C5438F /* YYText.h in Headers */ = {isa = PBXBuildFile; fileRef = E316932968D02D2C7FCB64BBE6B7E031 /* YYText.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6A01884EB516AE43864A3608969C21AA /* CodedInputStream.h in Headers */ = {isa = PBXBuildFile; fileRef = 03D3C1A8C6A5176D69D88705B0EC2268 /* CodedInputStream.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6B22793A5293CC12E26A66E31D9C7A5A /* YYTextRubyAnnotation.h in Headers */ = {isa = PBXBuildFile; fileRef = E69EE3C3E028E701CD474471DC5F2AAF /* YYTextRubyAnnotation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		70646749A02AE43842C5CCE5E0FBF077 /* RingBuffer.h in Headers */ = {isa = PBXBuildFile; fileRef = D822691A17794F4979C268BD1C84AD3A /* RingBuffer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		72198AFFEB58E246B156C26480BF242B /* YYTextAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = B798C511750672ADC33F83E8A519236E /* YYTextAttribute.m */; };
+		72F2EC7B5C9F6FF4CC6262A833324DB7 /* ExtendableMessageBuilder.h in Headers */ = {isa = PBXBuildFile; fileRef = FFF6CB9365DF884329AB7F0CB55D6194 /* ExtendableMessageBuilder.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		73C1D2E34CAB268D238792231967ADAA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C59B249C21FE178D4A257DE4CAF29E11 /* Foundation.framework */; };
+		770A5F497AEF70E3A6A3B1C7DD8A2A76 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AA15695F87CFC4A9494DF27112E5DE1 /* QuartzCore.framework */; };
+		787AAD962DF5E2D24BC7E3CE6B1AD4CD /* ObjectivecDescriptor.pb.m in Sources */ = {isa = PBXBuildFile; fileRef = EEA31F60676F83EE1F041643737FA152 /* ObjectivecDescriptor.pb.m */; };
+		789C4FD66AE427109953D8CCDF1DEC50 /* YYTextContainerView.h in Headers */ = {isa = PBXBuildFile; fileRef = F95B23795132A7FDA6B2D120946984C0 /* YYTextContainerView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		79DC0D4B085E60BE51A7C871506ECB3D /* YYTextParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A9FC541257DB8CB8F31647629794CDD /* YYTextParser.m */; };
+		7A0F8AD55D9B80A93FAF207CAF5EA331 /* YYText-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 121D75BE3DA97190045B8C081E64C2A9 /* YYText-dummy.m */; };
+		833FD5DDE03E30AEE8666115EFAF4C12 /* Field.m in Sources */ = {isa = PBXBuildFile; fileRef = CE20A6846C99BB635B7C566098B2688B /* Field.m */; };
+		88C01441E6064D83F25150A4FBFF6D2B /* ProtocolBuffers.h in Headers */ = {isa = PBXBuildFile; fileRef = 871D7E13BEA25BA9388098A7DD3AC5B0 /* ProtocolBuffers.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		89849A7AE3ED757FB3A5AFC85F3BB24D /* YYTextKeyboardManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A694B8EDAA84914C9DB3FD97E1E0169 /* YYTextKeyboardManager.m */; };
+		899B8D84B95B072D99B2537ED3F3E54E /* ConcreteExtensionField.h in Headers */ = {isa = PBXBuildFile; fileRef = DFC46BB60DBC1D839D1B31C0D07CA163 /* ConcreteExtensionField.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8A164CDB135BA5A45C9625D39E38F2B6 /* YYTextKeyboardManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 0476CFC5FFDC86CF4597F09CFAECAFA7 /* YYTextKeyboardManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9017013236097D3F03F4418E6ED2FC92 /* YYLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9002CEA52BE7A2E401011C5F0E30F41C /* YYLabel.m */; };
+		920A47C62E3E48990C42808C347C0AD9 /* ExtendableMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = FE038ED1C2AF0C3149595D874DD314EE /* ExtendableMessage.m */; };
+		93DA43BCBC5DD067ADF0FF331D24ACB4 /* NSAttributedString+YYText.h in Headers */ = {isa = PBXBuildFile; fileRef = A6C75DB9A074EF2FA2B29E3354440573 /* NSAttributedString+YYText.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		951A87782E8B8F7EF0BDBA10B3D894C5 /* UnknownFieldSet.m in Sources */ = {isa = PBXBuildFile; fileRef = CC41EB3DCF9974CD1EABEDB361AD56DC /* UnknownFieldSet.m */; };
+		9A305A19E2F0A21351B7C46223025DDB /* GeneratedMessageBuilder.h in Headers */ = {isa = PBXBuildFile; fileRef = EB6C7D42B6C22BADEAB8011AB3CF8F84 /* GeneratedMessageBuilder.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9C7292F75A9EA250689F1DE7AB6F89BA /* YYTextEffectWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 874A439AD79699A77066FA4C968471CE /* YYTextEffectWindow.m */; };
+		A1FF49FA6FC8E3D8CDE08CA5461F1A4D /* UIView+YYText.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D21B384B4DA5C07FC1A090F1FDFA15B /* UIView+YYText.m */; };
+		A412A8B1968B6C13AB8FB99827F87FC1 /* YYTextSelectionView.h in Headers */ = {isa = PBXBuildFile; fileRef = 8D38B7A8A37DEEE9D38BFC865CC8F01C /* YYTextSelectionView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A70135AF45DE7B1CBD82BCFB0D03E551 /* UIPasteboard+YYText.h in Headers */ = {isa = PBXBuildFile; fileRef = 99E4C70A3F43B24C3C8A35677E0BD154 /* UIPasteboard+YYText.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AC9CA8CE0834E62E46CD532749E7DBF3 /* NSAttributedString+YYText.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A81188C1FAAD331D7523843FA1AB1E1 /* NSAttributedString+YYText.m */; };
+		AF7145236CF20267AF80945A3B76CB91 /* YYTextAttribute.h in Headers */ = {isa = PBXBuildFile; fileRef = 7A4F40CAABEBC6E2E2F37EDAB118C59F /* YYTextAttribute.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B0D8B1F93FE8BBDC9079594F86654602 /* ExtendableMessage.h in Headers */ = {isa = PBXBuildFile; fileRef = BDBCA51C86A8ABDD6508C5D61296AEC3 /* ExtendableMessage.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B17392AC9EF3A2004B6AEEC5B45CF7C1 /* MutableField.m in Sources */ = {isa = PBXBuildFile; fileRef = B409223CBCFB2F39E9D455CD6334A740 /* MutableField.m */; };
+		B2371ADD09489541F0149FB61203D301 /* MutableExtensionRegistry.h in Headers */ = {isa = PBXBuildFile; fileRef = 5C63542A7C66C7A1636198BF4FD46556 /* MutableExtensionRegistry.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B6F2F55B9B9F74213C75B71120F716B1 /* CodedInputStream.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B9A82C0CFBB7F354A9235737FCC8243 /* CodedInputStream.m */; };
+		B8F3D01C092653474666BCD359EB0F2D /* YYTextEffectWindow.h in Headers */ = {isa = PBXBuildFile; fileRef = 3EA07922A7F360CA21FED3F311BF67E0 /* YYTextEffectWindow.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BBD2FDC711F6F5C59E81236682B565F7 /* YYTextLine.h in Headers */ = {isa = PBXBuildFile; fileRef = 36D58CB25EB8837817074A2BA344F627 /* YYTextLine.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BEAC2828A13056C9C95074FCDFC96804 /* ConcreteExtensionField.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DA54B7E014ADF0B3DE1A6FF79A82453 /* ConcreteExtensionField.m */; };
+		BF6384B6A2DC842930D6A2D29A2038F6 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A697C56B93860A1735867FE931FA9271 /* MobileCoreServices.framework */; };
+		C0B0CF4E224B3975B2942C87777C4EB5 /* RingBuffer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FF56454B70847BA30018D68058D0E9F /* RingBuffer.m */; };
+		C2A6642AAC547ABE9FFD18694300BA3D /* YYTextTransaction.m in Sources */ = {isa = PBXBuildFile; fileRef = BEBF4D74DFC6D58106FC374813B4AD59 /* YYTextTransaction.m */; };
+		C3BBF3031B6A79A891146F92ED88607C /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC78F42E53B594EF0B02AD43AD6C7894 /* CoreFoundation.framework */; };
+		C6E845CE5A28880D4D0D861B0E3F2222 /* AbstractMessageBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = FF1F0B9AB4ACAD669677F79A51C6476E /* AbstractMessageBuilder.m */; };
+		C759D090BF1EB3A5FA4E42B77261C243 /* CodedOutputStream.h in Headers */ = {isa = PBXBuildFile; fileRef = B0E6A6D77BE1949876DADF373F315AFF /* CodedOutputStream.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C82A0E5B42AB85A0BF485EFE5F48732F /* ProtocolBuffers-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D83F354A96C14162FF5C8227E797FD5E /* ProtocolBuffers-dummy.m */; };
+		C8611441B922BC66449D098C995E4806 /* Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ABEF03AA2C9EDB5EC60E3D1204FE2E6 /* Utilities.m */; };
+		C9DA54F074907479CE567D6247729D1C /* AbstractMessage.h in Headers */ = {isa = PBXBuildFile; fileRef = 343BBE136A2A8E68C2D00151FB15AABA /* AbstractMessage.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CB720FA70FAB44FB9217313CB8BD191C /* YYTextLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 019EF8CECCA1B8EEB28D51250EA65E2D /* YYTextLine.m */; };
+		CD92E06783453878078E80AB6008D7EC /* NSParagraphStyle+YYText.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FE45D4871543E1317C11EBB0AEF1C2B /* NSParagraphStyle+YYText.m */; };
+		CF42E7434E1A30EFE2C8077AF640F034 /* YYTextArchiver.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C6C114A00C51F15EE64517EF7C82114 /* YYTextArchiver.m */; };
+		D146D2A8EBDCC4CD83100593A2C4E690 /* YYTextContainerView.m in Sources */ = {isa = PBXBuildFile; fileRef = A972099106D2CD808AEEAF2ADAC6C73A /* YYTextContainerView.m */; };
+		D2AC035FB501D86B937B3962B45990B1 /* ForwardDeclarations.h in Headers */ = {isa = PBXBuildFile; fileRef = 074E6728132EA2B8301123741CCBA056 /* ForwardDeclarations.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D4E6A4CD76F999A625CD8CD5A687774E /* PBArray.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C6FAEF32695C4B4F155561E105490A1 /* PBArray.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D6B7741C3008CCED2C83731ACD5773B9 /* YYTextUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 09C056E1EDED5B64A55AA0F19B62B5D6 /* YYTextUtilities.m */; };
+		D8A27D76CD648E7765EE6F3B84D4DB58 /* YYTextMagnifier.h in Headers */ = {isa = PBXBuildFile; fileRef = FD807DCACF9E5DE97C9FE59EA902698A /* YYTextMagnifier.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DD99685C43CA0A51B2CFB7F29BFD7E06 /* YYTextUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 9B630FBD156A0E7391257ED56C7F5F38 /* YYTextUtilities.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DEDD89688E62396BD6F5870916EDCAFC /* UnknownFieldSetBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B6F0E1B4DD60AA88F0ED44DD14BC985 /* UnknownFieldSetBuilder.m */; };
+		E09496EC32C5C1A6E997C81508803E0C /* WireFormat.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F5E3BFBB05CA30559846C732B335068 /* WireFormat.m */; };
+		E112FF437A5689DB498EC7792982D225 /* MutableExtensionRegistry.m in Sources */ = {isa = PBXBuildFile; fileRef = 380141DA58AA11010CF032D9EEA7C9C7 /* MutableExtensionRegistry.m */; };
+		E2443FACD3242E8F1ECB544139FD9814 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C59B249C21FE178D4A257DE4CAF29E11 /* Foundation.framework */; };
+		E9483808B99587E0524219A58EE8FEAB /* UIView+YYText.h in Headers */ = {isa = PBXBuildFile; fileRef = E66128FCAE5B365356EEC2FD805BFA9D /* UIView+YYText.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EB1B52234ABFCCFF33A66D73E2DC6A60 /* YYTextParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 4D4406BE7DE7CB478007285E0906C87E /* YYTextParser.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ED726FA2C6D5380202FA01F5BD8EEFAB /* Descriptor.pb.m in Sources */ = {isa = PBXBuildFile; fileRef = AC56921C6D86C0F44A72BE0CECC8D154 /* Descriptor.pb.m */; };
+		EDE0FD8689A82C5F484F28108415352A /* UnknownFieldSetBuilder.h in Headers */ = {isa = PBXBuildFile; fileRef = C5BB8F965AD70DA02A28F3E7E72E0E12 /* UnknownFieldSetBuilder.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EEFC6EBC44A6AC4C1E811FA2F8F0D99D /* ExtensionRegistry.h in Headers */ = {isa = PBXBuildFile; fileRef = AF5764679345C6BAEFCA959EA086863C /* ExtensionRegistry.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EF91DA7DEDB583B9AE45BE28CBA78CAB /* YYTextSelectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = BB6DE4DE942CD735F7D318B580AF5D3C /* YYTextSelectionView.m */; };
+		F461EF7D06281D19A797195AFDDEB7D4 /* WireFormat.h in Headers */ = {isa = PBXBuildFile; fileRef = 11E2784232388A9985021EAF88B7DAB0 /* WireFormat.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F5E257826766194CB8A4302FE72DA61C /* CodedOutputStream.m in Sources */ = {isa = PBXBuildFile; fileRef = F811470CF34616A8313D0093C2AF93C4 /* CodedOutputStream.m */; };
+		F607A6736368CB303D44FD2AFF917222 /* ObjectivecDescriptor.pb.h in Headers */ = {isa = PBXBuildFile; fileRef = FB8BA56F3FCB0CF0A437D547EF828410 /* ObjectivecDescriptor.pb.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F79C0E2D04A5A89CC41E310465040FC1 /* Bootstrap.h in Headers */ = {isa = PBXBuildFile; fileRef = 99F80A563B247ECEC74DABE5C3A0D9EA /* Bootstrap.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		6A29442D0C30312B05B7CBBB4AE5C50D /* PBXContainerItemProxy */ = {
+		86E4F42489F7893A0BD7BAD8C7BD058C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 574D449AE6799B3C8A526D7469B81F74;
+			remoteGlobalIDString = 06ED845F6C06055243354EB7C148E68A;
+			remoteInfo = YYText;
+		};
+		D3A8AFFEFC508AEBFC00A2219AD6F1AC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AFDB61725DD8E0CF097BEECE4C9E3992;
 			remoteInfo = ProtocolBuffers;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		00A582ACD2DBF37630B37ED25392F7D8 /* ProtocolBuffers.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ProtocolBuffers.xcconfig; sourceTree = "<group>"; };
-		05AFA0990297D7BFA3229742DAA527B8 /* Descriptor.pb.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = Descriptor.pb.m; path = src/runtime/Classes/Descriptor.pb.m; sourceTree = "<group>"; };
-		079F5CD20DA497359C331F022FFA31B6 /* TextFormat.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TextFormat.m; path = src/runtime/Classes/TextFormat.m; sourceTree = "<group>"; };
-		0838C6800F7573781ADF63873CF2DD3F /* GeneratedMessageBuilder.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GeneratedMessageBuilder.m; path = src/runtime/Classes/GeneratedMessageBuilder.m; sourceTree = "<group>"; };
-		0ABE1AEA52CC19DAB7367444D62C7EF6 /* AbstractMessageBuilder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AbstractMessageBuilder.h; path = src/runtime/Classes/AbstractMessageBuilder.h; sourceTree = "<group>"; };
+		019EF8CECCA1B8EEB28D51250EA65E2D /* YYTextLine.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = YYTextLine.m; path = YYText/Component/YYTextLine.m; sourceTree = "<group>"; };
+		03D3C1A8C6A5176D69D88705B0EC2268 /* CodedInputStream.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CodedInputStream.h; path = src/runtime/Classes/CodedInputStream.h; sourceTree = "<group>"; };
+		0434DB326B3DC26D9AE014000726134D /* YYTextWeakProxy.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YYTextWeakProxy.h; path = YYText/Utility/YYTextWeakProxy.h; sourceTree = "<group>"; };
+		0476CFC5FFDC86CF4597F09CFAECAFA7 /* YYTextKeyboardManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YYTextKeyboardManager.h; path = YYText/Component/YYTextKeyboardManager.h; sourceTree = "<group>"; };
+		050510B31ACAAA55118D613A9DEC73E7 /* YYTextInput.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YYTextInput.h; path = YYText/Component/YYTextInput.h; sourceTree = "<group>"; };
+		0525E07A8CAE299CB20D411AA8A1138E /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Accelerate.framework; sourceTree = DEVELOPER_DIR; };
+		074E6728132EA2B8301123741CCBA056 /* ForwardDeclarations.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ForwardDeclarations.h; path = src/runtime/Classes/ForwardDeclarations.h; sourceTree = "<group>"; };
+		09C056E1EDED5B64A55AA0F19B62B5D6 /* YYTextUtilities.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = YYTextUtilities.m; path = YYText/Utility/YYTextUtilities.m; sourceTree = "<group>"; };
+		0A694B8EDAA84914C9DB3FD97E1E0169 /* YYTextKeyboardManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = YYTextKeyboardManager.m; path = YYText/Component/YYTextKeyboardManager.m; sourceTree = "<group>"; };
+		0A9FC541257DB8CB8F31647629794CDD /* YYTextParser.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = YYTextParser.m; path = YYText/String/YYTextParser.m; sourceTree = "<group>"; };
+		0F71C7E53CDB07705EA3ABFF8408CCC1 /* YYTextDebugOption.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YYTextDebugOption.h; path = YYText/Component/YYTextDebugOption.h; sourceTree = "<group>"; };
+		11E2784232388A9985021EAF88B7DAB0 /* WireFormat.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WireFormat.h; path = src/runtime/Classes/WireFormat.h; sourceTree = "<group>"; };
+		121D75BE3DA97190045B8C081E64C2A9 /* YYText-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "YYText-dummy.m"; sourceTree = "<group>"; };
+		12B96533AAF4F6DC0AE0FC3C1DE7C0D2 /* Message.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Message.h; path = src/runtime/Classes/Message.h; sourceTree = "<group>"; };
+		13170C62CE684D599AEF01980777BF31 /* YYTextAsyncLayer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YYTextAsyncLayer.h; path = YYText/Utility/YYTextAsyncLayer.h; sourceTree = "<group>"; };
+		15D93B47D0339F685727201B5BA3616F /* Descriptor.pb.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Descriptor.pb.h; path = src/runtime/Classes/Descriptor.pb.h; sourceTree = "<group>"; };
+		16F0BDA8394AFACE02EF67483BBAAE7E /* YYLabel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YYLabel.h; path = YYText/YYLabel.h; sourceTree = "<group>"; };
+		18F70A5D955F12347A5888A2DABAE0C5 /* AbstractMessageBuilder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AbstractMessageBuilder.h; path = src/runtime/Classes/AbstractMessageBuilder.h; sourceTree = "<group>"; };
+		1B1621E252CAF88DFE8759287528E9CC /* YYTextRubyAnnotation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = YYTextRubyAnnotation.m; path = YYText/String/YYTextRubyAnnotation.m; sourceTree = "<group>"; };
+		1B6F0E1B4DD60AA88F0ED44DD14BC985 /* UnknownFieldSetBuilder.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = UnknownFieldSetBuilder.m; path = src/runtime/Classes/UnknownFieldSetBuilder.m; sourceTree = "<group>"; };
+		1B9A82C0CFBB7F354A9235737FCC8243 /* CodedInputStream.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CodedInputStream.m; path = src/runtime/Classes/CodedInputStream.m; sourceTree = "<group>"; };
+		1C6C114A00C51F15EE64517EF7C82114 /* YYTextArchiver.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = YYTextArchiver.m; path = YYText/String/YYTextArchiver.m; sourceTree = "<group>"; };
 		226F3FCFBF6ED9C95272D79155CC3D33 /* Pods-MyWechat-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MyWechat-acknowledgements.plist"; sourceTree = "<group>"; };
-		26D521DD351D39D407F82ADAEA2C4906 /* ExtendableMessage.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ExtendableMessage.m; path = src/runtime/Classes/ExtendableMessage.m; sourceTree = "<group>"; };
-		2CF2ABBAF1026E850FA76334137D7DB0 /* UnknownFieldSet.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = UnknownFieldSet.m; path = src/runtime/Classes/UnknownFieldSet.m; sourceTree = "<group>"; };
-		336E8592ED3F95865F14D46D57E5C623 /* ForwardDeclarations.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ForwardDeclarations.h; path = src/runtime/Classes/ForwardDeclarations.h; sourceTree = "<group>"; };
-		3A09FB01EF41BCA33C739FE32C244308 /* UnknownFieldSet.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = UnknownFieldSet.h; path = src/runtime/Classes/UnknownFieldSet.h; sourceTree = "<group>"; };
-		40D94BBBD36D03A5E9D9CD6B1B0FAF82 /* libPods-MyWechat.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-MyWechat.a"; path = "libPods-MyWechat.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		4BE6A4CE3F92496C7A58AB95D927C719 /* WireFormat.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WireFormat.h; path = src/runtime/Classes/WireFormat.h; sourceTree = "<group>"; };
-		50547A8016C5760ED092A0C9C1523D99 /* AbstractMessage.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AbstractMessage.m; path = src/runtime/Classes/AbstractMessage.m; sourceTree = "<group>"; };
-		51A3CA88E2CFDE90812D79BDA841AF29 /* ExtensionRegistry.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ExtensionRegistry.m; path = src/runtime/Classes/ExtensionRegistry.m; sourceTree = "<group>"; };
+		2B6137717B32FAFCBD73402404010846 /* libProtocolBuffers.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libProtocolBuffers.a; path = libProtocolBuffers.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		343BBE136A2A8E68C2D00151FB15AABA /* AbstractMessage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AbstractMessage.h; path = src/runtime/Classes/AbstractMessage.h; sourceTree = "<group>"; };
+		36D58CB25EB8837817074A2BA344F627 /* YYTextLine.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YYTextLine.h; path = YYText/Component/YYTextLine.h; sourceTree = "<group>"; };
+		380141DA58AA11010CF032D9EEA7C9C7 /* MutableExtensionRegistry.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MutableExtensionRegistry.m; path = src/runtime/Classes/MutableExtensionRegistry.m; sourceTree = "<group>"; };
+		38BDBAA5A90C21A0C69791D106E3B093 /* YYTextRunDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YYTextRunDelegate.h; path = YYText/String/YYTextRunDelegate.h; sourceTree = "<group>"; };
+		3C6FAEF32695C4B4F155561E105490A1 /* PBArray.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PBArray.h; path = src/runtime/Classes/PBArray.h; sourceTree = "<group>"; };
+		3EA07922A7F360CA21FED3F311BF67E0 /* YYTextEffectWindow.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YYTextEffectWindow.h; path = YYText/Component/YYTextEffectWindow.h; sourceTree = "<group>"; };
+		3FF56454B70847BA30018D68058D0E9F /* RingBuffer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RingBuffer.m; path = src/runtime/Classes/RingBuffer.m; sourceTree = "<group>"; };
+		4A81188C1FAAD331D7523843FA1AB1E1 /* NSAttributedString+YYText.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSAttributedString+YYText.m"; path = "YYText/Utility/NSAttributedString+YYText.m"; sourceTree = "<group>"; };
+		4D4406BE7DE7CB478007285E0906C87E /* YYTextParser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YYTextParser.h; path = YYText/String/YYTextParser.h; sourceTree = "<group>"; };
+		4FE45D4871543E1317C11EBB0AEF1C2B /* NSParagraphStyle+YYText.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSParagraphStyle+YYText.m"; path = "YYText/Utility/NSParagraphStyle+YYText.m"; sourceTree = "<group>"; };
 		5285AB3342765B09041B7C2DE014B3AD /* Pods-MyWechat-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MyWechat-dummy.m"; sourceTree = "<group>"; };
-		56A6987E101B12E08D1100C29BACD3C5 /* GeneratedMessage.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GeneratedMessage.m; path = src/runtime/Classes/GeneratedMessage.m; sourceTree = "<group>"; };
-		5957F5D71C3D285062F9E9E9C6090B64 /* RingBuffer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RingBuffer.m; path = src/runtime/Classes/RingBuffer.m; sourceTree = "<group>"; };
-		5CB0BE26720D7E86027F7F18C4D7E387 /* MutableExtensionRegistry.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MutableExtensionRegistry.m; path = src/runtime/Classes/MutableExtensionRegistry.m; sourceTree = "<group>"; };
-		611977A4C0B3432E737D832DB4769E50 /* ExtensionField.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ExtensionField.h; path = src/runtime/Classes/ExtensionField.h; sourceTree = "<group>"; };
-		617AE35C1C5BC53F4E5E1ADCCD7DC02B /* CodedInputStream.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CodedInputStream.m; path = src/runtime/Classes/CodedInputStream.m; sourceTree = "<group>"; };
-		61C710C75ED018B4C74FA30EC13AB0C5 /* RingBuffer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RingBuffer.h; path = src/runtime/Classes/RingBuffer.h; sourceTree = "<group>"; };
-		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		72C1ABB2B024BF8CE6CD65661BAA8EAF /* ProtocolBuffers-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ProtocolBuffers-dummy.m"; sourceTree = "<group>"; };
-		78E8EE8AFACC7537B7BEC8A750366F18 /* ExtendableMessage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ExtendableMessage.h; path = src/runtime/Classes/ExtendableMessage.h; sourceTree = "<group>"; };
+		552350B0C2360B478A721EB17E853ED5 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		562BC871D4F3A58E1757D264DA4322DF /* Field.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Field.h; path = src/runtime/Classes/Field.h; sourceTree = "<group>"; };
+		5AA15695F87CFC4A9494DF27112E5DE1 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
+		5C63542A7C66C7A1636198BF4FD46556 /* MutableExtensionRegistry.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MutableExtensionRegistry.h; path = src/runtime/Classes/MutableExtensionRegistry.h; sourceTree = "<group>"; };
+		603F7380F39680EDA1B5CE8FFF5F242A /* YYTextRunDelegate.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = YYTextRunDelegate.m; path = YYText/String/YYTextRunDelegate.m; sourceTree = "<group>"; };
+		64544F9661B224E73153A099FB9293AA /* MutableField.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MutableField.h; path = src/runtime/Classes/MutableField.h; sourceTree = "<group>"; };
+		672FEE2512EFAD354F14293805D1B630 /* ProtocolBuffers-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ProtocolBuffers-prefix.pch"; sourceTree = "<group>"; };
+		6BCC1BB757741B15CA208BF8B9AC4535 /* YYTextArchiver.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YYTextArchiver.h; path = YYText/String/YYTextArchiver.h; sourceTree = "<group>"; };
+		71CC94032CB2296984FBFD608E83AF06 /* YYTextInput.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = YYTextInput.m; path = YYText/Component/YYTextInput.m; sourceTree = "<group>"; };
+		75605CDB7FBE7DA24BBEBBBAEE79345A /* GeneratedMessage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GeneratedMessage.h; path = src/runtime/Classes/GeneratedMessage.h; sourceTree = "<group>"; };
 		7936213B4E3A8D5E3D919654DD9B78E5 /* Pods-MyWechat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MyWechat.release.xcconfig"; sourceTree = "<group>"; };
+		7A4F40CAABEBC6E2E2F37EDAB118C59F /* YYTextAttribute.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YYTextAttribute.h; path = YYText/String/YYTextAttribute.h; sourceTree = "<group>"; };
 		7AADA15B2CE31CEE89EA338CF5EB7838 /* Pods-MyWechat-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MyWechat-acknowledgements.markdown"; sourceTree = "<group>"; };
+		7BB989EEAEA6502F0BEA408BE8EC27DC /* ProtocolBuffers.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ProtocolBuffers.xcconfig; sourceTree = "<group>"; };
+		7D6D89C77582F225FA3479BCFE1C0015 /* YYTextLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YYTextLayout.h; path = YYText/Component/YYTextLayout.h; sourceTree = "<group>"; };
 		7D9B595AC9969E4BE03742827D8B06BC /* Pods-MyWechat-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MyWechat-resources.sh"; sourceTree = "<group>"; };
-		7DCB0849AFF2EB4298F694C9A2B52DE0 /* Message.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Message.h; path = src/runtime/Classes/Message.h; sourceTree = "<group>"; };
-		81FD5B5E990BDC2F77F52730D133991F /* TextFormat.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TextFormat.h; path = src/runtime/Classes/TextFormat.h; sourceTree = "<group>"; };
+		7FBCA5EBABF2D9835707A793CA013C46 /* ExtensionRegistry.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ExtensionRegistry.m; path = src/runtime/Classes/ExtensionRegistry.m; sourceTree = "<group>"; };
+		871D7E13BEA25BA9388098A7DD3AC5B0 /* ProtocolBuffers.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ProtocolBuffers.h; path = src/runtime/Classes/ProtocolBuffers.h; sourceTree = "<group>"; };
+		8739B31D3895F95495820981412AC5CC /* GeneratedMessageBuilder.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GeneratedMessageBuilder.m; path = src/runtime/Classes/GeneratedMessageBuilder.m; sourceTree = "<group>"; };
+		874A439AD79699A77066FA4C968471CE /* YYTextEffectWindow.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = YYTextEffectWindow.m; path = YYText/Component/YYTextEffectWindow.m; sourceTree = "<group>"; };
+		8ABEF03AA2C9EDB5EC60E3D1204FE2E6 /* Utilities.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = Utilities.m; path = src/runtime/Classes/Utilities.m; sourceTree = "<group>"; };
 		8C44F859FAFE63AC34BCDCAF8F8982ED /* Pods-MyWechat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MyWechat.debug.xcconfig"; sourceTree = "<group>"; };
+		8D38B7A8A37DEEE9D38BFC865CC8F01C /* YYTextSelectionView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YYTextSelectionView.h; path = YYText/Component/YYTextSelectionView.h; sourceTree = "<group>"; };
+		8DA54B7E014ADF0B3DE1A6FF79A82453 /* ConcreteExtensionField.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ConcreteExtensionField.m; path = src/runtime/Classes/ConcreteExtensionField.m; sourceTree = "<group>"; };
+		9002CEA52BE7A2E401011C5F0E30F41C /* YYLabel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = YYLabel.m; path = YYText/YYLabel.m; sourceTree = "<group>"; };
+		90D8A557B998F6F58C6207B995B36C2D /* YYTextMagnifier.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = YYTextMagnifier.m; path = YYText/Component/YYTextMagnifier.m; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		95A3E637B9459407F241A7E3170393FB /* GeneratedMessageBuilder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GeneratedMessageBuilder.h; path = src/runtime/Classes/GeneratedMessageBuilder.h; sourceTree = "<group>"; };
-		9906B063AB94F2D4EDB8F0285E95A5D3 /* MutableExtensionRegistry.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MutableExtensionRegistry.h; path = src/runtime/Classes/MutableExtensionRegistry.h; sourceTree = "<group>"; };
-		990CC3FDD008B6EE5A46BFBC3A7C229C /* ProtocolBuffers-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ProtocolBuffers-prefix.pch"; sourceTree = "<group>"; };
-		9C433F3BCE1D444F729FD25307CD16B1 /* Descriptor.pb.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Descriptor.pb.h; path = src/runtime/Classes/Descriptor.pb.h; sourceTree = "<group>"; };
-		9DB076187FA59182D7B3DCD3500CBA71 /* ExtendableMessageBuilder.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ExtendableMessageBuilder.m; path = src/runtime/Classes/ExtendableMessageBuilder.m; sourceTree = "<group>"; };
-		A1F94F6E2F3BD6BB74A9D09F9977C5EE /* ObjectivecDescriptor.pb.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ObjectivecDescriptor.pb.m; path = src/runtime/Classes/ObjectivecDescriptor.pb.m; sourceTree = "<group>"; };
-		A92B1081BD968FA97FEDA9073C506BFC /* MutableField.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MutableField.h; path = src/runtime/Classes/MutableField.h; sourceTree = "<group>"; };
-		AB0C2E47EE169BB99FB9EEA325FA9E72 /* MutableField.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MutableField.m; path = src/runtime/Classes/MutableField.m; sourceTree = "<group>"; };
-		AD33A44D05771DE51C961F91EC404FC2 /* CodedInputStream.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CodedInputStream.h; path = src/runtime/Classes/CodedInputStream.h; sourceTree = "<group>"; };
-		AF5411D05A0A9C66A59F79B10445814F /* AbstractMessage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AbstractMessage.h; path = src/runtime/Classes/AbstractMessage.h; sourceTree = "<group>"; };
-		B2D408029B4D0F12AA07F4CBA1C5FF5A /* Field.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Field.h; path = src/runtime/Classes/Field.h; sourceTree = "<group>"; };
-		B4AD5CC425D9B2D64F5484B1130AF53A /* libProtocolBuffers.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libProtocolBuffers.a; path = libProtocolBuffers.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		B5D6C87F0BC47AD328ACB3D5AF99CAAF /* ConcreteExtensionField.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ConcreteExtensionField.h; path = src/runtime/Classes/ConcreteExtensionField.h; sourceTree = "<group>"; };
-		B68910B5E447598D0AACFB8BAFED419C /* Utilities.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Utilities.h; path = src/runtime/Classes/Utilities.h; sourceTree = "<group>"; };
-		B6A90DB13F6719E6A97539F102D77C0C /* UnknownFieldSetBuilder.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = UnknownFieldSetBuilder.m; path = src/runtime/Classes/UnknownFieldSetBuilder.m; sourceTree = "<group>"; };
+		97ED8B2D127EBA66986082FA220E5B9B /* YYTextView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YYTextView.h; path = YYText/YYTextView.h; sourceTree = "<group>"; };
+		985DBD70FB245138EC45B091E7D1B704 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/CoreText.framework; sourceTree = DEVELOPER_DIR; };
+		99E4C70A3F43B24C3C8A35677E0BD154 /* UIPasteboard+YYText.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIPasteboard+YYText.h"; path = "YYText/Utility/UIPasteboard+YYText.h"; sourceTree = "<group>"; };
+		99F80A563B247ECEC74DABE5C3A0D9EA /* Bootstrap.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Bootstrap.h; path = src/runtime/Classes/Bootstrap.h; sourceTree = "<group>"; };
+		9B630FBD156A0E7391257ED56C7F5F38 /* YYTextUtilities.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YYTextUtilities.h; path = YYText/Utility/YYTextUtilities.h; sourceTree = "<group>"; };
+		9BEAFC65D838A8D47D337F8052F45DDD /* GeneratedMessage.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GeneratedMessage.m; path = src/runtime/Classes/GeneratedMessage.m; sourceTree = "<group>"; };
+		9D21B384B4DA5C07FC1A090F1FDFA15B /* UIView+YYText.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+YYText.m"; path = "YYText/Utility/UIView+YYText.m"; sourceTree = "<group>"; };
+		9F5E3BFBB05CA30559846C732B335068 /* WireFormat.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = WireFormat.m; path = src/runtime/Classes/WireFormat.m; sourceTree = "<group>"; };
+		A403567C3B42BA612A86D0B19696EBC8 /* PBArray.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PBArray.m; path = src/runtime/Classes/PBArray.m; sourceTree = "<group>"; };
+		A697C56B93860A1735867FE931FA9271 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/MobileCoreServices.framework; sourceTree = DEVELOPER_DIR; };
+		A6C75DB9A074EF2FA2B29E3354440573 /* NSAttributedString+YYText.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSAttributedString+YYText.h"; path = "YYText/Utility/NSAttributedString+YYText.h"; sourceTree = "<group>"; };
+		A972099106D2CD808AEEAF2ADAC6C73A /* YYTextContainerView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = YYTextContainerView.m; path = YYText/Component/YYTextContainerView.m; sourceTree = "<group>"; };
+		AA2D171CAF2AEF5E886F801443966B9A /* YYTextView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = YYTextView.m; path = YYText/YYTextView.m; sourceTree = "<group>"; };
+		AC56921C6D86C0F44A72BE0CECC8D154 /* Descriptor.pb.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = Descriptor.pb.m; path = src/runtime/Classes/Descriptor.pb.m; sourceTree = "<group>"; };
+		AC76A3596B01A5937BAD4F30054C5873 /* TextFormat.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TextFormat.h; path = src/runtime/Classes/TextFormat.h; sourceTree = "<group>"; };
+		AF5764679345C6BAEFCA959EA086863C /* ExtensionRegistry.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ExtensionRegistry.h; path = src/runtime/Classes/ExtensionRegistry.h; sourceTree = "<group>"; };
+		B0E6A6D77BE1949876DADF373F315AFF /* CodedOutputStream.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CodedOutputStream.h; path = src/runtime/Classes/CodedOutputStream.h; sourceTree = "<group>"; };
+		B13A41EE834CF82BB5A9B048836BBEB6 /* ExtensionField.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ExtensionField.h; path = src/runtime/Classes/ExtensionField.h; sourceTree = "<group>"; };
+		B409223CBCFB2F39E9D455CD6334A740 /* MutableField.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MutableField.m; path = src/runtime/Classes/MutableField.m; sourceTree = "<group>"; };
+		B6262206A6FF2C40D0C8B6193D24C879 /* YYTextTransaction.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YYTextTransaction.h; path = YYText/Utility/YYTextTransaction.h; sourceTree = "<group>"; };
 		B70B397579343E9200CE8189902C3BBF /* Pods-MyWechat-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MyWechat-frameworks.sh"; sourceTree = "<group>"; };
-		BA6F8FBE51545E69B477529351EE016F /* Utilities.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = Utilities.m; path = src/runtime/Classes/Utilities.m; sourceTree = "<group>"; };
-		C7FB56D298C6EDEDAD4394DF228CCA13 /* UnknownFieldSetBuilder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = UnknownFieldSetBuilder.h; path = src/runtime/Classes/UnknownFieldSetBuilder.h; sourceTree = "<group>"; };
-		D58BE9B82830F693ECC409D7A76F3EB0 /* CodedOutputStream.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CodedOutputStream.m; path = src/runtime/Classes/CodedOutputStream.m; sourceTree = "<group>"; };
-		D9250FDFFC5FB79939C322EC716340D4 /* CodedOutputStream.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CodedOutputStream.h; path = src/runtime/Classes/CodedOutputStream.h; sourceTree = "<group>"; };
-		DD47609375DAD3CC7888A84D50C6D130 /* GeneratedMessage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GeneratedMessage.h; path = src/runtime/Classes/GeneratedMessage.h; sourceTree = "<group>"; };
-		E1CA27192CA935DB8ACD231CA9DA06F0 /* ObjectivecDescriptor.pb.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ObjectivecDescriptor.pb.h; path = src/runtime/Classes/ObjectivecDescriptor.pb.h; sourceTree = "<group>"; };
-		E4402681EA1F27DB002D649DE043C8E2 /* ConcreteExtensionField.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ConcreteExtensionField.m; path = src/runtime/Classes/ConcreteExtensionField.m; sourceTree = "<group>"; };
-		E47D1504A8DBF4AC120A4540A38AAA27 /* ProtocolBuffers.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ProtocolBuffers.h; path = src/runtime/Classes/ProtocolBuffers.h; sourceTree = "<group>"; };
-		E9D7864B037CDA12C510BF91A112BF7E /* MessageBuilder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MessageBuilder.h; path = src/runtime/Classes/MessageBuilder.h; sourceTree = "<group>"; };
-		EE0AB75EA1A8ABD280F6915ED92B7E67 /* PBArray.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PBArray.h; path = src/runtime/Classes/PBArray.h; sourceTree = "<group>"; };
-		EF53BE6C566A1A7CF7808FDF653A5016 /* Field.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = Field.m; path = src/runtime/Classes/Field.m; sourceTree = "<group>"; };
-		F3FCC8488B611BE6FC42BDE2DC26F7C4 /* AbstractMessageBuilder.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AbstractMessageBuilder.m; path = src/runtime/Classes/AbstractMessageBuilder.m; sourceTree = "<group>"; };
-		F408D87D1D20A91AB3B9C259CDC82881 /* ExtensionRegistry.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ExtensionRegistry.h; path = src/runtime/Classes/ExtensionRegistry.h; sourceTree = "<group>"; };
-		F4A9467D32E3A5781FA2C9E2242F4657 /* WireFormat.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = WireFormat.m; path = src/runtime/Classes/WireFormat.m; sourceTree = "<group>"; };
-		FB045C2EF90EA80F7CA163D7B1C05430 /* ExtendableMessageBuilder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ExtendableMessageBuilder.h; path = src/runtime/Classes/ExtendableMessageBuilder.h; sourceTree = "<group>"; };
-		FB7BCDA2C0384BDAA0121A59F1771815 /* PBArray.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PBArray.m; path = src/runtime/Classes/PBArray.m; sourceTree = "<group>"; };
-		FF1303D27BBA51368BC0D2A465C853EC /* Bootstrap.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Bootstrap.h; path = src/runtime/Classes/Bootstrap.h; sourceTree = "<group>"; };
+		B798C511750672ADC33F83E8A519236E /* YYTextAttribute.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = YYTextAttribute.m; path = YYText/String/YYTextAttribute.m; sourceTree = "<group>"; };
+		B848043D737F13D03A764E7A87105239 /* TextFormat.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TextFormat.m; path = src/runtime/Classes/TextFormat.m; sourceTree = "<group>"; };
+		BB02A3D692729F89E67D69D1E2614DDD /* AbstractMessage.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AbstractMessage.m; path = src/runtime/Classes/AbstractMessage.m; sourceTree = "<group>"; };
+		BB6DE4DE942CD735F7D318B580AF5D3C /* YYTextSelectionView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = YYTextSelectionView.m; path = YYText/Component/YYTextSelectionView.m; sourceTree = "<group>"; };
+		BDBCA51C86A8ABDD6508C5D61296AEC3 /* ExtendableMessage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ExtendableMessage.h; path = src/runtime/Classes/ExtendableMessage.h; sourceTree = "<group>"; };
+		BEBF4D74DFC6D58106FC374813B4AD59 /* YYTextTransaction.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = YYTextTransaction.m; path = YYText/Utility/YYTextTransaction.m; sourceTree = "<group>"; };
+		C47486CED69B635C892ED1957884590C /* YYTextWeakProxy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = YYTextWeakProxy.m; path = YYText/Utility/YYTextWeakProxy.m; sourceTree = "<group>"; };
+		C59B249C21FE178D4A257DE4CAF29E11 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		C5BB8F965AD70DA02A28F3E7E72E0E12 /* UnknownFieldSetBuilder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = UnknownFieldSetBuilder.h; path = src/runtime/Classes/UnknownFieldSetBuilder.h; sourceTree = "<group>"; };
+		CBC5F602C61BBB6A73AC5CDD5AE29150 /* Utilities.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Utilities.h; path = src/runtime/Classes/Utilities.h; sourceTree = "<group>"; };
+		CC41EB3DCF9974CD1EABEDB361AD56DC /* UnknownFieldSet.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = UnknownFieldSet.m; path = src/runtime/Classes/UnknownFieldSet.m; sourceTree = "<group>"; };
+		CCDE29CBFD5EE5ECF454C21B13C7BDC8 /* YYText.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = YYText.xcconfig; sourceTree = "<group>"; };
+		CE20A6846C99BB635B7C566098B2688B /* Field.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = Field.m; path = src/runtime/Classes/Field.m; sourceTree = "<group>"; };
+		D51478708A8E3BC3310E0FAC78E57D44 /* MessageBuilder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MessageBuilder.h; path = src/runtime/Classes/MessageBuilder.h; sourceTree = "<group>"; };
+		D822691A17794F4979C268BD1C84AD3A /* RingBuffer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RingBuffer.h; path = src/runtime/Classes/RingBuffer.h; sourceTree = "<group>"; };
+		D83F354A96C14162FF5C8227E797FD5E /* ProtocolBuffers-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ProtocolBuffers-dummy.m"; sourceTree = "<group>"; };
+		DFC46BB60DBC1D839D1B31C0D07CA163 /* ConcreteExtensionField.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ConcreteExtensionField.h; path = src/runtime/Classes/ConcreteExtensionField.h; sourceTree = "<group>"; };
+		E265AEFFB34130B3C924A0A20E09305E /* YYText-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "YYText-prefix.pch"; sourceTree = "<group>"; };
+		E316932968D02D2C7FCB64BBE6B7E031 /* YYText.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YYText.h; path = YYText/YYText.h; sourceTree = "<group>"; };
+		E444A43EC86AE97BAEE84A6A92142A40 /* ExtendableMessageBuilder.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ExtendableMessageBuilder.m; path = src/runtime/Classes/ExtendableMessageBuilder.m; sourceTree = "<group>"; };
+		E66128FCAE5B365356EEC2FD805BFA9D /* UIView+YYText.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+YYText.h"; path = "YYText/Utility/UIView+YYText.h"; sourceTree = "<group>"; };
+		E69EE3C3E028E701CD474471DC5F2AAF /* YYTextRubyAnnotation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YYTextRubyAnnotation.h; path = YYText/String/YYTextRubyAnnotation.h; sourceTree = "<group>"; };
+		EB6C7D42B6C22BADEAB8011AB3CF8F84 /* GeneratedMessageBuilder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GeneratedMessageBuilder.h; path = src/runtime/Classes/GeneratedMessageBuilder.h; sourceTree = "<group>"; };
+		EC2D39EBCC375EF4CBB012F9B8278E9E /* NSParagraphStyle+YYText.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSParagraphStyle+YYText.h"; path = "YYText/Utility/NSParagraphStyle+YYText.h"; sourceTree = "<group>"; };
+		EC78F42E53B594EF0B02AD43AD6C7894 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/CoreFoundation.framework; sourceTree = DEVELOPER_DIR; };
+		EEA31F60676F83EE1F041643737FA152 /* ObjectivecDescriptor.pb.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ObjectivecDescriptor.pb.m; path = src/runtime/Classes/ObjectivecDescriptor.pb.m; sourceTree = "<group>"; };
+		EEC67484A8D2FCA890E6790BDDE00D57 /* UIPasteboard+YYText.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIPasteboard+YYText.m"; path = "YYText/Utility/UIPasteboard+YYText.m"; sourceTree = "<group>"; };
+		EED0020317B5B1D5C1E9BD6087B33D1B /* YYTextLayout.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = YYTextLayout.m; path = YYText/Component/YYTextLayout.m; sourceTree = "<group>"; };
+		F1B2BAE10F15E9A0FC90FC73402D8BB7 /* YYTextDebugOption.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = YYTextDebugOption.m; path = YYText/Component/YYTextDebugOption.m; sourceTree = "<group>"; };
+		F811470CF34616A8313D0093C2AF93C4 /* CodedOutputStream.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CodedOutputStream.m; path = src/runtime/Classes/CodedOutputStream.m; sourceTree = "<group>"; };
+		F9266E2F2D43A358B91D59289F9094CE /* libYYText.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libYYText.a; path = libYYText.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		F95B23795132A7FDA6B2D120946984C0 /* YYTextContainerView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YYTextContainerView.h; path = YYText/Component/YYTextContainerView.h; sourceTree = "<group>"; };
+		F961191210D8170FEA026F4C93FF4BF8 /* YYTextAsyncLayer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = YYTextAsyncLayer.m; path = YYText/Utility/YYTextAsyncLayer.m; sourceTree = "<group>"; };
+		FB8BA56F3FCB0CF0A437D547EF828410 /* ObjectivecDescriptor.pb.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ObjectivecDescriptor.pb.h; path = src/runtime/Classes/ObjectivecDescriptor.pb.h; sourceTree = "<group>"; };
+		FC55EA9BDBDA6801CE97DA9EAE1A9190 /* UnknownFieldSet.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = UnknownFieldSet.h; path = src/runtime/Classes/UnknownFieldSet.h; sourceTree = "<group>"; };
+		FD59D77586AA83A035FADF78B4E58ECB /* libPods-MyWechat.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-MyWechat.a"; path = "libPods-MyWechat.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD807DCACF9E5DE97C9FE59EA902698A /* YYTextMagnifier.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YYTextMagnifier.h; path = YYText/Component/YYTextMagnifier.h; sourceTree = "<group>"; };
+		FE038ED1C2AF0C3149595D874DD314EE /* ExtendableMessage.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ExtendableMessage.m; path = src/runtime/Classes/ExtendableMessage.m; sourceTree = "<group>"; };
+		FF1F0B9AB4ACAD669677F79A51C6476E /* AbstractMessageBuilder.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AbstractMessageBuilder.m; path = src/runtime/Classes/AbstractMessageBuilder.m; sourceTree = "<group>"; };
+		FFF6CB9365DF884329AB7F0CB55D6194 /* ExtendableMessageBuilder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ExtendableMessageBuilder.h; path = src/runtime/Classes/ExtendableMessageBuilder.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		F63BB0BFA9BC3BF82B7C1ABEB98BA0FB /* Frameworks */ = {
+		86E712B8805986D794FDA0FC421989F1 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0AA270DFA209D4F22819F6FA25504628 /* Foundation.framework in Frameworks */,
+				2095D2C062AFB8A626E62E9556161F29 /* Accelerate.framework in Frameworks */,
+				C3BBF3031B6A79A891146F92ED88607C /* CoreFoundation.framework in Frameworks */,
+				17174964A38ED53B0563C651962AC7EA /* CoreText.framework in Frameworks */,
+				65EEA31ABDB5E17E246644D39EEEF756 /* Foundation.framework in Frameworks */,
+				BF6384B6A2DC842930D6A2D29A2038F6 /* MobileCoreServices.framework in Frameworks */,
+				770A5F497AEF70E3A6A3B1C7DD8A2A76 /* QuartzCore.framework in Frameworks */,
+				677D63687B7308BD3851407DDBE34AA5 /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F860AC596B434303E53CAD7E29C8926B /* Frameworks */ = {
+		CB1B35CC151D05657EBD272C18805E90 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				251ADC5385244A7270C851835667D2A0 /* Foundation.framework in Frameworks */,
+				73C1D2E34CAB268D238792231967ADAA /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F86FAF5D8121E69C6AF5948E749619DA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E2443FACD3242E8F1ECB544139FD9814 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -168,15 +305,13 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		36EFE21E5A5BDA4D6E1718F33D68C9C8 /* Support Files */ = {
+		299853D5F0E3E8074494488D9DAA9D89 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				00A582ACD2DBF37630B37ED25392F7D8 /* ProtocolBuffers.xcconfig */,
-				72C1ABB2B024BF8CE6CD65661BAA8EAF /* ProtocolBuffers-dummy.m */,
-				990CC3FDD008B6EE5A46BFBC3A7C229C /* ProtocolBuffers-prefix.pch */,
+				72F1BB46CD444BC2CFB9E6F7CF5FB727 /* ProtocolBuffers */,
+				DBD8FD15375D8B66953978C364AD413F /* YYText */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/ProtocolBuffers";
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		39EFBC185CA89CF36B8EF4563E36A965 /* Pods-MyWechat */ = {
@@ -194,157 +329,303 @@
 			path = "Target Support Files/Pods-MyWechat";
 			sourceTree = "<group>";
 		};
-		54D8F522AFA601A3607B5AC0EFA0EEC0 /* Pods */ = {
+		72F1BB46CD444BC2CFB9E6F7CF5FB727 /* ProtocolBuffers */ = {
 			isa = PBXGroup;
 			children = (
-				A4BB9919836C0251D1B1E87DA0ED7F4A /* ProtocolBuffers */,
+				343BBE136A2A8E68C2D00151FB15AABA /* AbstractMessage.h */,
+				BB02A3D692729F89E67D69D1E2614DDD /* AbstractMessage.m */,
+				18F70A5D955F12347A5888A2DABAE0C5 /* AbstractMessageBuilder.h */,
+				FF1F0B9AB4ACAD669677F79A51C6476E /* AbstractMessageBuilder.m */,
+				99F80A563B247ECEC74DABE5C3A0D9EA /* Bootstrap.h */,
+				03D3C1A8C6A5176D69D88705B0EC2268 /* CodedInputStream.h */,
+				1B9A82C0CFBB7F354A9235737FCC8243 /* CodedInputStream.m */,
+				B0E6A6D77BE1949876DADF373F315AFF /* CodedOutputStream.h */,
+				F811470CF34616A8313D0093C2AF93C4 /* CodedOutputStream.m */,
+				DFC46BB60DBC1D839D1B31C0D07CA163 /* ConcreteExtensionField.h */,
+				8DA54B7E014ADF0B3DE1A6FF79A82453 /* ConcreteExtensionField.m */,
+				15D93B47D0339F685727201B5BA3616F /* Descriptor.pb.h */,
+				AC56921C6D86C0F44A72BE0CECC8D154 /* Descriptor.pb.m */,
+				BDBCA51C86A8ABDD6508C5D61296AEC3 /* ExtendableMessage.h */,
+				FE038ED1C2AF0C3149595D874DD314EE /* ExtendableMessage.m */,
+				FFF6CB9365DF884329AB7F0CB55D6194 /* ExtendableMessageBuilder.h */,
+				E444A43EC86AE97BAEE84A6A92142A40 /* ExtendableMessageBuilder.m */,
+				B13A41EE834CF82BB5A9B048836BBEB6 /* ExtensionField.h */,
+				AF5764679345C6BAEFCA959EA086863C /* ExtensionRegistry.h */,
+				7FBCA5EBABF2D9835707A793CA013C46 /* ExtensionRegistry.m */,
+				562BC871D4F3A58E1757D264DA4322DF /* Field.h */,
+				CE20A6846C99BB635B7C566098B2688B /* Field.m */,
+				074E6728132EA2B8301123741CCBA056 /* ForwardDeclarations.h */,
+				75605CDB7FBE7DA24BBEBBBAEE79345A /* GeneratedMessage.h */,
+				9BEAFC65D838A8D47D337F8052F45DDD /* GeneratedMessage.m */,
+				EB6C7D42B6C22BADEAB8011AB3CF8F84 /* GeneratedMessageBuilder.h */,
+				8739B31D3895F95495820981412AC5CC /* GeneratedMessageBuilder.m */,
+				12B96533AAF4F6DC0AE0FC3C1DE7C0D2 /* Message.h */,
+				D51478708A8E3BC3310E0FAC78E57D44 /* MessageBuilder.h */,
+				5C63542A7C66C7A1636198BF4FD46556 /* MutableExtensionRegistry.h */,
+				380141DA58AA11010CF032D9EEA7C9C7 /* MutableExtensionRegistry.m */,
+				64544F9661B224E73153A099FB9293AA /* MutableField.h */,
+				B409223CBCFB2F39E9D455CD6334A740 /* MutableField.m */,
+				FB8BA56F3FCB0CF0A437D547EF828410 /* ObjectivecDescriptor.pb.h */,
+				EEA31F60676F83EE1F041643737FA152 /* ObjectivecDescriptor.pb.m */,
+				3C6FAEF32695C4B4F155561E105490A1 /* PBArray.h */,
+				A403567C3B42BA612A86D0B19696EBC8 /* PBArray.m */,
+				871D7E13BEA25BA9388098A7DD3AC5B0 /* ProtocolBuffers.h */,
+				D822691A17794F4979C268BD1C84AD3A /* RingBuffer.h */,
+				3FF56454B70847BA30018D68058D0E9F /* RingBuffer.m */,
+				AC76A3596B01A5937BAD4F30054C5873 /* TextFormat.h */,
+				B848043D737F13D03A764E7A87105239 /* TextFormat.m */,
+				FC55EA9BDBDA6801CE97DA9EAE1A9190 /* UnknownFieldSet.h */,
+				CC41EB3DCF9974CD1EABEDB361AD56DC /* UnknownFieldSet.m */,
+				C5BB8F965AD70DA02A28F3E7E72E0E12 /* UnknownFieldSetBuilder.h */,
+				1B6F0E1B4DD60AA88F0ED44DD14BC985 /* UnknownFieldSetBuilder.m */,
+				CBC5F602C61BBB6A73AC5CDD5AE29150 /* Utilities.h */,
+				8ABEF03AA2C9EDB5EC60E3D1204FE2E6 /* Utilities.m */,
+				11E2784232388A9985021EAF88B7DAB0 /* WireFormat.h */,
+				9F5E3BFBB05CA30559846C732B335068 /* WireFormat.m */,
+				DB65AAC1613368242176EC39E305FF3B /* Support Files */,
 			);
-			name = Pods;
+			name = ProtocolBuffers;
+			path = ProtocolBuffers;
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
-				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				54D8F522AFA601A3607B5AC0EFA0EEC0 /* Pods */,
-				BE89F65C6FE64963C3BEA4EEE035C7AE /* Products */,
+				F4CDA5FA9197A41E0081E84F932906EB /* Frameworks */,
+				299853D5F0E3E8074494488D9DAA9D89 /* Pods */,
+				EB2E682C3415E5B6C575B8830C56FE02 /* Products */,
 				09E531F5A1F777331C57A05F422AC328 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		A4BB9919836C0251D1B1E87DA0ED7F4A /* ProtocolBuffers */ = {
+		81CBDD767DC78B7BC4D510DBAB638443 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				AF5411D05A0A9C66A59F79B10445814F /* AbstractMessage.h */,
-				50547A8016C5760ED092A0C9C1523D99 /* AbstractMessage.m */,
-				0ABE1AEA52CC19DAB7367444D62C7EF6 /* AbstractMessageBuilder.h */,
-				F3FCC8488B611BE6FC42BDE2DC26F7C4 /* AbstractMessageBuilder.m */,
-				FF1303D27BBA51368BC0D2A465C853EC /* Bootstrap.h */,
-				AD33A44D05771DE51C961F91EC404FC2 /* CodedInputStream.h */,
-				617AE35C1C5BC53F4E5E1ADCCD7DC02B /* CodedInputStream.m */,
-				D9250FDFFC5FB79939C322EC716340D4 /* CodedOutputStream.h */,
-				D58BE9B82830F693ECC409D7A76F3EB0 /* CodedOutputStream.m */,
-				B5D6C87F0BC47AD328ACB3D5AF99CAAF /* ConcreteExtensionField.h */,
-				E4402681EA1F27DB002D649DE043C8E2 /* ConcreteExtensionField.m */,
-				9C433F3BCE1D444F729FD25307CD16B1 /* Descriptor.pb.h */,
-				05AFA0990297D7BFA3229742DAA527B8 /* Descriptor.pb.m */,
-				78E8EE8AFACC7537B7BEC8A750366F18 /* ExtendableMessage.h */,
-				26D521DD351D39D407F82ADAEA2C4906 /* ExtendableMessage.m */,
-				FB045C2EF90EA80F7CA163D7B1C05430 /* ExtendableMessageBuilder.h */,
-				9DB076187FA59182D7B3DCD3500CBA71 /* ExtendableMessageBuilder.m */,
-				611977A4C0B3432E737D832DB4769E50 /* ExtensionField.h */,
-				F408D87D1D20A91AB3B9C259CDC82881 /* ExtensionRegistry.h */,
-				51A3CA88E2CFDE90812D79BDA841AF29 /* ExtensionRegistry.m */,
-				B2D408029B4D0F12AA07F4CBA1C5FF5A /* Field.h */,
-				EF53BE6C566A1A7CF7808FDF653A5016 /* Field.m */,
-				336E8592ED3F95865F14D46D57E5C623 /* ForwardDeclarations.h */,
-				DD47609375DAD3CC7888A84D50C6D130 /* GeneratedMessage.h */,
-				56A6987E101B12E08D1100C29BACD3C5 /* GeneratedMessage.m */,
-				95A3E637B9459407F241A7E3170393FB /* GeneratedMessageBuilder.h */,
-				0838C6800F7573781ADF63873CF2DD3F /* GeneratedMessageBuilder.m */,
-				7DCB0849AFF2EB4298F694C9A2B52DE0 /* Message.h */,
-				E9D7864B037CDA12C510BF91A112BF7E /* MessageBuilder.h */,
-				9906B063AB94F2D4EDB8F0285E95A5D3 /* MutableExtensionRegistry.h */,
-				5CB0BE26720D7E86027F7F18C4D7E387 /* MutableExtensionRegistry.m */,
-				A92B1081BD968FA97FEDA9073C506BFC /* MutableField.h */,
-				AB0C2E47EE169BB99FB9EEA325FA9E72 /* MutableField.m */,
-				E1CA27192CA935DB8ACD231CA9DA06F0 /* ObjectivecDescriptor.pb.h */,
-				A1F94F6E2F3BD6BB74A9D09F9977C5EE /* ObjectivecDescriptor.pb.m */,
-				EE0AB75EA1A8ABD280F6915ED92B7E67 /* PBArray.h */,
-				FB7BCDA2C0384BDAA0121A59F1771815 /* PBArray.m */,
-				E47D1504A8DBF4AC120A4540A38AAA27 /* ProtocolBuffers.h */,
-				61C710C75ED018B4C74FA30EC13AB0C5 /* RingBuffer.h */,
-				5957F5D71C3D285062F9E9E9C6090B64 /* RingBuffer.m */,
-				81FD5B5E990BDC2F77F52730D133991F /* TextFormat.h */,
-				079F5CD20DA497359C331F022FFA31B6 /* TextFormat.m */,
-				3A09FB01EF41BCA33C739FE32C244308 /* UnknownFieldSet.h */,
-				2CF2ABBAF1026E850FA76334137D7DB0 /* UnknownFieldSet.m */,
-				C7FB56D298C6EDEDAD4394DF228CCA13 /* UnknownFieldSetBuilder.h */,
-				B6A90DB13F6719E6A97539F102D77C0C /* UnknownFieldSetBuilder.m */,
-				B68910B5E447598D0AACFB8BAFED419C /* Utilities.h */,
-				BA6F8FBE51545E69B477529351EE016F /* Utilities.m */,
-				4BE6A4CE3F92496C7A58AB95D927C719 /* WireFormat.h */,
-				F4A9467D32E3A5781FA2C9E2242F4657 /* WireFormat.m */,
-				36EFE21E5A5BDA4D6E1718F33D68C9C8 /* Support Files */,
+				CCDE29CBFD5EE5ECF454C21B13C7BDC8 /* YYText.xcconfig */,
+				121D75BE3DA97190045B8C081E64C2A9 /* YYText-dummy.m */,
+				E265AEFFB34130B3C924A0A20E09305E /* YYText-prefix.pch */,
 			);
-			name = ProtocolBuffers;
-			path = ProtocolBuffers;
+			name = "Support Files";
+			path = "../Target Support Files/YYText";
 			sourceTree = "<group>";
 		};
-		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+		D64510687103930C234CECEF8A2BEAB1 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				D35AF013A5F0BAD4F32504907A52519E /* iOS */,
+				0525E07A8CAE299CB20D411AA8A1138E /* Accelerate.framework */,
+				EC78F42E53B594EF0B02AD43AD6C7894 /* CoreFoundation.framework */,
+				985DBD70FB245138EC45B091E7D1B704 /* CoreText.framework */,
+				C59B249C21FE178D4A257DE4CAF29E11 /* Foundation.framework */,
+				A697C56B93860A1735867FE931FA9271 /* MobileCoreServices.framework */,
+				5AA15695F87CFC4A9494DF27112E5DE1 /* QuartzCore.framework */,
+				552350B0C2360B478A721EB17E853ED5 /* UIKit.framework */,
 			);
-			name = Frameworks;
+			name = iOS;
 			sourceTree = "<group>";
 		};
-		BE89F65C6FE64963C3BEA4EEE035C7AE /* Products */ = {
+		DB65AAC1613368242176EC39E305FF3B /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				40D94BBBD36D03A5E9D9CD6B1B0FAF82 /* libPods-MyWechat.a */,
-				B4AD5CC425D9B2D64F5484B1130AF53A /* libProtocolBuffers.a */,
+				7BB989EEAEA6502F0BEA408BE8EC27DC /* ProtocolBuffers.xcconfig */,
+				D83F354A96C14162FF5C8227E797FD5E /* ProtocolBuffers-dummy.m */,
+				672FEE2512EFAD354F14293805D1B630 /* ProtocolBuffers-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/ProtocolBuffers";
+			sourceTree = "<group>";
+		};
+		DBD8FD15375D8B66953978C364AD413F /* YYText */ = {
+			isa = PBXGroup;
+			children = (
+				A6C75DB9A074EF2FA2B29E3354440573 /* NSAttributedString+YYText.h */,
+				4A81188C1FAAD331D7523843FA1AB1E1 /* NSAttributedString+YYText.m */,
+				EC2D39EBCC375EF4CBB012F9B8278E9E /* NSParagraphStyle+YYText.h */,
+				4FE45D4871543E1317C11EBB0AEF1C2B /* NSParagraphStyle+YYText.m */,
+				99E4C70A3F43B24C3C8A35677E0BD154 /* UIPasteboard+YYText.h */,
+				EEC67484A8D2FCA890E6790BDDE00D57 /* UIPasteboard+YYText.m */,
+				E66128FCAE5B365356EEC2FD805BFA9D /* UIView+YYText.h */,
+				9D21B384B4DA5C07FC1A090F1FDFA15B /* UIView+YYText.m */,
+				16F0BDA8394AFACE02EF67483BBAAE7E /* YYLabel.h */,
+				9002CEA52BE7A2E401011C5F0E30F41C /* YYLabel.m */,
+				E316932968D02D2C7FCB64BBE6B7E031 /* YYText.h */,
+				6BCC1BB757741B15CA208BF8B9AC4535 /* YYTextArchiver.h */,
+				1C6C114A00C51F15EE64517EF7C82114 /* YYTextArchiver.m */,
+				13170C62CE684D599AEF01980777BF31 /* YYTextAsyncLayer.h */,
+				F961191210D8170FEA026F4C93FF4BF8 /* YYTextAsyncLayer.m */,
+				7A4F40CAABEBC6E2E2F37EDAB118C59F /* YYTextAttribute.h */,
+				B798C511750672ADC33F83E8A519236E /* YYTextAttribute.m */,
+				F95B23795132A7FDA6B2D120946984C0 /* YYTextContainerView.h */,
+				A972099106D2CD808AEEAF2ADAC6C73A /* YYTextContainerView.m */,
+				0F71C7E53CDB07705EA3ABFF8408CCC1 /* YYTextDebugOption.h */,
+				F1B2BAE10F15E9A0FC90FC73402D8BB7 /* YYTextDebugOption.m */,
+				3EA07922A7F360CA21FED3F311BF67E0 /* YYTextEffectWindow.h */,
+				874A439AD79699A77066FA4C968471CE /* YYTextEffectWindow.m */,
+				050510B31ACAAA55118D613A9DEC73E7 /* YYTextInput.h */,
+				71CC94032CB2296984FBFD608E83AF06 /* YYTextInput.m */,
+				0476CFC5FFDC86CF4597F09CFAECAFA7 /* YYTextKeyboardManager.h */,
+				0A694B8EDAA84914C9DB3FD97E1E0169 /* YYTextKeyboardManager.m */,
+				7D6D89C77582F225FA3479BCFE1C0015 /* YYTextLayout.h */,
+				EED0020317B5B1D5C1E9BD6087B33D1B /* YYTextLayout.m */,
+				36D58CB25EB8837817074A2BA344F627 /* YYTextLine.h */,
+				019EF8CECCA1B8EEB28D51250EA65E2D /* YYTextLine.m */,
+				FD807DCACF9E5DE97C9FE59EA902698A /* YYTextMagnifier.h */,
+				90D8A557B998F6F58C6207B995B36C2D /* YYTextMagnifier.m */,
+				4D4406BE7DE7CB478007285E0906C87E /* YYTextParser.h */,
+				0A9FC541257DB8CB8F31647629794CDD /* YYTextParser.m */,
+				E69EE3C3E028E701CD474471DC5F2AAF /* YYTextRubyAnnotation.h */,
+				1B1621E252CAF88DFE8759287528E9CC /* YYTextRubyAnnotation.m */,
+				38BDBAA5A90C21A0C69791D106E3B093 /* YYTextRunDelegate.h */,
+				603F7380F39680EDA1B5CE8FFF5F242A /* YYTextRunDelegate.m */,
+				8D38B7A8A37DEEE9D38BFC865CC8F01C /* YYTextSelectionView.h */,
+				BB6DE4DE942CD735F7D318B580AF5D3C /* YYTextSelectionView.m */,
+				B6262206A6FF2C40D0C8B6193D24C879 /* YYTextTransaction.h */,
+				BEBF4D74DFC6D58106FC374813B4AD59 /* YYTextTransaction.m */,
+				9B630FBD156A0E7391257ED56C7F5F38 /* YYTextUtilities.h */,
+				09C056E1EDED5B64A55AA0F19B62B5D6 /* YYTextUtilities.m */,
+				97ED8B2D127EBA66986082FA220E5B9B /* YYTextView.h */,
+				AA2D171CAF2AEF5E886F801443966B9A /* YYTextView.m */,
+				0434DB326B3DC26D9AE014000726134D /* YYTextWeakProxy.h */,
+				C47486CED69B635C892ED1957884590C /* YYTextWeakProxy.m */,
+				81CBDD767DC78B7BC4D510DBAB638443 /* Support Files */,
+			);
+			name = YYText;
+			path = YYText;
+			sourceTree = "<group>";
+		};
+		EB2E682C3415E5B6C575B8830C56FE02 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FD59D77586AA83A035FADF78B4E58ECB /* libPods-MyWechat.a */,
+				2B6137717B32FAFCBD73402404010846 /* libProtocolBuffers.a */,
+				F9266E2F2D43A358B91D59289F9094CE /* libYYText.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		D35AF013A5F0BAD4F32504907A52519E /* iOS */ = {
+		F4CDA5FA9197A41E0081E84F932906EB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */,
+				D64510687103930C234CECEF8A2BEAB1 /* iOS */,
 			);
-			name = iOS;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		1CF922C3052CA6105CCB28DA8E80336E /* Headers */ = {
+		19DDE11D88EA843893881E1E8159D599 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				268A7FE65E403D3B2C61E598F3495C62 /* AbstractMessage.h in Headers */,
-				D9077F0818306B4E5EE7C3D26D8A7670 /* AbstractMessageBuilder.h in Headers */,
-				FBF2ACF6F3646B000831996F3C3EA367 /* Bootstrap.h in Headers */,
-				BA06543C76BC3793887ABFCC31092887 /* CodedInputStream.h in Headers */,
-				03E83DB03B9F3B32D36E3C9FFA82CF76 /* CodedOutputStream.h in Headers */,
-				8E0D55F411BCF1D9D9F5677731B31998 /* ConcreteExtensionField.h in Headers */,
-				BA30EC3B9DACDEA213408EAD7AF57490 /* Descriptor.pb.h in Headers */,
-				110FF328548AB71E508F0FE848685B94 /* ExtendableMessage.h in Headers */,
-				C49B16E0C77DAD96BB021E6E66264DD2 /* ExtendableMessageBuilder.h in Headers */,
-				2E23B82B9E427A9422FBAAB34967D271 /* ExtensionField.h in Headers */,
-				A72498A6B7A8E1F2B4E1B83CE6183AF5 /* ExtensionRegistry.h in Headers */,
-				4B1C8D989308AFB062F9960750A4DDFD /* Field.h in Headers */,
-				10A64268DBE0A0C08200488FE12A3AFA /* ForwardDeclarations.h in Headers */,
-				03280479E77B1AC148E0907D8D10DA30 /* GeneratedMessage.h in Headers */,
-				95921B28A49EF20288A28E2F916FAB49 /* GeneratedMessageBuilder.h in Headers */,
-				D5EBBDB68E40D0C58C363DEA6CB3447C /* Message.h in Headers */,
-				07121FA20076A99BE3DEF747CA604356 /* MessageBuilder.h in Headers */,
-				05291CCCB7C4F2E71968B937AAC09BB1 /* MutableExtensionRegistry.h in Headers */,
-				18F0C49FE3ADA0BE19AF139AA6D5EDA8 /* MutableField.h in Headers */,
-				C8FF1C9BE689B95B59A8D0430B919095 /* ObjectivecDescriptor.pb.h in Headers */,
-				90B0DDF2003B80750EBF880E7A640A9E /* PBArray.h in Headers */,
-				EDB983FB46C7B61571147D89408A2F03 /* ProtocolBuffers.h in Headers */,
-				B770A8012C03B635B20DB82928F13BC2 /* RingBuffer.h in Headers */,
-				08702325898051BE4282202B536A2FC5 /* TextFormat.h in Headers */,
-				9E1DD623A43C23ECDA76C45058B03CA1 /* UnknownFieldSet.h in Headers */,
-				2EA8EEA86705E0BFFDD4A2355489EE00 /* UnknownFieldSetBuilder.h in Headers */,
-				2D4C8498FD6243584B779B8C83EBE9BD /* Utilities.h in Headers */,
-				29B35DB818652BDDDD680773F2A5DA7A /* WireFormat.h in Headers */,
+				93DA43BCBC5DD067ADF0FF331D24ACB4 /* NSAttributedString+YYText.h in Headers */,
+				3BADA8D8C3D5EF9258F2A78667440248 /* NSParagraphStyle+YYText.h in Headers */,
+				A70135AF45DE7B1CBD82BCFB0D03E551 /* UIPasteboard+YYText.h in Headers */,
+				E9483808B99587E0524219A58EE8FEAB /* UIView+YYText.h in Headers */,
+				19C5290EA7FACDBCE347D3878FE3514C /* YYLabel.h in Headers */,
+				6841AEB70CA9732EFAC58F70C4C5438F /* YYText.h in Headers */,
+				5C12364DC38EF1F67321154D699928BF /* YYTextArchiver.h in Headers */,
+				0ABAB35BA192827B21FFD8DC2D16F767 /* YYTextAsyncLayer.h in Headers */,
+				AF7145236CF20267AF80945A3B76CB91 /* YYTextAttribute.h in Headers */,
+				789C4FD66AE427109953D8CCDF1DEC50 /* YYTextContainerView.h in Headers */,
+				5D93BE1E7EFF8CB3AA41788F0E1FC10C /* YYTextDebugOption.h in Headers */,
+				B8F3D01C092653474666BCD359EB0F2D /* YYTextEffectWindow.h in Headers */,
+				081E85369CE605926972A1034F666B76 /* YYTextInput.h in Headers */,
+				8A164CDB135BA5A45C9625D39E38F2B6 /* YYTextKeyboardManager.h in Headers */,
+				3CFAFF7FA8482E61ED1DD43376BA470F /* YYTextLayout.h in Headers */,
+				BBD2FDC711F6F5C59E81236682B565F7 /* YYTextLine.h in Headers */,
+				D8A27D76CD648E7765EE6F3B84D4DB58 /* YYTextMagnifier.h in Headers */,
+				EB1B52234ABFCCFF33A66D73E2DC6A60 /* YYTextParser.h in Headers */,
+				6B22793A5293CC12E26A66E31D9C7A5A /* YYTextRubyAnnotation.h in Headers */,
+				111231896849011B30A61807D2FE0105 /* YYTextRunDelegate.h in Headers */,
+				A412A8B1968B6C13AB8FB99827F87FC1 /* YYTextSelectionView.h in Headers */,
+				543488A50B3AFACAAA3D3BA2C716E575 /* YYTextTransaction.h in Headers */,
+				DD99685C43CA0A51B2CFB7F29BFD7E06 /* YYTextUtilities.h in Headers */,
+				2D45F38D8CB17F9E499A3C8CD86CF15D /* YYTextView.h in Headers */,
+				5C2C9F2189401FC668D64A0536A182A9 /* YYTextWeakProxy.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3B8FD786D6BC8AC92E569695D62ED98E /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C9DA54F074907479CE567D6247729D1C /* AbstractMessage.h in Headers */,
+				3586845947AADD36C33360FF779C041E /* AbstractMessageBuilder.h in Headers */,
+				F79C0E2D04A5A89CC41E310465040FC1 /* Bootstrap.h in Headers */,
+				6A01884EB516AE43864A3608969C21AA /* CodedInputStream.h in Headers */,
+				C759D090BF1EB3A5FA4E42B77261C243 /* CodedOutputStream.h in Headers */,
+				899B8D84B95B072D99B2537ED3F3E54E /* ConcreteExtensionField.h in Headers */,
+				4505ADE5F07C97BB099CC05A44B16703 /* Descriptor.pb.h in Headers */,
+				B0D8B1F93FE8BBDC9079594F86654602 /* ExtendableMessage.h in Headers */,
+				72F2EC7B5C9F6FF4CC6262A833324DB7 /* ExtendableMessageBuilder.h in Headers */,
+				561318DB17FFE99C9440358D196AE7FB /* ExtensionField.h in Headers */,
+				EEFC6EBC44A6AC4C1E811FA2F8F0D99D /* ExtensionRegistry.h in Headers */,
+				097435D824B52D48120C0B84D1B3B420 /* Field.h in Headers */,
+				D2AC035FB501D86B937B3962B45990B1 /* ForwardDeclarations.h in Headers */,
+				15F9D4E421CF956FBA7F2221E5921773 /* GeneratedMessage.h in Headers */,
+				9A305A19E2F0A21351B7C46223025DDB /* GeneratedMessageBuilder.h in Headers */,
+				2DEC7B8ACE6232D3449635C2ECE2D63C /* Message.h in Headers */,
+				623F4E8A61AC43F8F883FA772C2757EC /* MessageBuilder.h in Headers */,
+				B2371ADD09489541F0149FB61203D301 /* MutableExtensionRegistry.h in Headers */,
+				1F93D6CE66519ADCF4B442F812C81530 /* MutableField.h in Headers */,
+				F607A6736368CB303D44FD2AFF917222 /* ObjectivecDescriptor.pb.h in Headers */,
+				D4E6A4CD76F999A625CD8CD5A687774E /* PBArray.h in Headers */,
+				88C01441E6064D83F25150A4FBFF6D2B /* ProtocolBuffers.h in Headers */,
+				70646749A02AE43842C5CCE5E0FBF077 /* RingBuffer.h in Headers */,
+				1E1E3E4DD50DD8DF3C3BC73B91F6F012 /* TextFormat.h in Headers */,
+				58246C28A4201B231B498E488503EC63 /* UnknownFieldSet.h in Headers */,
+				EDE0FD8689A82C5F484F28108415352A /* UnknownFieldSetBuilder.h in Headers */,
+				283CFE38D6CC02FC1988847F15058546 /* Utilities.h in Headers */,
+				F461EF7D06281D19A797195AFDDEB7D4 /* WireFormat.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		574D449AE6799B3C8A526D7469B81F74 /* ProtocolBuffers */ = {
+		06ED845F6C06055243354EB7C148E68A /* YYText */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 14360AB2D9DCA25C8D508A2BC087C42E /* Build configuration list for PBXNativeTarget "ProtocolBuffers" */;
+			buildConfigurationList = 3CDA3494F637756A652E85D40AF1B766 /* Build configuration list for PBXNativeTarget "YYText" */;
 			buildPhases = (
-				BD7ED9704D4FD2EA5E187DA3C7D5E373 /* Sources */,
-				F63BB0BFA9BC3BF82B7C1ABEB98BA0FB /* Frameworks */,
-				1CF922C3052CA6105CCB28DA8E80336E /* Headers */,
+				84B0094FA299B588C68A3887646952F6 /* Sources */,
+				86E712B8805986D794FDA0FC421989F1 /* Frameworks */,
+				19DDE11D88EA843893881E1E8159D599 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = YYText;
+			productName = YYText;
+			productReference = F9266E2F2D43A358B91D59289F9094CE /* libYYText.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		7A53A264608BD726CDF5B64FCEF46F05 /* Pods-MyWechat */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9A25512E584A109C28AEB69FA1B79204 /* Build configuration list for PBXNativeTarget "Pods-MyWechat" */;
+			buildPhases = (
+				7B91B71EFD7A04B3665883000BE92391 /* Sources */,
+				F86FAF5D8121E69C6AF5948E749619DA /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1EF04B70ECE627E172B2CF944C996A49 /* PBXTargetDependency */,
+				FF4BD5CA271A497F4FD772FE610CCF62 /* PBXTargetDependency */,
+			);
+			name = "Pods-MyWechat";
+			productName = "Pods-MyWechat";
+			productReference = FD59D77586AA83A035FADF78B4E58ECB /* libPods-MyWechat.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		AFDB61725DD8E0CF097BEECE4C9E3992 /* ProtocolBuffers */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3E22889301D396DFF048734B20503473 /* Build configuration list for PBXNativeTarget "ProtocolBuffers" */;
+			buildPhases = (
+				83E5C9FF26B0C74EB296142AD1E59BD0 /* Sources */,
+				CB1B35CC151D05657EBD272C18805E90 /* Frameworks */,
+				3B8FD786D6BC8AC92E569695D62ED98E /* Headers */,
 			);
 			buildRules = (
 			);
@@ -352,24 +633,7 @@
 			);
 			name = ProtocolBuffers;
 			productName = ProtocolBuffers;
-			productReference = B4AD5CC425D9B2D64F5484B1130AF53A /* libProtocolBuffers.a */;
-			productType = "com.apple.product-type.library.static";
-		};
-		CB7902A300BDF830B4D608A547BE4C0A /* Pods-MyWechat */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 6D45CF6EED533D069EB0C8284A7F1EF5 /* Build configuration list for PBXNativeTarget "Pods-MyWechat" */;
-			buildPhases = (
-				3A9CEEED8AEAE6CC071282CA5057D79D /* Sources */,
-				F860AC596B434303E53CAD7E29C8926B /* Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				A0D5BA4F762065773641373247B819B3 /* PBXTargetDependency */,
-			);
-			name = "Pods-MyWechat";
-			productName = "Pods-MyWechat";
-			productReference = 40D94BBBD36D03A5E9D9CD6B1B0FAF82 /* libPods-MyWechat.a */;
+			productReference = 2B6137717B32FAFCBD73402404010846 /* libProtocolBuffers.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
@@ -389,80 +653,143 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = BE89F65C6FE64963C3BEA4EEE035C7AE /* Products */;
+			productRefGroup = EB2E682C3415E5B6C575B8830C56FE02 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				CB7902A300BDF830B4D608A547BE4C0A /* Pods-MyWechat */,
-				574D449AE6799B3C8A526D7469B81F74 /* ProtocolBuffers */,
+				7A53A264608BD726CDF5B64FCEF46F05 /* Pods-MyWechat */,
+				AFDB61725DD8E0CF097BEECE4C9E3992 /* ProtocolBuffers */,
+				06ED845F6C06055243354EB7C148E68A /* YYText */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		3A9CEEED8AEAE6CC071282CA5057D79D /* Sources */ = {
+		7B91B71EFD7A04B3665883000BE92391 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F7CF85E506B1C27EDDEB227AF15383C8 /* Pods-MyWechat-dummy.m in Sources */,
+				45EF97E1222FFC813DB220120D2B0B2E /* Pods-MyWechat-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BD7ED9704D4FD2EA5E187DA3C7D5E373 /* Sources */ = {
+		83E5C9FF26B0C74EB296142AD1E59BD0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1C1B9EED1C76620D4885A95F5CEA3748 /* AbstractMessage.m in Sources */,
-				F142FACCF5C90DB140290E3DC59253F1 /* AbstractMessageBuilder.m in Sources */,
-				43563C4536E8625E5B1828EC293B6A83 /* CodedInputStream.m in Sources */,
-				68A8F1ED5F6A0C2F002C0B2E69A773CF /* CodedOutputStream.m in Sources */,
-				D154D085BCA5BD646681AE33B8A4650C /* ConcreteExtensionField.m in Sources */,
-				0AFDDF695D14B2384AAD00EACC4A6331 /* Descriptor.pb.m in Sources */,
-				8026312F3469326B2EFF899053857934 /* ExtendableMessage.m in Sources */,
-				6B448A1B0B253723E2DCCF3F3A99FB33 /* ExtendableMessageBuilder.m in Sources */,
-				BB7EE829827D92AB2974F3FC6C0BB881 /* ExtensionRegistry.m in Sources */,
-				D6DF158F3F987D33665B90DEC98D316C /* Field.m in Sources */,
-				8E5B38CF8BE742A66FB3559B587B3379 /* GeneratedMessage.m in Sources */,
-				5E1C87E0C99DC15F3406001C8EEEE05C /* GeneratedMessageBuilder.m in Sources */,
-				2FC9C16F3A0EDD2B1158836A60580210 /* MutableExtensionRegistry.m in Sources */,
-				BAF92DA47DB7760519352BFE66292FF2 /* MutableField.m in Sources */,
-				2CCB4704608462FBF3229C179C18BB29 /* ObjectivecDescriptor.pb.m in Sources */,
-				7EEC6F5231AC84D24C718BB464E62866 /* PBArray.m in Sources */,
-				D2EB8DE489CD926B0C633D1BE942B51C /* ProtocolBuffers-dummy.m in Sources */,
-				C7C007DB90564574FBC393F7A3CEB774 /* RingBuffer.m in Sources */,
-				069708A344DE29E5C4175DD3424BB5A0 /* TextFormat.m in Sources */,
-				5AE3990B7983E8E3F6142B87BA9CFADB /* UnknownFieldSet.m in Sources */,
-				60F56A38E5EEEC0047055C7C1FDDB49E /* UnknownFieldSetBuilder.m in Sources */,
-				8711DD0F75DF981F4C042C00DE7F543C /* Utilities.m in Sources */,
-				13A47443AF94162704D66C49F66E42A9 /* WireFormat.m in Sources */,
+				56EB737222EA7225DB638DC4DDDB83B3 /* AbstractMessage.m in Sources */,
+				C6E845CE5A28880D4D0D861B0E3F2222 /* AbstractMessageBuilder.m in Sources */,
+				B6F2F55B9B9F74213C75B71120F716B1 /* CodedInputStream.m in Sources */,
+				F5E257826766194CB8A4302FE72DA61C /* CodedOutputStream.m in Sources */,
+				BEAC2828A13056C9C95074FCDFC96804 /* ConcreteExtensionField.m in Sources */,
+				ED726FA2C6D5380202FA01F5BD8EEFAB /* Descriptor.pb.m in Sources */,
+				920A47C62E3E48990C42808C347C0AD9 /* ExtendableMessage.m in Sources */,
+				2EFE1E52512F370DBBD9FD5657959972 /* ExtendableMessageBuilder.m in Sources */,
+				6027F136131243BA78AADA0CD2C0BC7D /* ExtensionRegistry.m in Sources */,
+				833FD5DDE03E30AEE8666115EFAF4C12 /* Field.m in Sources */,
+				31B75A2F7A902C05F36956822AC7236F /* GeneratedMessage.m in Sources */,
+				0C6B9B994F4D556FA328B13AB9E2E82C /* GeneratedMessageBuilder.m in Sources */,
+				E112FF437A5689DB498EC7792982D225 /* MutableExtensionRegistry.m in Sources */,
+				B17392AC9EF3A2004B6AEEC5B45CF7C1 /* MutableField.m in Sources */,
+				787AAD962DF5E2D24BC7E3CE6B1AD4CD /* ObjectivecDescriptor.pb.m in Sources */,
+				271DA8EB48A2601CB9BB8FD3BEB89684 /* PBArray.m in Sources */,
+				C82A0E5B42AB85A0BF485EFE5F48732F /* ProtocolBuffers-dummy.m in Sources */,
+				C0B0CF4E224B3975B2942C87777C4EB5 /* RingBuffer.m in Sources */,
+				097F5120DA006028CFFC2B2F32464FE0 /* TextFormat.m in Sources */,
+				951A87782E8B8F7EF0BDBA10B3D894C5 /* UnknownFieldSet.m in Sources */,
+				DEDD89688E62396BD6F5870916EDCAFC /* UnknownFieldSetBuilder.m in Sources */,
+				C8611441B922BC66449D098C995E4806 /* Utilities.m in Sources */,
+				E09496EC32C5C1A6E997C81508803E0C /* WireFormat.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84B0094FA299B588C68A3887646952F6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC9CA8CE0834E62E46CD532749E7DBF3 /* NSAttributedString+YYText.m in Sources */,
+				CD92E06783453878078E80AB6008D7EC /* NSParagraphStyle+YYText.m in Sources */,
+				405B4BCADA9E2006B7464AC29FE2B2BA /* UIPasteboard+YYText.m in Sources */,
+				A1FF49FA6FC8E3D8CDE08CA5461F1A4D /* UIView+YYText.m in Sources */,
+				9017013236097D3F03F4418E6ED2FC92 /* YYLabel.m in Sources */,
+				7A0F8AD55D9B80A93FAF207CAF5EA331 /* YYText-dummy.m in Sources */,
+				CF42E7434E1A30EFE2C8077AF640F034 /* YYTextArchiver.m in Sources */,
+				2FA83CDB12B03EA1FDE659C0D307F623 /* YYTextAsyncLayer.m in Sources */,
+				72198AFFEB58E246B156C26480BF242B /* YYTextAttribute.m in Sources */,
+				D146D2A8EBDCC4CD83100593A2C4E690 /* YYTextContainerView.m in Sources */,
+				57830A93D06468BE8FDF71CED9A7133F /* YYTextDebugOption.m in Sources */,
+				9C7292F75A9EA250689F1DE7AB6F89BA /* YYTextEffectWindow.m in Sources */,
+				17CCD69ECD55292A9EDA8780A1AF54B3 /* YYTextInput.m in Sources */,
+				89849A7AE3ED757FB3A5AFC85F3BB24D /* YYTextKeyboardManager.m in Sources */,
+				3976C5D33C678F55E99CF761D375EEED /* YYTextLayout.m in Sources */,
+				CB720FA70FAB44FB9217313CB8BD191C /* YYTextLine.m in Sources */,
+				22DF7AA6914AA6C9B8A9BAC95C6DC721 /* YYTextMagnifier.m in Sources */,
+				79DC0D4B085E60BE51A7C871506ECB3D /* YYTextParser.m in Sources */,
+				48F15CF0407E11C923DC3C1AF05B5404 /* YYTextRubyAnnotation.m in Sources */,
+				3D8F9475AD330BAA52B98138A6BA7B6E /* YYTextRunDelegate.m in Sources */,
+				EF91DA7DEDB583B9AE45BE28CBA78CAB /* YYTextSelectionView.m in Sources */,
+				C2A6642AAC547ABE9FFD18694300BA3D /* YYTextTransaction.m in Sources */,
+				D6B7741C3008CCED2C83731ACD5773B9 /* YYTextUtilities.m in Sources */,
+				1CC2DC5ABC9D8F6FBF361F5CE6F5A15B /* YYTextView.m in Sources */,
+				681BEE797D98100F6B59D7CF20499F4E /* YYTextWeakProxy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		A0D5BA4F762065773641373247B819B3 /* PBXTargetDependency */ = {
+		1EF04B70ECE627E172B2CF944C996A49 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = ProtocolBuffers;
-			target = 574D449AE6799B3C8A526D7469B81F74 /* ProtocolBuffers */;
-			targetProxy = 6A29442D0C30312B05B7CBBB4AE5C50D /* PBXContainerItemProxy */;
+			target = AFDB61725DD8E0CF097BEECE4C9E3992 /* ProtocolBuffers */;
+			targetProxy = D3A8AFFEFC508AEBFC00A2219AD6F1AC /* PBXContainerItemProxy */;
+		};
+		FF4BD5CA271A497F4FD772FE610CCF62 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = YYText;
+			target = 06ED845F6C06055243354EB7C148E68A /* YYText */;
+			targetProxy = 86E4F42489F7893A0BD7BAD8C7BD058C /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		1E8295D452F68C89609DF693B6416135 /* Release */ = {
+		147A08CC6562D370B077DD7ED865CCDF /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7936213B4E3A8D5E3D919654DD9B78E5 /* Pods-MyWechat.release.xcconfig */;
+			baseConfigurationReference = CCDE29CBFD5EE5ECF454C21B13C7BDC8 /* YYText.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/YYText/YYText-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+			};
+			name = Debug;
+		};
+		2783F1D58BEC6993EE8F47BB4A5A2D21 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8C44F859FAFE63AC34BCDCAF8F8982ED /* Pods-MyWechat.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MACH_O_TYPE = staticlib;
-				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_ENABLE_DEBUG_INFO = YES;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
@@ -471,7 +798,7 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 			};
-			name = Release;
+			name = Debug;
 		};
 		3890D7C92DE120C2BA762135796CFA80 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -566,9 +893,33 @@
 			};
 			name = Debug;
 		};
-		4B0AB64F03AF9D0AE32B907DF6EDAE05 /* Release */ = {
+		5E30824F0BF8538C499A69467F4834F6 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 00A582ACD2DBF37630B37ED25392F7D8 /* ProtocolBuffers.xcconfig */;
+			baseConfigurationReference = 7BB989EEAEA6502F0BEA408BE8EC27DC /* ProtocolBuffers.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/ProtocolBuffers/ProtocolBuffers-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+			};
+			name = Debug;
+		};
+		7929C2724014DF290E2F5FF93A357BD2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7BB989EEAEA6502F0BEA408BE8EC27DC /* ProtocolBuffers.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -590,19 +941,19 @@
 			};
 			name = Release;
 		};
-		DB05EB9031A3364B9A7B8DB17BD11984 /* Debug */ = {
+		7DA173AA01CFD95634912C60FCA9EDCF /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8C44F859FAFE63AC34BCDCAF8F8982ED /* Pods-MyWechat.debug.xcconfig */;
+			baseConfigurationReference = 7936213B4E3A8D5E3D919654DD9B78E5 /* Pods-MyWechat.release.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MACH_O_TYPE = staticlib;
-				MTL_ENABLE_DEBUG_INFO = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
@@ -611,21 +962,21 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 			};
-			name = Debug;
+			name = Release;
 		};
-		DFB70D6EB6D706B3E446214E3C686D33 /* Debug */ = {
+		983EC0FBC7C25533288D0A1427F32BB8 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 00A582ACD2DBF37630B37ED25392F7D8 /* ProtocolBuffers.xcconfig */;
+			baseConfigurationReference = CCDE29CBFD5EE5ECF454C21B13C7BDC8 /* YYText.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/ProtocolBuffers/ProtocolBuffers-prefix.pch";
+				GCC_PREFIX_HEADER = "Target Support Files/YYText/YYText-prefix.pch";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
-				MTL_ENABLE_DEBUG_INFO = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PRIVATE_HEADERS_FOLDER_PATH = "";
@@ -635,20 +986,11 @@
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 			};
-			name = Debug;
+			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		14360AB2D9DCA25C8D508A2BC087C42E /* Build configuration list for PBXNativeTarget "ProtocolBuffers" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				DFB70D6EB6D706B3E446214E3C686D33 /* Debug */,
-				4B0AB64F03AF9D0AE32B907DF6EDAE05 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -658,11 +1000,29 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6D45CF6EED533D069EB0C8284A7F1EF5 /* Build configuration list for PBXNativeTarget "Pods-MyWechat" */ = {
+		3CDA3494F637756A652E85D40AF1B766 /* Build configuration list for PBXNativeTarget "YYText" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				DB05EB9031A3364B9A7B8DB17BD11984 /* Debug */,
-				1E8295D452F68C89609DF693B6416135 /* Release */,
+				147A08CC6562D370B077DD7ED865CCDF /* Debug */,
+				983EC0FBC7C25533288D0A1427F32BB8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3E22889301D396DFF048734B20503473 /* Build configuration list for PBXNativeTarget "ProtocolBuffers" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5E30824F0BF8538C499A69467F4834F6 /* Debug */,
+				7929C2724014DF290E2F5FF93A357BD2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9A25512E584A109C28AEB69FA1B79204 /* Build configuration list for PBXNativeTarget "Pods-MyWechat" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2783F1D58BEC6993EE8F47BB4A5A2D21 /* Debug */,
+				7DA173AA01CFD95634912C60FCA9EDCF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

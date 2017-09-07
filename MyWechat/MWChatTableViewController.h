@@ -8,7 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import "MWMessageProtocol.h"
+#import "MWPersonInfo.h"
 
 @interface MWChatTableViewController : UIViewController<UITableViewDelegate, UITableViewDataSource, UITextViewDelegate, MWMessageProtocol, NSStreamDelegate>
+
+@property(nonatomic, strong) NSInputStream *inputStream;
+@property(nonatomic, strong) NSOutputStream *outputStream;
+@property(nonatomic, strong) MWPersonInfo * personInfo;
 
 @end
