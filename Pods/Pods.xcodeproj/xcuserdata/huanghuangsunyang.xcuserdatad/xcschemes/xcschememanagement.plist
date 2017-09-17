@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>NJKWebViewProgress.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-MyWechat.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -22,17 +27,22 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>06ED845F6C06055243354EB7C148E68A</key>
+		<key>22EE69EAC84B2D480DBFA15B9BA4E9F5</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>7A53A264608BD726CDF5B64FCEF46F05</key>
+		<key>AD891664ECDC1420918C096BD73D8501</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>AFDB61725DD8E0CF097BEECE4C9E3992</key>
+		<key>C6CF2C436ED125F5E30C2FBB2086D6A3</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>CCB7CB485E21C0801790635C83376BA2</key>
 		<dict>
 			<key>primary</key>
 			<true/>

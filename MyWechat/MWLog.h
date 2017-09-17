@@ -11,7 +11,7 @@
 #define MWLog_h
 
 #define MWLog(str, args...) \
-NSLog(@"%@%s %@", NSStringFromClass(self.class), __FUNCTION__,\
+NSLog(@"%s [LINE:%d] %@", __FUNCTION__, __LINE__, \
 [NSString stringWithFormat:str, ##args])
 
 

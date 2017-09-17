@@ -9,10 +9,11 @@
 #import "MWMainPageTableViewController.h"
 #import "MWMainPageInfoManager.h"
 #import "MWChatTableViewController.h"
-#import <sys/socket.h>
-#import <netdb.h>
 #import "MWNetworkData.pb.h"
 #import "MWLog.h"
+#import "MWAllExtension.h"
+#import <sys/socket.h>
+#import <netdb.h>
 #import <err.h>
 #import <errno.h>
 
@@ -42,10 +43,15 @@
     [self setupNetwork];
 }
 
+- (void) reload {
+    [[MWMainPageInfoManager sharedInfo] sortAllItems];
+    [self.tableView reloadData];
+}
+
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     MWLog(@"main page view will appear");
-    [self.tableView reloadData];
+    [self reload];
 }
 
 - (void) setupView {
@@ -115,16 +121,12 @@
                               forIndexPath:indexPath];
     
     NSArray * items = [MWMainPageInfoManager sharedInfo].allItems;
-    
     MWPersonInfo * item = items[indexPath.row];
-    
-    MWLog(@"%@", item);
     
     cell.nameLabel.text = item.name;
     cell.lastMessageLabel.text = item.lastMessage;
     cell.portraitImageView.image = item.portrait;
-    
-    // Configure the cell...
+    cell.lastMessageTimeLabel.text = [NSString stringFromDate:item.lastMessageTime];
     
     return cell;
 }

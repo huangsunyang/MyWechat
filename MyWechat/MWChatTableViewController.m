@@ -191,8 +191,7 @@
         NSArray *arrayOfAllMatches=[dataDetector matchesInString:wholeText options:NSMatchingReportProgress range:NSMakeRange(0, wholeText.length)];
 
         NSMutableAttributedString * text = [[NSMutableAttributedString alloc] initWithString:wholeText];
-        for (NSTextCheckingResult *match in arrayOfAllMatches)
-        {
+        for (NSTextCheckingResult *match in arrayOfAllMatches) {
             [text yy_setTextHighlightRange:match.range//设置点击的位置
                                      color:[UIColor orangeColor]
                            backgroundColor:[UIColor whiteColor]
@@ -210,7 +209,7 @@
         return cell;
     } else if (message.messageType == MessageTypeSendInform) {
         MWChatInformTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MWChatInformTableViewCell" forIndexPath:indexPath];
-        cell.informText.text = [NSString stringFromDate:[NSDate dateWithTimeIntervalSinceNow:0]];
+        cell.informText.text = [NSString stringFromDate:[NSDate date]];
         return cell;
     }
     return nil;
@@ -358,6 +357,46 @@
     [self.navigationController pushViewController:detailInfoController animated:YES];
 }
 
+- (void) onMessageTapped:(UIGestureRecognizer *)gesture {
+    self.hidesBottomBarWhenPushed = YES;
+    
+    //获取当前点击的indexPath
+    CGPoint point = [gesture locationInView:self.tableView];
+    NSIndexPath *indexPath = [self.tableView indexPathForRowAtPoint:point];
+    MWChatTableViewCell * cell = [self.tableView cellForRowAtIndexPath:indexPath];
+    
+    //获取所有的链接
+    NSString * wholeText = cell.chatText.text;
+    NSError * error;
+    NSDataDetector *dataDetector=[NSDataDetector dataDetectorWithTypes:NSTextCheckingTypeLink error:&error];
+    NSArray *arrayOfAllMatches=[dataDetector matchesInString:wholeText options:NSMatchingReportProgress range:NSMakeRange(0, wholeText.length)];
+    
+    //只有一个url就直接打开连接
+    if (arrayOfAllMatches.count == 1) {
+        NSTextCheckingResult * match = arrayOfAllMatches[0];
+        NSString * urlStr = [wholeText substringWithRange:match.range];
+        MWWebMessageViewController * webView = [MWWebMessageViewController webViewWithURLString: urlStr];
+        [self.navigationController pushViewController:webView animated:YES];
+        return;
+    }
+    
+    //显示alertview
+    UIAlertController * alertController = [UIAlertController alertControllerWithTitle:@""
+                                                                              message:@""
+                                                                       preferredStyle:UIAlertControllerStyleActionSheet];
+    for (NSTextCheckingResult * match in arrayOfAllMatches) {
+        UIAlertAction * action = [UIAlertAction actionWithTitle:[wholeText substringWithRange:match.range]
+                                                          style:UIAlertActionStyleDefault
+                                                        handler:^(UIAlertAction * action) {
+                                                            MWWebMessageViewController * webView = [MWWebMessageViewController webViewWithURLString:[wholeText substringWithRange:match.range]];
+                                                            [self.navigationController pushViewController:webView animated:YES];
+                                                        }];
+        [alertController addAction:action];
+    }
+    
+    [self presentViewController:alertController animated:YES completion:nil];
+}
+
 //删除一条信息
 - (void)onDeleteMessage: (id)sender {
     NSString * name = self.personInfo.name;
@@ -415,6 +454,7 @@
     
     //记录当下的最后一条消息和发送时间
     self.personInfo.lastMessage = message.messageText;
+    self.personInfo.lastMessageTime = [NSDate date];
     
     //尝试发送protobuf
     if ([self.outputStream hasSpaceAvailable]) {

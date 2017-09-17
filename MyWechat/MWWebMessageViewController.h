@@ -7,8 +7,9 @@
 //
 
 #import "ViewController.h"
+#import "NJKWebViewProgress.h"
 
-@interface MWWebMessageViewController : ViewController
+@interface MWWebMessageViewController : ViewController<NJKWebViewProgressDelegate, UIWebViewDelegate>
 
 @property (nonatomic) NSURL * URL;
 

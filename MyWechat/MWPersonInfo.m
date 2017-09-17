@@ -22,8 +22,8 @@
 
 - (instancetype) initWithName: (NSString *) name {
     self = [self initWithName:name
-                  lastMessage:@"最后一条消息"
-              lastMessageTime:[NSDate dateWithTimeIntervalSinceNow:0]
+                  lastMessage:@""
+              lastMessageTime:[NSDate date]
                      isNotify:NO
             portraitImageName:@"default_portrait"];
     

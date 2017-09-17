@@ -58,4 +58,12 @@
     return _allItems;
 }
 
+# pragma mark - tools
+
+- (void) sortAllItems {
+    [_allItems sortUsingComparator: ^NSComparisonResult(MWPersonInfo * a, MWPersonInfo * b) {
+        return [b.lastMessageTime compare:a.lastMessageTime];
+    }];
+}
+
 @end

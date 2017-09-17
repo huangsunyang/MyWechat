@@ -17,6 +17,7 @@
 @property(nonatomic, strong) NSArray * allItems;
 
 + (instancetype) sharedInfo;
+- (void) sortAllItems;
 
 @end
 

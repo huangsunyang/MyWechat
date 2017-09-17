@@ -11,4 +11,5 @@
 @protocol MWMessageProtocol <NSObject>
 - (void) onMessageLongPressed: (UIGestureRecognizer *) gesture;
 - (void) onPortraitTapped: (UIGestureRecognizer *) gesture;
+- (void)onMessageTapped: (UIGestureRecognizer *) gesture;
 @end
