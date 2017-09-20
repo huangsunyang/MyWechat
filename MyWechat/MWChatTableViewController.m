@@ -18,11 +18,13 @@
 #import "MWWebMessageViewController.h"
 #import <sys/socket.h>
 #import <netdb.h>
-#import "MWNetworkData.pb.h"
+#import "MwnetworkData.pbobjc.h"
 #import <err.h>
 #import <errno.h>
 #import "YYText.h"
 #import "MWLog.h"
+#import "MWNetworkManager.h"
+#import "MwnetworkData.pbobjc.h"
 
 @interface MWChatTableViewController ()
 
@@ -45,6 +47,7 @@
     [self setupFrames];
     [self setupEvents];
     [self setupNavigationBarItems];
+    [self setupNetwork];
     self.isKeyboardShown = false;
 }
 
@@ -126,6 +129,10 @@
                                                                   target:self
                                                                   action:@selector(onRightNavigationBarItemClicked)];
     self.navigationItem.rightBarButtonItem = setButton;
+}
+
+- (void) setupNetwork {
+    self.outputStream = [MWNetworkManager sharedInstance].outputStream;
 }
 
 - (void) viewWillAppear:(BOOL)animated {
@@ -458,66 +465,14 @@
     
     //尝试发送protobuf
     if ([self.outputStream hasSpaceAvailable]) {
-        MWNetworkDataBuilder * proto = [[MWNetworkDataBuilder alloc] init];
-        [proto setType:1];
-        [proto setFromUsr:@"huangsunyang"];
-        [proto setToUsr:@"choufei"];
-        [proto setStrData:text];
-        MWNetworkData * networkData = [proto build];
-        [self.outputStream write:[networkData data].bytes maxLength:[networkData data].length];
+        MWNetworkData * networkData = [[MWNetworkData alloc] init];
+        [networkData setType:1];
+        [networkData setFromUsr:@"huangsunyang"];
+        [networkData setToUsr:@"chougei"];
+        [networkData setStrData:text];
+        [self.outputStream write:[networkData data].bytes maxLength:1024];
     }
 }
 
-- (void)stream:(NSStream *)aStream handleEvent:(NSStreamEvent)eventCode {
-    NSString * event = @"nothing happened";
-    switch (eventCode) {
-        case NSStreamEventNone:
-            event = @"NSStreamEventNone";
-            break;
-        case NSStreamEventOpenCompleted:
-            event = @"NSStreamEventOpenCompleted";
-            break;
-        case NSStreamEventHasBytesAvailable: //有字节可读
-            if (aStream == self.inputStream) {
-                event = @"NSStreamEventHasBytesAvailable";
-                if ([self.inputStream hasBytesAvailable])
-                    [self receiveMessage];
-            }
-            break;
-        case NSStreamEventHasSpaceAvailable:
-            event = @"NSStreamEventHasSpaceAvailable";
-            break;
-        case NSStreamEventErrorOccurred:
-            event = @"NSStreamEventErrorOccurred";
-            break;
-        case NSStreamEventEndEncountered:   //结束
-            event = @"NSStreamEventEndEncountered";
-            [self closeConnection];
-        default:
-            break;
-    }
-    MWLog(@"event ---------- %@", event);
-}
-
-- (void) receiveMessage {
-    uint8_t buf[1024];
-    NSMutableData * receiveDate = [[NSMutableData alloc] init];
-    while ([self.inputStream hasBytesAvailable]) {
-        NSInteger length = [self.inputStream read:buf maxLength:sizeof(buf)];
-        [receiveDate appendBytes:buf length:length];
-    }
-    NSString * receiveStr = [[NSString alloc] initWithData:receiveDate encoding:NSUTF8StringEncoding];
-    if (receiveStr.length <= 0) return;
-    MWMessage * message = [[MWMessage alloc] initWithType:MessageTypeReceive string:receiveStr];
-    [self addMessage:message];
-}
-
-- (void) closeConnection {
-    [self.inputStream close];
-    [self.outputStream close];
-    //从主循环移除
-    [self.inputStream removeFromRunLoop:[NSRunLoop mainRunLoop] forMode:NSDefaultRunLoopMode];
-    [self.outputStream removeFromRunLoop:[NSRunLoop mainRunLoop] forMode:NSDefaultRunLoopMode];
-}
 
 @end

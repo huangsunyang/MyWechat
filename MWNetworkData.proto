@@ -1,7 +1,7 @@
-syntax = "proto2";
+syntax = "proto3";
 message MWNetworkData {
-    required int32 type = 1;
-    required string str_data = 2;
-    required string from_usr = 3;
-    required string to_usr = 4;
+    int32 type = 1;
+    string str_data = 2;
+    string from_usr = 3;
+    string to_usr = 4;
 }

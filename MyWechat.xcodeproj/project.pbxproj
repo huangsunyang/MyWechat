@@ -23,7 +23,8 @@
 		696CB0B61F5E6797004DB493 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 696CB0B51F5E6797004DB493 /* UIView+Extension.m */; };
 		696CB0BB1F5E6CD2004DB493 /* MWDetailInfoTableViewButtonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 696CB0B91F5E6CD2004DB493 /* MWDetailInfoTableViewButtonCell.m */; };
 		696CB0BC1F5E6CD2004DB493 /* MWDetailInfoTableViewButtonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 696CB0BA1F5E6CD2004DB493 /* MWDetailInfoTableViewButtonCell.xib */; };
-		69DE00DB1F5FE7B60077FEA9 /* MWNetworkData.pb.m in Sources */ = {isa = PBXBuildFile; fileRef = 69DE00DA1F5FE7B60077FEA9 /* MWNetworkData.pb.m */; };
+		69877B621F6F93A500F09E2F /* MWNetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 69877B611F6F93A500F09E2F /* MWNetworkManager.m */; };
+		69877B651F6FA47E00F09E2F /* MwnetworkData.pbobjc.m in Sources */ = {isa = PBXBuildFile; fileRef = 69877B641F6FA47E00F09E2F /* MwnetworkData.pbobjc.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		69DE00DF1F603E260077FEA9 /* MWWebMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 69DE00DE1F603E260077FEA9 /* MWWebMessageViewController.m */; };
 		69DE00E21F61756D0077FEA9 /* MWAllUserMessageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 69DE00E11F61756D0077FEA9 /* MWAllUserMessageManager.m */; };
 		69E7511E1F5658BE000728DD /* MWChatTableViewCellReverse.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69E7511C1F5658BE000728DD /* MWChatTableViewCellReverse.xib */; };
@@ -89,8 +90,10 @@
 		696CB0B81F5E6CD2004DB493 /* MWDetailInfoTableViewButtonCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWDetailInfoTableViewButtonCell.h; sourceTree = "<group>"; };
 		696CB0B91F5E6CD2004DB493 /* MWDetailInfoTableViewButtonCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWDetailInfoTableViewButtonCell.m; sourceTree = "<group>"; };
 		696CB0BA1F5E6CD2004DB493 /* MWDetailInfoTableViewButtonCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MWDetailInfoTableViewButtonCell.xib; sourceTree = "<group>"; };
-		69DE00D91F5FE7B60077FEA9 /* MWNetworkData.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWNetworkData.pb.h; sourceTree = "<group>"; };
-		69DE00DA1F5FE7B60077FEA9 /* MWNetworkData.pb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWNetworkData.pb.m; sourceTree = "<group>"; };
+		69877B601F6F93A500F09E2F /* MWNetworkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWNetworkManager.h; sourceTree = "<group>"; };
+		69877B611F6F93A500F09E2F /* MWNetworkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWNetworkManager.m; sourceTree = "<group>"; };
+		69877B631F6FA47E00F09E2F /* MwnetworkData.pbobjc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MwnetworkData.pbobjc.h; sourceTree = "<group>"; };
+		69877B641F6FA47E00F09E2F /* MwnetworkData.pbobjc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MwnetworkData.pbobjc.m; sourceTree = "<group>"; };
 		69DE00DD1F603E260077FEA9 /* MWWebMessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWWebMessageViewController.h; sourceTree = "<group>"; };
 		69DE00DE1F603E260077FEA9 /* MWWebMessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWWebMessageViewController.m; sourceTree = "<group>"; };
 		69DE00E01F61756D0077FEA9 /* MWAllUserMessageManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWAllUserMessageManager.h; sourceTree = "<group>"; };
@@ -261,11 +264,20 @@
 			name = Model;
 			sourceTree = "<group>";
 		};
+		69877B5A1F6F933800F09E2F /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				69877B601F6F93A500F09E2F /* MWNetworkManager.h */,
+				69877B611F6F93A500F09E2F /* MWNetworkManager.m */,
+			);
+			name = Network;
+			sourceTree = "<group>";
+		};
 		69DE00D51F5FE4510077FEA9 /* protoFile */ = {
 			isa = PBXGroup;
 			children = (
-				69DE00D91F5FE7B60077FEA9 /* MWNetworkData.pb.h */,
-				69DE00DA1F5FE7B60077FEA9 /* MWNetworkData.pb.m */,
+				69877B631F6FA47E00F09E2F /* MwnetworkData.pbobjc.h */,
+				69877B641F6FA47E00F09E2F /* MwnetworkData.pbobjc.m */,
 			);
 			name = protoFile;
 			sourceTree = "<group>";
@@ -415,6 +427,7 @@
 		69E751701F5AF8A8000728DD /* library */ = {
 			isa = PBXGroup;
 			children = (
+				69877B5A1F6F933800F09E2F /* Network */,
 				69DE00E31F619C230077FEA9 /* log */,
 				69DE00D51F5FE4510077FEA9 /* protoFile */,
 				69E751711F5AF8B6000728DD /* ToastView */,
@@ -667,7 +680,6 @@
 				690EAB761F24EA2F00609313 /* MWMainPageInfoManager.m in Sources */,
 				8C6635921F33193E00739333 /* MWChatTableViewController.m in Sources */,
 				69DE00E21F61756D0077FEA9 /* MWAllUserMessageManager.m in Sources */,
-				69DE00DB1F5FE7B60077FEA9 /* MWNetworkData.pb.m in Sources */,
 				690EAB451F24E6B800609313 /* ViewController.m in Sources */,
 				69E751631F5AE44C000728DD /* MWAddressBookHeaderView.m in Sources */,
 				696CB0BB1F5E6CD2004DB493 /* MWDetailInfoTableViewButtonCell.m in Sources */,
@@ -684,7 +696,9 @@
 				690EAB7E1F27925200609313 /* MWMainPageTableViewCell.m in Sources */,
 				690EAB3F1F24E6B800609313 /* main.m in Sources */,
 				696CB0B61F5E6797004DB493 /* UIView+Extension.m in Sources */,
+				69877B621F6F93A500F09E2F /* MWNetworkManager.m in Sources */,
 				69E751481F585F56000728DD /* MWMessageManager.m in Sources */,
+				69877B651F6FA47E00F09E2F /* MwnetworkData.pbobjc.m in Sources */,
 				69E751431F5716CA000728DD /* MWTypeView.m in Sources */,
 				69E7517B1F5C17C1000728DD /* MWDetailInfoController.m in Sources */,
 				69E751741F5AF8C2000728DD /* ALToastView.m in Sources */,
@@ -759,6 +773,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				"HEADER_SEARCH_PATHS[arch=*]" = "/Volumes/Macintosh_HD/document/CS/github/MyWechat/MyWechat/protobuf-master/objectivec";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;

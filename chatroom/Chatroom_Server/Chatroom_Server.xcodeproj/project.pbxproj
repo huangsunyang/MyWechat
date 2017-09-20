@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		69877B2E1F6E686C00F09E2F /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 69877B2D1F6E686C00F09E2F /* main.cpp */; };
 		69877B351F6E687900F09E2F /* server.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 69877B341F6E687900F09E2F /* server.cpp */; };
+		69877B571F6E852500F09E2F /* MWNetworkData.pb.cc in Sources */ = {isa = PBXBuildFile; fileRef = 69877B551F6E852500F09E2F /* MWNetworkData.pb.cc */; };
+		69877B591F6E85C900F09E2F /* libprotobuf.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 69877B4D1F6E83C800F09E2F /* libprotobuf.a */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,8 +26,16 @@
 
 /* Begin PBXFileReference section */
 		69877B2A1F6E686C00F09E2F /* Chatroom_Server */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Chatroom_Server; sourceTree = BUILT_PRODUCTS_DIR; };
-		69877B2D1F6E686C00F09E2F /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		69877B341F6E687900F09E2F /* server.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = server.cpp; sourceTree = "<group>"; };
+		69877B361F6E68BF00F09E2F /* utility.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = utility.h; path = ../utility.h; sourceTree = "<group>"; };
+		69877B461F6E82C000F09E2F /* libprotobuf-lite.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libprotobuf-lite.a"; path = "../../../../../../../../usr/local/Cellar/protobuf/3.3.0/lib/libprotobuf-lite.a"; sourceTree = "<group>"; };
+		69877B471F6E82C000F09E2F /* libprotobuf.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libprotobuf.a; path = ../../../../../../../../usr/local/Cellar/protobuf/3.3.0/lib/libprotobuf.a; sourceTree = "<group>"; };
+		69877B481F6E82C000F09E2F /* libprotoc.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libprotoc.a; path = ../../../../../../../../usr/local/Cellar/protobuf/3.3.0/lib/libprotoc.a; sourceTree = "<group>"; };
+		69877B4C1F6E83C800F09E2F /* libprotobuf-lite.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libprotobuf-lite.a"; path = "../../../../../../../../usr/local/Cellar/protobuf/3.4.1/lib/libprotobuf-lite.a"; sourceTree = "<group>"; };
+		69877B4D1F6E83C800F09E2F /* libprotobuf.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libprotobuf.a; path = ../../../../../../../../usr/local/Cellar/protobuf/3.4.1/lib/libprotobuf.a; sourceTree = "<group>"; };
+		69877B4E1F6E83C800F09E2F /* libprotoc.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libprotoc.a; path = ../../../../../../../../usr/local/Cellar/protobuf/3.4.1/lib/libprotoc.a; sourceTree = "<group>"; };
+		69877B551F6E852500F09E2F /* MWNetworkData.pb.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MWNetworkData.pb.cc; path = ../../MWNetworkData.pb.cc; sourceTree = "<group>"; };
+		69877B561F6E852500F09E2F /* MWNetworkData.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MWNetworkData.pb.h; path = ../../MWNetworkData.pb.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -34,6 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				69877B591F6E85C900F09E2F /* libprotobuf.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -45,6 +55,7 @@
 			children = (
 				69877B2C1F6E686C00F09E2F /* Chatroom_Server */,
 				69877B2B1F6E686C00F09E2F /* Products */,
+				69877B451F6E82BF00F09E2F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -59,10 +70,25 @@
 		69877B2C1F6E686C00F09E2F /* Chatroom_Server */ = {
 			isa = PBXGroup;
 			children = (
+				69877B361F6E68BF00F09E2F /* utility.h */,
+				69877B551F6E852500F09E2F /* MWNetworkData.pb.cc */,
+				69877B561F6E852500F09E2F /* MWNetworkData.pb.h */,
 				69877B341F6E687900F09E2F /* server.cpp */,
-				69877B2D1F6E686C00F09E2F /* main.cpp */,
 			);
 			path = Chatroom_Server;
+			sourceTree = "<group>";
+		};
+		69877B451F6E82BF00F09E2F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				69877B4C1F6E83C800F09E2F /* libprotobuf-lite.a */,
+				69877B4D1F6E83C800F09E2F /* libprotobuf.a */,
+				69877B4E1F6E83C800F09E2F /* libprotoc.a */,
+				69877B461F6E82C000F09E2F /* libprotobuf-lite.a */,
+				69877B471F6E82C000F09E2F /* libprotobuf.a */,
+				69877B481F6E82C000F09E2F /* libprotoc.a */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -123,7 +149,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				69877B351F6E687900F09E2F /* server.cpp in Sources */,
-				69877B2E1F6E686C00F09E2F /* main.cpp in Sources */,
+				69877B571F6E852500F09E2F /* MWNetworkData.pb.cc in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -171,6 +197,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				"HEADER_SEARCH_PATHS[arch=*]" = /usr/local/Cellar/protobuf/3.4.1/include;
+				"LIBRARY_SEARCH_PATHS[arch=*]" = /usr/local/Cellar/protobuf/3.3.0/lib;
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -222,6 +250,11 @@
 		69877B321F6E686C00F09E2F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/usr/local/Cellar/protobuf/3.3.0/lib,
+					/usr/local/Cellar/protobuf/3.4.1/lib,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -229,6 +262,11 @@
 		69877B331F6E686C00F09E2F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/usr/local/Cellar/protobuf/3.3.0/lib,
+					/usr/local/Cellar/protobuf/3.4.1/lib,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

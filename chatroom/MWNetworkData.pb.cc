@@ -46,7 +46,7 @@ PROTOBUF_CONSTEXPR_VAR ::google::protobuf::internal::ParseTable const
 };
 
 const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MWNetworkData, _has_bits_),
+  ~0u,  // no _has_bits_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MWNetworkData, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
@@ -55,13 +55,9 @@ const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_ATTRIBUTE_SECTION
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MWNetworkData, str_data_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MWNetworkData, from_usr_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MWNetworkData, to_usr_),
-  3,
-  0,
-  1,
-  2,
 };
 static const ::google::protobuf::internal::MigrationSchema schemas[] GOOGLE_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
-  { 0, 9, sizeof(MWNetworkData)},
+  { 0, -1, sizeof(MWNetworkData)},
 };
 
 static ::google::protobuf::Message const * const file_default_instances[] = {
@@ -107,11 +103,11 @@ void AddDescriptorsImpl() {
   InitDefaults();
   static const char descriptor[] GOOGLE_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
       "\n\023MWNetworkData.proto\"Q\n\rMWNetworkData\022\014"
-      "\n\004type\030\001 \002(\005\022\020\n\010str_data\030\002 \002(\t\022\020\n\010from_u"
-      "sr\030\003 \002(\t\022\016\n\006to_usr\030\004 \002(\t"
+      "\n\004type\030\001 \001(\005\022\020\n\010str_data\030\002 \001(\t\022\020\n\010from_u"
+      "sr\030\003 \001(\t\022\016\n\006to_usr\030\004 \001(\tb\006proto3"
   };
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-      descriptor, 104);
+      descriptor, 112);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "MWNetworkData.proto", &protobuf_RegisterTypes);
 }
@@ -151,19 +147,18 @@ MWNetworkData::MWNetworkData()
 MWNetworkData::MWNetworkData(const MWNetworkData& from)
   : ::google::protobuf::Message(),
       _internal_metadata_(NULL),
-      _has_bits_(from._has_bits_),
       _cached_size_(0) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   str_data_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (from.has_str_data()) {
+  if (from.str_data().size() > 0) {
     str_data_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.str_data_);
   }
   from_usr_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (from.has_from_usr()) {
+  if (from.from_usr().size() > 0) {
     from_usr_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.from_usr_);
   }
   to_usr_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (from.has_to_usr()) {
+  if (from.to_usr().size() > 0) {
     to_usr_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.to_usr_);
   }
   type_ = from.type_;
@@ -171,11 +166,11 @@ MWNetworkData::MWNetworkData(const MWNetworkData& from)
 }
 
 void MWNetworkData::SharedCtor() {
-  _cached_size_ = 0;
   str_data_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   from_usr_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   to_usr_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   type_ = 0;
+  _cached_size_ = 0;
 }
 
 MWNetworkData::~MWNetworkData() {
@@ -218,23 +213,10 @@ void MWNetworkData::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  cached_has_bits = _has_bits_[0];
-  if (cached_has_bits & 7u) {
-    if (cached_has_bits & 0x00000001u) {
-      GOOGLE_DCHECK(!str_data_.IsDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited()));
-      (*str_data_.UnsafeRawStringPointer())->clear();
-    }
-    if (cached_has_bits & 0x00000002u) {
-      GOOGLE_DCHECK(!from_usr_.IsDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited()));
-      (*from_usr_.UnsafeRawStringPointer())->clear();
-    }
-    if (cached_has_bits & 0x00000004u) {
-      GOOGLE_DCHECK(!to_usr_.IsDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited()));
-      (*to_usr_.UnsafeRawStringPointer())->clear();
-    }
-  }
+  str_data_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  from_usr_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  to_usr_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   type_ = 0;
-  _has_bits_.Clear();
   _internal_metadata_.Clear();
 }
 
@@ -248,11 +230,11 @@ bool MWNetworkData::MergePartialFromCodedStream(
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // required int32 type = 1;
+      // int32 type = 1;
       case 1: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(8u /* 8 & 0xFF */)) {
-          set_has_type();
+
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
                  input, &type_)));
@@ -262,48 +244,48 @@ bool MWNetworkData::MergePartialFromCodedStream(
         break;
       }
 
-      // required string str_data = 2;
+      // string str_data = 2;
       case 2: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(18u /* 18 & 0xFF */)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->mutable_str_data()));
-          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
             this->str_data().data(), static_cast<int>(this->str_data().length()),
-            ::google::protobuf::internal::WireFormat::PARSE,
-            "MWNetworkData.str_data");
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "MWNetworkData.str_data"));
         } else {
           goto handle_unusual;
         }
         break;
       }
 
-      // required string from_usr = 3;
+      // string from_usr = 3;
       case 3: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(26u /* 26 & 0xFF */)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->mutable_from_usr()));
-          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
             this->from_usr().data(), static_cast<int>(this->from_usr().length()),
-            ::google::protobuf::internal::WireFormat::PARSE,
-            "MWNetworkData.from_usr");
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "MWNetworkData.from_usr"));
         } else {
           goto handle_unusual;
         }
         break;
       }
 
-      // required string to_usr = 4;
+      // string to_usr = 4;
       case 4: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(34u /* 34 & 0xFF */)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->mutable_to_usr()));
-          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
             this->to_usr().data(), static_cast<int>(this->to_usr().length()),
-            ::google::protobuf::internal::WireFormat::PARSE,
-            "MWNetworkData.to_usr");
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "MWNetworkData.to_usr"));
         } else {
           goto handle_unusual;
         }
@@ -336,45 +318,44 @@ void MWNetworkData::SerializeWithCachedSizes(
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  cached_has_bits = _has_bits_[0];
-  // required int32 type = 1;
-  if (cached_has_bits & 0x00000008u) {
+  // int32 type = 1;
+  if (this->type() != 0) {
     ::google::protobuf::internal::WireFormatLite::WriteInt32(1, this->type(), output);
   }
 
-  // required string str_data = 2;
-  if (cached_has_bits & 0x00000001u) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+  // string str_data = 2;
+  if (this->str_data().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->str_data().data(), static_cast<int>(this->str_data().length()),
-      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
       "MWNetworkData.str_data");
     ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
       2, this->str_data(), output);
   }
 
-  // required string from_usr = 3;
-  if (cached_has_bits & 0x00000002u) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+  // string from_usr = 3;
+  if (this->from_usr().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->from_usr().data(), static_cast<int>(this->from_usr().length()),
-      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
       "MWNetworkData.from_usr");
     ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
       3, this->from_usr(), output);
   }
 
-  // required string to_usr = 4;
-  if (cached_has_bits & 0x00000004u) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+  // string to_usr = 4;
+  if (this->to_usr().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->to_usr().data(), static_cast<int>(this->to_usr().length()),
-      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
       "MWNetworkData.to_usr");
     ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
       4, this->to_usr(), output);
   }
 
-  if (_internal_metadata_.have_unknown_fields()) {
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
     ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
-        _internal_metadata_.unknown_fields(), output);
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
   }
   // @@protoc_insertion_point(serialize_end:MWNetworkData)
 }
@@ -386,120 +367,89 @@ void MWNetworkData::SerializeWithCachedSizes(
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  cached_has_bits = _has_bits_[0];
-  // required int32 type = 1;
-  if (cached_has_bits & 0x00000008u) {
+  // int32 type = 1;
+  if (this->type() != 0) {
     target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(1, this->type(), target);
   }
 
-  // required string str_data = 2;
-  if (cached_has_bits & 0x00000001u) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+  // string str_data = 2;
+  if (this->str_data().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->str_data().data(), static_cast<int>(this->str_data().length()),
-      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
       "MWNetworkData.str_data");
     target =
       ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
         2, this->str_data(), target);
   }
 
-  // required string from_usr = 3;
-  if (cached_has_bits & 0x00000002u) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+  // string from_usr = 3;
+  if (this->from_usr().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->from_usr().data(), static_cast<int>(this->from_usr().length()),
-      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
       "MWNetworkData.from_usr");
     target =
       ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
         3, this->from_usr(), target);
   }
 
-  // required string to_usr = 4;
-  if (cached_has_bits & 0x00000004u) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+  // string to_usr = 4;
+  if (this->to_usr().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->to_usr().data(), static_cast<int>(this->to_usr().length()),
-      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
       "MWNetworkData.to_usr");
     target =
       ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
         4, this->to_usr(), target);
   }
 
-  if (_internal_metadata_.have_unknown_fields()) {
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
     target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields(), target);
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:MWNetworkData)
   return target;
 }
 
-size_t MWNetworkData::RequiredFieldsByteSizeFallback() const {
-// @@protoc_insertion_point(required_fields_byte_size_fallback_start:MWNetworkData)
-  size_t total_size = 0;
-
-  if (has_str_data()) {
-    // required string str_data = 2;
-    total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::StringSize(
-        this->str_data());
-  }
-
-  if (has_from_usr()) {
-    // required string from_usr = 3;
-    total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::StringSize(
-        this->from_usr());
-  }
-
-  if (has_to_usr()) {
-    // required string to_usr = 4;
-    total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::StringSize(
-        this->to_usr());
-  }
-
-  if (has_type()) {
-    // required int32 type = 1;
-    total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::Int32Size(
-        this->type());
-  }
-
-  return total_size;
-}
 size_t MWNetworkData::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:MWNetworkData)
   size_t total_size = 0;
 
-  if (_internal_metadata_.have_unknown_fields()) {
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
     total_size +=
       ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
-        _internal_metadata_.unknown_fields());
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
   }
-  if (((_has_bits_[0] & 0x0000000f) ^ 0x0000000f) == 0) {  // All required fields are present.
-    // required string str_data = 2;
+  // string str_data = 2;
+  if (this->str_data().size() > 0) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::StringSize(
         this->str_data());
+  }
 
-    // required string from_usr = 3;
+  // string from_usr = 3;
+  if (this->from_usr().size() > 0) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::StringSize(
         this->from_usr());
+  }
 
-    // required string to_usr = 4;
+  // string to_usr = 4;
+  if (this->to_usr().size() > 0) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::StringSize(
         this->to_usr());
+  }
 
-    // required int32 type = 1;
+  // int32 type = 1;
+  if (this->type() != 0) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::Int32Size(
         this->type());
-
-  } else {
-    total_size += RequiredFieldsByteSizeFallback();
   }
+
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
   GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
   _cached_size_ = cached_size;
@@ -529,24 +479,20 @@ void MWNetworkData::MergeFrom(const MWNetworkData& from) {
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  cached_has_bits = from._has_bits_[0];
-  if (cached_has_bits & 15u) {
-    if (cached_has_bits & 0x00000001u) {
-      set_has_str_data();
-      str_data_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.str_data_);
-    }
-    if (cached_has_bits & 0x00000002u) {
-      set_has_from_usr();
-      from_usr_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.from_usr_);
-    }
-    if (cached_has_bits & 0x00000004u) {
-      set_has_to_usr();
-      to_usr_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.to_usr_);
-    }
-    if (cached_has_bits & 0x00000008u) {
-      type_ = from.type_;
-    }
-    _has_bits_[0] |= cached_has_bits;
+  if (from.str_data().size() > 0) {
+
+    str_data_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.str_data_);
+  }
+  if (from.from_usr().size() > 0) {
+
+    from_usr_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.from_usr_);
+  }
+  if (from.to_usr().size() > 0) {
+
+    to_usr_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.to_usr_);
+  }
+  if (from.type() != 0) {
+    set_type(from.type());
   }
 }
 
@@ -565,7 +511,6 @@ void MWNetworkData::CopyFrom(const MWNetworkData& from) {
 }
 
 bool MWNetworkData::IsInitialized() const {
-  if ((_has_bits_[0] & 0x0000000f) != 0x0000000f) return false;
   return true;
 }
 
@@ -579,7 +524,6 @@ void MWNetworkData::InternalSwap(MWNetworkData* other) {
   from_usr_.Swap(&other->from_usr_);
   to_usr_.Swap(&other->to_usr_);
   swap(type_, other->type_);
-  swap(_has_bits_[0], other->_has_bits_[0]);
   _internal_metadata_.Swap(&other->_internal_metadata_);
   swap(_cached_size_, other->_cached_size_);
 }
@@ -592,56 +536,36 @@ void MWNetworkData::InternalSwap(MWNetworkData* other) {
 #if PROTOBUF_INLINE_NOT_IN_HEADERS
 // MWNetworkData
 
-// required int32 type = 1;
-bool MWNetworkData::has_type() const {
-  return (_has_bits_[0] & 0x00000008u) != 0;
-}
-void MWNetworkData::set_has_type() {
-  _has_bits_[0] |= 0x00000008u;
-}
-void MWNetworkData::clear_has_type() {
-  _has_bits_[0] &= ~0x00000008u;
-}
+// int32 type = 1;
 void MWNetworkData::clear_type() {
   type_ = 0;
-  clear_has_type();
 }
 ::google::protobuf::int32 MWNetworkData::type() const {
   // @@protoc_insertion_point(field_get:MWNetworkData.type)
   return type_;
 }
 void MWNetworkData::set_type(::google::protobuf::int32 value) {
-  set_has_type();
+  
   type_ = value;
   // @@protoc_insertion_point(field_set:MWNetworkData.type)
 }
 
-// required string str_data = 2;
-bool MWNetworkData::has_str_data() const {
-  return (_has_bits_[0] & 0x00000001u) != 0;
-}
-void MWNetworkData::set_has_str_data() {
-  _has_bits_[0] |= 0x00000001u;
-}
-void MWNetworkData::clear_has_str_data() {
-  _has_bits_[0] &= ~0x00000001u;
-}
+// string str_data = 2;
 void MWNetworkData::clear_str_data() {
   str_data_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  clear_has_str_data();
 }
 const ::std::string& MWNetworkData::str_data() const {
   // @@protoc_insertion_point(field_get:MWNetworkData.str_data)
   return str_data_.GetNoArena();
 }
 void MWNetworkData::set_str_data(const ::std::string& value) {
-  set_has_str_data();
+  
   str_data_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
   // @@protoc_insertion_point(field_set:MWNetworkData.str_data)
 }
 #if LANG_CXX11
 void MWNetworkData::set_str_data(::std::string&& value) {
-  set_has_str_data();
+  
   str_data_.SetNoArena(
     &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
   // @@protoc_insertion_point(field_set_rvalue:MWNetworkData.str_data)
@@ -649,62 +573,52 @@ void MWNetworkData::set_str_data(::std::string&& value) {
 #endif
 void MWNetworkData::set_str_data(const char* value) {
   GOOGLE_DCHECK(value != NULL);
-  set_has_str_data();
+  
   str_data_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
   // @@protoc_insertion_point(field_set_char:MWNetworkData.str_data)
 }
 void MWNetworkData::set_str_data(const char* value, size_t size) {
-  set_has_str_data();
+  
   str_data_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
   // @@protoc_insertion_point(field_set_pointer:MWNetworkData.str_data)
 }
 ::std::string* MWNetworkData::mutable_str_data() {
-  set_has_str_data();
+  
   // @@protoc_insertion_point(field_mutable:MWNetworkData.str_data)
   return str_data_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 ::std::string* MWNetworkData::release_str_data() {
   // @@protoc_insertion_point(field_release:MWNetworkData.str_data)
-  clear_has_str_data();
+  
   return str_data_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 void MWNetworkData::set_allocated_str_data(::std::string* str_data) {
   if (str_data != NULL) {
-    set_has_str_data();
+    
   } else {
-    clear_has_str_data();
+    
   }
   str_data_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), str_data);
   // @@protoc_insertion_point(field_set_allocated:MWNetworkData.str_data)
 }
 
-// required string from_usr = 3;
-bool MWNetworkData::has_from_usr() const {
-  return (_has_bits_[0] & 0x00000002u) != 0;
-}
-void MWNetworkData::set_has_from_usr() {
-  _has_bits_[0] |= 0x00000002u;
-}
-void MWNetworkData::clear_has_from_usr() {
-  _has_bits_[0] &= ~0x00000002u;
-}
+// string from_usr = 3;
 void MWNetworkData::clear_from_usr() {
   from_usr_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  clear_has_from_usr();
 }
 const ::std::string& MWNetworkData::from_usr() const {
   // @@protoc_insertion_point(field_get:MWNetworkData.from_usr)
   return from_usr_.GetNoArena();
 }
 void MWNetworkData::set_from_usr(const ::std::string& value) {
-  set_has_from_usr();
+  
   from_usr_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
   // @@protoc_insertion_point(field_set:MWNetworkData.from_usr)
 }
 #if LANG_CXX11
 void MWNetworkData::set_from_usr(::std::string&& value) {
-  set_has_from_usr();
+  
   from_usr_.SetNoArena(
     &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
   // @@protoc_insertion_point(field_set_rvalue:MWNetworkData.from_usr)
@@ -712,62 +626,52 @@ void MWNetworkData::set_from_usr(::std::string&& value) {
 #endif
 void MWNetworkData::set_from_usr(const char* value) {
   GOOGLE_DCHECK(value != NULL);
-  set_has_from_usr();
+  
   from_usr_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
   // @@protoc_insertion_point(field_set_char:MWNetworkData.from_usr)
 }
 void MWNetworkData::set_from_usr(const char* value, size_t size) {
-  set_has_from_usr();
+  
   from_usr_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
   // @@protoc_insertion_point(field_set_pointer:MWNetworkData.from_usr)
 }
 ::std::string* MWNetworkData::mutable_from_usr() {
-  set_has_from_usr();
+  
   // @@protoc_insertion_point(field_mutable:MWNetworkData.from_usr)
   return from_usr_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 ::std::string* MWNetworkData::release_from_usr() {
   // @@protoc_insertion_point(field_release:MWNetworkData.from_usr)
-  clear_has_from_usr();
+  
   return from_usr_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 void MWNetworkData::set_allocated_from_usr(::std::string* from_usr) {
   if (from_usr != NULL) {
-    set_has_from_usr();
+    
   } else {
-    clear_has_from_usr();
+    
   }
   from_usr_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from_usr);
   // @@protoc_insertion_point(field_set_allocated:MWNetworkData.from_usr)
 }
 
-// required string to_usr = 4;
-bool MWNetworkData::has_to_usr() const {
-  return (_has_bits_[0] & 0x00000004u) != 0;
-}
-void MWNetworkData::set_has_to_usr() {
-  _has_bits_[0] |= 0x00000004u;
-}
-void MWNetworkData::clear_has_to_usr() {
-  _has_bits_[0] &= ~0x00000004u;
-}
+// string to_usr = 4;
 void MWNetworkData::clear_to_usr() {
   to_usr_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  clear_has_to_usr();
 }
 const ::std::string& MWNetworkData::to_usr() const {
   // @@protoc_insertion_point(field_get:MWNetworkData.to_usr)
   return to_usr_.GetNoArena();
 }
 void MWNetworkData::set_to_usr(const ::std::string& value) {
-  set_has_to_usr();
+  
   to_usr_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
   // @@protoc_insertion_point(field_set:MWNetworkData.to_usr)
 }
 #if LANG_CXX11
 void MWNetworkData::set_to_usr(::std::string&& value) {
-  set_has_to_usr();
+  
   to_usr_.SetNoArena(
     &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
   // @@protoc_insertion_point(field_set_rvalue:MWNetworkData.to_usr)
@@ -775,31 +679,31 @@ void MWNetworkData::set_to_usr(::std::string&& value) {
 #endif
 void MWNetworkData::set_to_usr(const char* value) {
   GOOGLE_DCHECK(value != NULL);
-  set_has_to_usr();
+  
   to_usr_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
   // @@protoc_insertion_point(field_set_char:MWNetworkData.to_usr)
 }
 void MWNetworkData::set_to_usr(const char* value, size_t size) {
-  set_has_to_usr();
+  
   to_usr_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
   // @@protoc_insertion_point(field_set_pointer:MWNetworkData.to_usr)
 }
 ::std::string* MWNetworkData::mutable_to_usr() {
-  set_has_to_usr();
+  
   // @@protoc_insertion_point(field_mutable:MWNetworkData.to_usr)
   return to_usr_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 ::std::string* MWNetworkData::release_to_usr() {
   // @@protoc_insertion_point(field_release:MWNetworkData.to_usr)
-  clear_has_to_usr();
+  
   return to_usr_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 void MWNetworkData::set_allocated_to_usr(::std::string* to_usr) {
   if (to_usr != NULL) {
-    set_has_to_usr();
+    
   } else {
-    clear_has_to_usr();
+    
   }
   to_usr_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), to_usr);
   // @@protoc_insertion_point(field_set_allocated:MWNetworkData.to_usr)

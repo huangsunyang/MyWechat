@@ -77,13 +77,6 @@ class MWNetworkData : public ::google::protobuf::Message /* @@protoc_insertion_p
     return *this;
   }
   #endif
-  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
-    return _internal_metadata_.unknown_fields();
-  }
-  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields();
-  }
-
   static const ::google::protobuf::Descriptor* descriptor();
   static const MWNetworkData& default_instance();
 
@@ -139,8 +132,7 @@ class MWNetworkData : public ::google::protobuf::Message /* @@protoc_insertion_p
 
   // accessors -------------------------------------------------------
 
-  // required string str_data = 2;
-  bool has_str_data() const;
+  // string str_data = 2;
   void clear_str_data();
   static const int kStrDataFieldNumber = 2;
   const ::std::string& str_data() const;
@@ -154,8 +146,7 @@ class MWNetworkData : public ::google::protobuf::Message /* @@protoc_insertion_p
   ::std::string* release_str_data();
   void set_allocated_str_data(::std::string* str_data);
 
-  // required string from_usr = 3;
-  bool has_from_usr() const;
+  // string from_usr = 3;
   void clear_from_usr();
   static const int kFromUsrFieldNumber = 3;
   const ::std::string& from_usr() const;
@@ -169,8 +160,7 @@ class MWNetworkData : public ::google::protobuf::Message /* @@protoc_insertion_p
   ::std::string* release_from_usr();
   void set_allocated_from_usr(::std::string* from_usr);
 
-  // required string to_usr = 4;
-  bool has_to_usr() const;
+  // string to_usr = 4;
   void clear_to_usr();
   static const int kToUsrFieldNumber = 4;
   const ::std::string& to_usr() const;
@@ -184,8 +174,7 @@ class MWNetworkData : public ::google::protobuf::Message /* @@protoc_insertion_p
   ::std::string* release_to_usr();
   void set_allocated_to_usr(::std::string* to_usr);
 
-  // required int32 type = 1;
-  bool has_type() const;
+  // int32 type = 1;
   void clear_type();
   static const int kTypeFieldNumber = 1;
   ::google::protobuf::int32 type() const;
@@ -193,25 +182,13 @@ class MWNetworkData : public ::google::protobuf::Message /* @@protoc_insertion_p
 
   // @@protoc_insertion_point(class_scope:MWNetworkData)
  private:
-  void set_has_type();
-  void clear_has_type();
-  void set_has_str_data();
-  void clear_has_str_data();
-  void set_has_from_usr();
-  void clear_has_from_usr();
-  void set_has_to_usr();
-  void clear_has_to_usr();
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
-  ::google::protobuf::internal::HasBits<1> _has_bits_;
-  mutable int _cached_size_;
   ::google::protobuf::internal::ArenaStringPtr str_data_;
   ::google::protobuf::internal::ArenaStringPtr from_usr_;
   ::google::protobuf::internal::ArenaStringPtr to_usr_;
   ::google::protobuf::int32 type_;
+  mutable int _cached_size_;
   friend struct protobuf_MWNetworkData_2eproto::TableStruct;
 };
 // ===================================================================
@@ -226,56 +203,36 @@ class MWNetworkData : public ::google::protobuf::Message /* @@protoc_insertion_p
 #endif  // __GNUC__
 // MWNetworkData
 
-// required int32 type = 1;
-inline bool MWNetworkData::has_type() const {
-  return (_has_bits_[0] & 0x00000008u) != 0;
-}
-inline void MWNetworkData::set_has_type() {
-  _has_bits_[0] |= 0x00000008u;
-}
-inline void MWNetworkData::clear_has_type() {
-  _has_bits_[0] &= ~0x00000008u;
-}
+// int32 type = 1;
 inline void MWNetworkData::clear_type() {
   type_ = 0;
-  clear_has_type();
 }
 inline ::google::protobuf::int32 MWNetworkData::type() const {
   // @@protoc_insertion_point(field_get:MWNetworkData.type)
   return type_;
 }
 inline void MWNetworkData::set_type(::google::protobuf::int32 value) {
-  set_has_type();
+  
   type_ = value;
   // @@protoc_insertion_point(field_set:MWNetworkData.type)
 }
 
-// required string str_data = 2;
-inline bool MWNetworkData::has_str_data() const {
-  return (_has_bits_[0] & 0x00000001u) != 0;
-}
-inline void MWNetworkData::set_has_str_data() {
-  _has_bits_[0] |= 0x00000001u;
-}
-inline void MWNetworkData::clear_has_str_data() {
-  _has_bits_[0] &= ~0x00000001u;
-}
+// string str_data = 2;
 inline void MWNetworkData::clear_str_data() {
   str_data_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  clear_has_str_data();
 }
 inline const ::std::string& MWNetworkData::str_data() const {
   // @@protoc_insertion_point(field_get:MWNetworkData.str_data)
   return str_data_.GetNoArena();
 }
 inline void MWNetworkData::set_str_data(const ::std::string& value) {
-  set_has_str_data();
+  
   str_data_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
   // @@protoc_insertion_point(field_set:MWNetworkData.str_data)
 }
 #if LANG_CXX11
 inline void MWNetworkData::set_str_data(::std::string&& value) {
-  set_has_str_data();
+  
   str_data_.SetNoArena(
     &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
   // @@protoc_insertion_point(field_set_rvalue:MWNetworkData.str_data)
@@ -283,62 +240,52 @@ inline void MWNetworkData::set_str_data(::std::string&& value) {
 #endif
 inline void MWNetworkData::set_str_data(const char* value) {
   GOOGLE_DCHECK(value != NULL);
-  set_has_str_data();
+  
   str_data_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
   // @@protoc_insertion_point(field_set_char:MWNetworkData.str_data)
 }
 inline void MWNetworkData::set_str_data(const char* value, size_t size) {
-  set_has_str_data();
+  
   str_data_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
   // @@protoc_insertion_point(field_set_pointer:MWNetworkData.str_data)
 }
 inline ::std::string* MWNetworkData::mutable_str_data() {
-  set_has_str_data();
+  
   // @@protoc_insertion_point(field_mutable:MWNetworkData.str_data)
   return str_data_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline ::std::string* MWNetworkData::release_str_data() {
   // @@protoc_insertion_point(field_release:MWNetworkData.str_data)
-  clear_has_str_data();
+  
   return str_data_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline void MWNetworkData::set_allocated_str_data(::std::string* str_data) {
   if (str_data != NULL) {
-    set_has_str_data();
+    
   } else {
-    clear_has_str_data();
+    
   }
   str_data_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), str_data);
   // @@protoc_insertion_point(field_set_allocated:MWNetworkData.str_data)
 }
 
-// required string from_usr = 3;
-inline bool MWNetworkData::has_from_usr() const {
-  return (_has_bits_[0] & 0x00000002u) != 0;
-}
-inline void MWNetworkData::set_has_from_usr() {
-  _has_bits_[0] |= 0x00000002u;
-}
-inline void MWNetworkData::clear_has_from_usr() {
-  _has_bits_[0] &= ~0x00000002u;
-}
+// string from_usr = 3;
 inline void MWNetworkData::clear_from_usr() {
   from_usr_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  clear_has_from_usr();
 }
 inline const ::std::string& MWNetworkData::from_usr() const {
   // @@protoc_insertion_point(field_get:MWNetworkData.from_usr)
   return from_usr_.GetNoArena();
 }
 inline void MWNetworkData::set_from_usr(const ::std::string& value) {
-  set_has_from_usr();
+  
   from_usr_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
   // @@protoc_insertion_point(field_set:MWNetworkData.from_usr)
 }
 #if LANG_CXX11
 inline void MWNetworkData::set_from_usr(::std::string&& value) {
-  set_has_from_usr();
+  
   from_usr_.SetNoArena(
     &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
   // @@protoc_insertion_point(field_set_rvalue:MWNetworkData.from_usr)
@@ -346,62 +293,52 @@ inline void MWNetworkData::set_from_usr(::std::string&& value) {
 #endif
 inline void MWNetworkData::set_from_usr(const char* value) {
   GOOGLE_DCHECK(value != NULL);
-  set_has_from_usr();
+  
   from_usr_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
   // @@protoc_insertion_point(field_set_char:MWNetworkData.from_usr)
 }
 inline void MWNetworkData::set_from_usr(const char* value, size_t size) {
-  set_has_from_usr();
+  
   from_usr_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
   // @@protoc_insertion_point(field_set_pointer:MWNetworkData.from_usr)
 }
 inline ::std::string* MWNetworkData::mutable_from_usr() {
-  set_has_from_usr();
+  
   // @@protoc_insertion_point(field_mutable:MWNetworkData.from_usr)
   return from_usr_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline ::std::string* MWNetworkData::release_from_usr() {
   // @@protoc_insertion_point(field_release:MWNetworkData.from_usr)
-  clear_has_from_usr();
+  
   return from_usr_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline void MWNetworkData::set_allocated_from_usr(::std::string* from_usr) {
   if (from_usr != NULL) {
-    set_has_from_usr();
+    
   } else {
-    clear_has_from_usr();
+    
   }
   from_usr_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from_usr);
   // @@protoc_insertion_point(field_set_allocated:MWNetworkData.from_usr)
 }
 
-// required string to_usr = 4;
-inline bool MWNetworkData::has_to_usr() const {
-  return (_has_bits_[0] & 0x00000004u) != 0;
-}
-inline void MWNetworkData::set_has_to_usr() {
-  _has_bits_[0] |= 0x00000004u;
-}
-inline void MWNetworkData::clear_has_to_usr() {
-  _has_bits_[0] &= ~0x00000004u;
-}
+// string to_usr = 4;
 inline void MWNetworkData::clear_to_usr() {
   to_usr_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  clear_has_to_usr();
 }
 inline const ::std::string& MWNetworkData::to_usr() const {
   // @@protoc_insertion_point(field_get:MWNetworkData.to_usr)
   return to_usr_.GetNoArena();
 }
 inline void MWNetworkData::set_to_usr(const ::std::string& value) {
-  set_has_to_usr();
+  
   to_usr_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
   // @@protoc_insertion_point(field_set:MWNetworkData.to_usr)
 }
 #if LANG_CXX11
 inline void MWNetworkData::set_to_usr(::std::string&& value) {
-  set_has_to_usr();
+  
   to_usr_.SetNoArena(
     &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
   // @@protoc_insertion_point(field_set_rvalue:MWNetworkData.to_usr)
@@ -409,31 +346,31 @@ inline void MWNetworkData::set_to_usr(::std::string&& value) {
 #endif
 inline void MWNetworkData::set_to_usr(const char* value) {
   GOOGLE_DCHECK(value != NULL);
-  set_has_to_usr();
+  
   to_usr_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
   // @@protoc_insertion_point(field_set_char:MWNetworkData.to_usr)
 }
 inline void MWNetworkData::set_to_usr(const char* value, size_t size) {
-  set_has_to_usr();
+  
   to_usr_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
   // @@protoc_insertion_point(field_set_pointer:MWNetworkData.to_usr)
 }
 inline ::std::string* MWNetworkData::mutable_to_usr() {
-  set_has_to_usr();
+  
   // @@protoc_insertion_point(field_mutable:MWNetworkData.to_usr)
   return to_usr_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline ::std::string* MWNetworkData::release_to_usr() {
   // @@protoc_insertion_point(field_release:MWNetworkData.to_usr)
-  clear_has_to_usr();
+  
   return to_usr_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline void MWNetworkData::set_allocated_to_usr(::std::string* to_usr) {
   if (to_usr != NULL) {
-    set_has_to_usr();
+    
   } else {
-    clear_has_to_usr();
+    
   }
   to_usr_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), to_usr);
   // @@protoc_insertion_point(field_set_allocated:MWNetworkData.to_usr)

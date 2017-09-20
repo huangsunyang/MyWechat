@@ -9,6 +9,7 @@
 #import "MWMainPageTableViewController.h"
 #import "MWMainPageInfoManager.h"
 #import "MWChatTableViewController.h"
+#import "MWNetworkManager.h"
 #import "MWNetworkData.pb.h"
 #import "MWLog.h"
 #import "MWAllExtension.h"
@@ -20,8 +21,7 @@
 @interface MWMainPageTableViewController ()
 
 @property(nonatomic) MWMainPageInfoManager * infoManager;
-@property(nonatomic, strong) NSInputStream *inputStream;
-@property(nonatomic, strong) NSOutputStream *outputStream;
+@property(nonatomic, weak) NSOutputStream *outputStream;
 
 @end
 
@@ -65,24 +65,7 @@
 }
 
 - (void) setupNetwork {
-    NSString * localHost = @"183.172.22.42";
-    int port = 4867;
-    CFReadStreamRef readStream;
-    CFWriteStreamRef writeStream;
-    
-    CFStreamCreatePairWithSocketToHost(NULL, (__bridge CFStringRef)(localHost), port, &readStream, &writeStream);
-    
-    self.inputStream = (__bridge NSInputStream *)readStream;
-    self.outputStream = (__bridge NSOutputStream *)writeStream;
-    
-    self.inputStream.delegate = self;
-    self.outputStream.delegate = self;
-    
-    [self.inputStream scheduleInRunLoop:[NSRunLoop mainRunLoop] forMode:NSDefaultRunLoopMode];
-    [self.outputStream scheduleInRunLoop:[NSRunLoop mainRunLoop] forMode:NSDefaultRunLoopMode];
-    
-    [self.inputStream open];
-    [self.outputStream open];
+    self.outputStream = [MWNetworkManager sharedInstance].outputStream;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -91,15 +74,6 @@
 }
 
 - (void) dealloc {
-    
-}
-
-- (void) closeConnection {
-    [self.inputStream close];
-    [self.outputStream close];
-    //从主循环移除
-    [self.inputStream removeFromRunLoop:[NSRunLoop mainRunLoop] forMode:NSDefaultRunLoopMode];
-    [self.outputStream removeFromRunLoop:[NSRunLoop mainRunLoop] forMode:NSDefaultRunLoopMode];
 }
 
 #pragma mark - Table view data source
@@ -138,8 +112,6 @@
 - (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     self.hidesBottomBarWhenPushed = YES;
     MWChatTableViewController * chatViewController = [[MWChatTableViewController alloc] init];
-    chatViewController.inputStream = self.inputStream;
-    chatViewController.outputStream = self.outputStream;
     
     NSArray * items = [MWMainPageInfoManager sharedInfo].allItems;
     MWPersonInfo * item = items[indexPath.row];
@@ -148,6 +120,5 @@
     [self.navigationController pushViewController:chatViewController animated:YES];
     self.hidesBottomBarWhenPushed = NO;
 }
-
 
 @end
